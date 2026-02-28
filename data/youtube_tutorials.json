@@ -1,0 +1,286 @@
+{
+  "metadata": {
+    "title": "YouTube一人公司与AI创业教程合集",
+    "description": "关于一人公司(One Person Company)和AI+一人公司的YouTube教程资源汇总",
+    "created_at": "2026-03-01",
+    "total_videos": 22,
+    "categories": ["一人公司", "AI创业", "个人品牌", "内容创作", "自动化工具"]
+  },
+  "videos": [
+    {
+      "id": 1,
+      "title": "Dan Koe - How To Learn Anything 10X Faster Than Anyone With AI",
+      "channel": "Dan Koe",
+      "category": "AI+一人公司",
+      "description": "Dan Koe的10倍速学习法，讲解如何利用AI加速学习，建立一人公司。包含项目驱动学习、AI作为创意陪练等核心方法论。",
+      "topics": ["AI学习法", "项目驱动学习", "个人成长", "效率提升"],
+      "language": "英语",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Dan Koe - One Person Business 60天启动指南",
+      "channel": "Dan Koe",
+      "category": "一人公司",
+      "description": "油管大神Dan Koe的60天行动计划，教你从0到1启动一人公司并赚到第一笔1000美元。包含内容创作、受众积累、微报价策略等。",
+      "topics": ["一人公司启动", "内容创作", "受众建设", "变现策略"],
+      "language": "英语",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "Dan Koe - 打造一人公司完整指南",
+      "channel": "Dan Koe",
+      "category": "一人公司",
+      "description": "详解如何打造一人公司事业，从确定独特价值主张(UVP)、建立个人品牌到分层变现的完整流程。",
+      "topics": ["UVP定位", "个人品牌", "分层变现", "数字产品"],
+      "language": "英语",
+      "featured": true
+    },
+    {
+      "id": 4,
+      "title": "YouTube赚钱从哪开始？新手全流程实战教程",
+      "channel": "B站/YouTube创业教程",
+      "category": "内容创作",
+      "description": "保姆级YouTube赚钱新手系统教程，从账号注册、领域选择、视频制作到变现收款的完整10节课。",
+      "topics": ["YouTube运营", "频道设置", "SEO优化", "广告收益"],
+      "language": "中文",
+      "platform": "B站/YouTube",
+      "featured": true
+    },
+    {
+      "id": 5,
+      "title": "2025 YouTube赚钱计划 | 从0到1成为Youtuber",
+      "channel": "B站创业频道",
+      "category": "内容创作",
+      "description": "从0到1成为Youtuber的全流程教程，包含项目准备、内容创作、算法理解和心态建设。",
+      "topics": ["YouTube创业", "被动收入", "副业项目"],
+      "language": "中文",
+      "platform": "B站"
+    },
+    {
+      "id": 6,
+      "title": "Small Business Marketing Using YouTube - Coursera",
+      "channel": "Coursera",
+      "category": "商业营销",
+      "description": "1小时项目式课程，学习如何使用YouTube推广小型企业，包括频道创建、定制、视频发布、客户互动和分析。",
+      "topics": ["YouTube营销", "小企业推广", "频道运营", "数据分析"],
+      "language": "英语",
+      "platform": "Coursera"
+    },
+    {
+      "id": 7,
+      "title": "YouTube Secrets: Growing Following and Making Money",
+      "channel": "Sean Cannell & Benji Travis",
+      "category": "内容创作",
+      "description": "YouTube头部创作者Sean Cannell和Benji Travis的指南，系统解析频道运营、内容创作、粉丝互动及商业化变现。",
+      "topics": ["YouTube增长", "视频影响力", "商业化", "粉丝社区"],
+      "language": "英语",
+      "format": "图书/视频"
+    },
+    {
+      "id": 8,
+      "title": "AI时代，普通人最暴利的活法：打造你的'一人公司'",
+      "channel": "中文AI创业内容",
+      "category": "AI+一人公司",
+      "description": "详解AI时代如何用AI工具搭建一人公司，包括品牌打造、内容创作、产品开发和促销的AI应用。",
+      "topics": ["AI工具", "品牌打造", "内容创作", "数字产品", "自动化"],
+      "language": "中文"
+    },
+    {
+      "id": 9,
+      "title": "AI如何做一人公司？2026实操手册",
+      "channel": "AI创业指南",
+      "category": "AI+一人公司",
+      "description": "2026年一人公司实操手册，包含虚拟军团工具矩阵搭建、三种盈利路径(批量产品化、垂直领域链主、AI增强型服务)和90天落地计划。",
+      "topics": ["AI工具链", "盈利路径", "MVP验证", "自动化流水线"],
+      "language": "中文",
+      "featured": true
+    },
+    {
+      "id": 10,
+      "title": "n8n AI自动化完整课程 - 8小时零基础入门",
+      "channel": "Nate Herk | AI Automation",
+      "category": "AI自动化",
+      "description": "超过8小时的深度教学，从零开始学习n8n工具构建AI自动化项目，全程无需编写代码，构建15+个AI自动化工作流。",
+      "topics": ["n8n", "AI自动化", "工作流", "无代码", "API集成"],
+      "language": "英语",
+      "featured": true
+    },
+    {
+      "id": 11,
+      "title": "成为AI自动化专家: 从零基础到创建真实的AI代理",
+      "channel": "The ITzy",
+      "category": "AI自动化",
+      "description": "学习使用n8n、Relevance AI、Voiceflow、Zapier等工具设计、构建和部署AI自动化系统，包括客服、内容创作、潜在客户跟进等。",
+      "topics": ["AI代理", "自动化系统", "n8n", "Zapier", "Voiceflow"],
+      "language": "中文/英语"
+    },
+    {
+      "id": 12,
+      "title": "为企业构建和销售n8n AI Agent - 9小时完整课程",
+      "channel": "Scrapes AI",
+      "category": "AI自动化",
+      "description": "9小时进阶课程，掌握构建和销售解决实际业务问题的AI代理和自动化，学习150+个客户AI自动化案例。",
+      "topics": ["n8n", "AI代理", "业务流程", "销售系统", "SaaS构建"],
+      "language": "英语"
+    },
+    {
+      "id": 13,
+      "title": "Tina Huang - AI学习实用教程",
+      "channel": "Tina Huang",
+      "category": "AI工具",
+      "description": "适合职场人士、学生、研究生的实用导向AI教程，大量高效使用ChatGPT和AI工具的真实案例。",
+      "topics": ["ChatGPT", "AI工具", "职场效率", "学习技巧"],
+      "language": "英语",
+      "target_audience": "职场人士/学生"
+    },
+    {
+      "id": 14,
+      "title": "Andrej Karpathy - GPT底层逻辑讲解",
+      "channel": "Andrej Karpathy",
+      "category": "AI技术",
+      "description": "深入浅出的GPT底层逻辑讲解，适合想要深入理解AI工作原理的技术型创业者。",
+      "topics": ["GPT", "大语言模型", "AI原理", "技术深度"],
+      "language": "英语",
+      "level": "进阶"
+    },
+    {
+      "id": 15,
+      "title": "Jeff Su - AI工作流搭建技巧",
+      "channel": "Jeff Su",
+      "category": "AI工具",
+      "description": "AI工作流搭建技巧，教你如何高效整合AI工具到日常工作流程中。",
+      "topics": ["AI工作流", "生产力工具", "效率提升"],
+      "language": "英语"
+    },
+    {
+      "id": 16,
+      "title": "Greg Isenberg - AI应用实战",
+      "channel": "Greg Isenberg",
+      "category": "AI创业",
+      "description": "AI应用实战案例分享，展示如何将AI应用到实际商业场景中。",
+      "topics": ["AI应用", "商业实战", "创业案例"],
+      "language": "英语"
+    },
+    {
+      "id": 17,
+      "title": "Lex Fridman - AI深度访谈",
+      "channel": "Lex Fridman",
+      "category": "AI洞察",
+      "description": "与AI领域顶尖人物的深度访谈，获取行业前沿洞察和创业灵感。",
+      "topics": ["AI访谈", "行业洞察", "创业思维"],
+      "language": "英语",
+      "format": "播客/视频"
+    },
+    {
+      "id": 18,
+      "title": "马特 - 5年200万订阅的YouTube成功复制指南",
+      "channel": "Matt (英国创作者)",
+      "category": "内容创作",
+      "description": "19岁启动YouTube频道，5年仅22个爆款视频积累200万订阅，年入低六位数英镑的成功经验分享。",
+      "topics": ["YouTube增长", "内容策略", "长青内容", "创作者系统"],
+      "language": "英语"
+    },
+    {
+      "id": 19,
+      "title": "Alex Berman - 冷邮件与LinkedIn获客指南",
+      "channel": "Alex Berman",
+      "category": "商业获客",
+      "description": "数据驱动的精准获客指南，专注冷邮件模板和LinkedIn操作技巧，帮助外贸和B2B创业者高效开发客户。",
+      "topics": ["冷邮件", "LinkedIn", "客户开发", "B2B销售"],
+      "language": "英语"
+    },
+    {
+      "id": 20,
+      "title": "Sales Training International - B2B谈单技巧",
+      "channel": "Sales Training International",
+      "category": "销售技巧",
+      "description": "B2B谈单核心技巧教学，覆盖催单、价格博弈、拒单应对等全场景的实战验证谈判话术。",
+      "topics": ["B2B销售", "谈判技巧", "异议处理", "订单转化"],
+      "language": "英语"
+    },
+    {
+      "id": 21,
+      "title": "Harsh Dhawan - 外贸从入门到进阶",
+      "channel": "Export Experts Global",
+      "category": "外贸创业",
+      "description": "外贸完整培训课程，涵盖产品选择、市场调研、客户沟通话术和物流管理，适合外贸新手系统学习。",
+      "topics": ["外贸入门", "产品选择", "市场调研", "客户沟通", "物流管理"],
+      "language": "英语"
+    },
+    {
+      "id": 22,
+      "title": "AI办公与副业实战教程：零基础到精通",
+      "channel": "AI副业教程",
+      "category": "AI副业",
+      "description": "专为职场人与副业探索者设计，聚焦AI工具在办公效率提升与副业变现中的深度应用，包括ChatGPT、Notion AI、Zapier等工具。",
+      "topics": ["AI办公", "副业变现", "ChatGPT", "自动化", "内容创作"],
+      "language": "中文"
+    }
+  ],
+  "resources": {
+    "books": [
+      {
+        "title": "《一人公司》(Company of One)",
+        "author": "保罗·贾维斯 (Paul Jarvis)",
+        "description": "一人公司概念的经典著作，主张通过自动化、外包和数字工具构建灵活业务系统"
+      },
+      {
+        "title": "《YouTube Secrets》",
+        "author": "Sean Cannell & Benji Travis",
+        "description": "YouTube频道运营、内容创作和变现的终极指南"
+      }
+    ],
+    "tools": [
+      {
+        "category": "内容创作",
+        "tools": ["ChatGPT", "Claude", "Canva AI", "剪映AI", "即梦"]
+      },
+      {
+        "category": "自动化",
+        "tools": ["n8n", "Zapier", "Make", "Relevance AI", "Voiceflow"]
+      },
+      {
+        "category": "编程开发",
+        "tools": ["GitHub Copilot", "CodeLlama", "Cursor"]
+      },
+      {
+        "category": "营销获客",
+        "tools": ["Lemlist", "HubSpot AI", "Intercom", "Drift"]
+      }
+    ],
+    "communities": [
+      {
+        "name": "中国数谷·未来数智港",
+        "location": "杭州",
+        "description": "OPC创业者社区，提供免费工位和政策支持"
+      },
+      {
+        "name": "零界魔方",
+        "location": "上海临港",
+        "description": "超级创业者社区，吸纳OPC团队"
+      },
+      {
+        "name": "AI北纬社区",
+        "location": "北京中关村",
+        "description": "AI创业者聚集地"
+      }
+    ]
+  },
+  "key_insights": {
+    "一人公司定义": "以单一决策者为核心，依托AI智能体与数字化工具链，能够独立完成完整商业闭环的新型企业组织形态",
+    "核心能力": [
+      "将隐性行业经验转化为可被AI理解和执行的解决方案",
+      "指挥AI团队而非亲力亲为",
+      "选准细分战场，垂直深耕"
+    ],
+    "成功要素": [
+      "独特的价值主张(UVP)",
+      "持续的内容输出",
+      "分层变现策略",
+      "自动化工作流程",
+      "强大的自驱力和学习能力"
+    ]
+  }
+}
