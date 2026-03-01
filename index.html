@@ -3,91 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>一人公司教程导航 | X + YouTube + GitHub</title>
+    <title>一人公司系统教程 | 文本整合版</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Noto Sans SC', sans-serif;
-        }
-
+        body { font-family: 'Noto Sans SC', sans-serif; }
         .hero-bg {
-            background-image: radial-gradient(circle at 12% 18%, rgba(56, 189, 248, 0.35), transparent 28%),
-                              radial-gradient(circle at 88% 12%, rgba(248, 113, 113, 0.25), transparent 30%),
-                              linear-gradient(120deg, #0f172a 0%, #111827 40%, #0b1220 100%);
+            background-image: radial-gradient(circle at 20% 20%, rgba(125, 211, 252, 0.25), transparent 35%),
+                              radial-gradient(circle at 80% 10%, rgba(244, 114, 182, 0.2), transparent 30%),
+                              linear-gradient(130deg, #0f172a, #111827 45%, #020617);
         }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
     <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <div class="font-black text-lg sm:text-xl">One-Person Company 教程导航</div>
-            <div class="hidden md:flex items-center gap-6 text-sm font-medium">
-                <a href="#youtube" class="hover:text-red-600">YouTube</a>
-                <a href="#x" class="hover:text-sky-600">X</a>
-                <a href="#github" class="hover:text-gray-900">GitHub</a>
+            <div class="font-black text-lg sm:text-xl">One-Person Company 系统教程</div>
+            <div class="hidden md:flex gap-6 text-sm font-medium">
+                <a href="#tutorial" class="hover:text-indigo-600">系统教程</a>
+                <a href="#youtube-text" class="hover:text-red-600">YouTube 文本</a>
+                <a href="#x-text" class="hover:text-sky-600">X 文本</a>
+                <a href="#github" class="hover:text-gray-900">GitHub 资源</a>
             </div>
             <button id="mobile-menu-btn" class="md:hidden p-2 rounded border border-slate-300">菜单</button>
         </div>
         <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white">
             <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-3 text-sm">
-                <a href="#youtube">YouTube</a>
-                <a href="#x">X</a>
-                <a href="#github">GitHub</a>
+                <a href="#tutorial">系统教程</a>
+                <a href="#youtube-text">YouTube 文本</a>
+                <a href="#x-text">X 文本</a>
+                <a href="#github">GitHub 资源</a>
             </div>
         </div>
     </nav>
 
     <header class="hero-bg text-white">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-            <p class="uppercase text-xs tracking-[0.2em] text-sky-200 mb-3">Collected on 2026-03-01</p>
-            <h1 class="text-3xl sm:text-5xl font-black leading-tight max-w-3xl mb-4">在 X、YouTube、GitHub 上搜集的一人公司教程集合</h1>
-            <p class="text-slate-200 max-w-2xl">覆盖一人公司、独立开发、AI 自动化创业。点击卡片可直接跳转到教程、账号或平台搜索入口。</p>
+            <p class="uppercase text-xs tracking-[0.2em] text-sky-200 mb-3">Updated: 2026-03-01</p>
+            <h1 class="text-3xl sm:text-5xl font-black leading-tight max-w-4xl mb-4">先收集，再转文本，再整合：一人公司系统化教程</h1>
+            <p class="text-slate-200 max-w-3xl">本页把 YouTube 视频和 X 内容转成可执行文字，并汇总成 6 个模块的行动课程。每个模块都包含目标、步骤和交付物。</p>
 
-            <div class="mt-8 grid grid-cols-3 gap-3 max-w-xl">
+            <div class="mt-8 grid grid-cols-4 gap-3 max-w-2xl">
+                <div class="bg-white/10 border border-white/20 rounded-xl p-3 text-center">
+                    <div id="module-count" class="text-2xl font-bold">--</div>
+                    <div class="text-xs text-slate-200">模块</div>
+                </div>
                 <div class="bg-white/10 border border-white/20 rounded-xl p-3 text-center">
                     <div id="youtube-count" class="text-2xl font-bold">--</div>
-                    <div class="text-xs text-slate-200">YouTube</div>
+                    <div class="text-xs text-slate-200">YouTube 文本</div>
                 </div>
                 <div class="bg-white/10 border border-white/20 rounded-xl p-3 text-center">
                     <div id="x-count" class="text-2xl font-bold">--</div>
-                    <div class="text-xs text-slate-200">X</div>
+                    <div class="text-xs text-slate-200">X 文本</div>
                 </div>
                 <div class="bg-white/10 border border-white/20 rounded-xl p-3 text-center">
                     <div id="github-count" class="text-2xl font-bold">--</div>
-                    <div class="text-xs text-slate-200">GitHub</div>
+                    <div class="text-xs text-slate-200">GitHub 资源</div>
                 </div>
             </div>
         </div>
     </header>
 
     <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-14">
-        <section id="youtube">
+        <section id="tutorial">
             <div class="flex items-end justify-between mb-5">
-                <h2 class="text-2xl sm:text-3xl font-bold">YouTube 教程</h2>
-                <span class="text-sm text-slate-500">视频教程与搜索入口</span>
+                <h2 class="text-2xl sm:text-3xl font-bold">系统教程（6 模块）</h2>
+                <span class="text-sm text-slate-500">按学习顺序执行</span>
             </div>
-            <div id="youtube-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div id="tutorial-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <p class="col-span-full text-center text-slate-500">加载中...</p>
             </div>
         </section>
 
-        <section id="x">
+        <section id="youtube-text">
             <div class="flex items-end justify-between mb-5">
-                <h2 class="text-2xl sm:text-3xl font-bold">X 教程/观点</h2>
-                <span class="text-sm text-slate-500">账号与主题检索入口</span>
+                <h2 class="text-2xl sm:text-3xl font-bold">YouTube 转文本素材</h2>
+                <span class="text-sm text-slate-500">视频摘要 + 行动提炼</span>
             </div>
-            <div id="x-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div id="youtube-text-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <p class="col-span-full text-center text-slate-500">加载中...</p>
+            </div>
+        </section>
+
+        <section id="x-text">
+            <div class="flex items-end justify-between mb-5">
+                <h2 class="text-2xl sm:text-3xl font-bold">X 转文本素材</h2>
+                <span class="text-sm text-slate-500">帖子观点 + 执行动作</span>
+            </div>
+            <div id="x-text-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 <p class="col-span-full text-center text-slate-500">加载中...</p>
             </div>
         </section>
 
         <section id="github">
             <div class="flex items-end justify-between mb-5">
-                <h2 class="text-2xl sm:text-3xl font-bold">GitHub 教程资源</h2>
-                <span class="text-sm text-slate-500">仓库与关键词检索</span>
+                <h2 class="text-2xl sm:text-3xl font-bold">GitHub 参考资源</h2>
+                <span class="text-sm text-slate-500">工具与开源项目</span>
             </div>
             <div id="github-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 <p class="col-span-full text-center text-slate-500">加载中...</p>
@@ -97,7 +110,7 @@
 
     <footer class="bg-slate-900 text-slate-300">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-sm">
-            <p>数据更新时间：2026-03-01。仓库：<a href="https://github.com/simonsxxs/opcmode" class="text-sky-300 hover:text-sky-200" target="_blank" rel="noopener noreferrer">simonsxxs/opcmode</a></p>
+            <p>仓库地址：<a href="https://github.com/simonsxxs/opcmode" class="text-sky-300 hover:text-sky-200" target="_blank" rel="noopener noreferrer">simonsxxs/opcmode</a></p>
         </div>
     </footer>
 

@@ -1,43 +1,15 @@
-// One Person Business Hub - Main Application
-
-const SECTION_CONFIG = {
-    youtube: {
-        file: 'data/youtube_tutorials.json',
-        gridId: 'youtube-grid',
-        countId: 'youtube-count',
-        label: 'YOUTUBE',
-        badgeClass: 'bg-red-100 text-red-700',
-        linkClass: 'text-red-700 hover:text-red-900',
-        buttonText: '打开教程'
-    },
-    x: {
-        file: 'data/x_content.json',
-        gridId: 'x-grid',
-        countId: 'x-count',
-        label: 'X',
-        badgeClass: 'bg-sky-100 text-sky-700',
-        linkClass: 'text-sky-700 hover:text-sky-900',
-        buttonText: '查看内容'
-    },
-    github: {
-        file: 'data/github_resources.json',
-        gridId: 'github-grid',
-        countId: 'github-count',
-        label: 'GITHUB',
-        badgeClass: 'bg-gray-100 text-gray-700',
-        linkClass: 'text-gray-700 hover:text-gray-900',
-        buttonText: '打开仓库/搜索'
-    }
+const FILES = {
+    tutorial: 'data/system_tutorial.json',
+    youtube: 'data/youtube_tutorials.json',
+    x: 'data/x_content.json',
+    github: 'data/github_resources.json'
 };
 
 function setupMobileMenu() {
     const menuBtn = document.getElementById('mobile-menu-btn');
     const menu = document.getElementById('mobile-menu');
     if (!menuBtn || !menu) return;
-
-    menuBtn.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-    });
+    menuBtn.addEventListener('click', () => menu.classList.toggle('hidden'));
 }
 
 function setupSmoothScroll() {
@@ -47,70 +19,150 @@ function setupSmoothScroll() {
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
                 target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                const mobileMenu = document.getElementById('mobile-menu');
-                if (mobileMenu) mobileMenu.classList.add('hidden');
+                document.getElementById('mobile-menu')?.classList.add('hidden');
             }
         });
     });
 }
 
-function renderCard(item, config) {
-    const tags = Array.isArray(item.tags) ? item.tags.slice(0, 4) : [];
-
-    return `
-        <article class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-lg transition">
-            <div class="flex items-center justify-between mb-3">
-                <span class="text-xs px-2 py-1 rounded-full ${config.badgeClass}">${config.label}</span>
-                <span class="text-xs text-gray-500">${item.author || 'Unknown'}</span>
-            </div>
-            <h3 class="text-lg font-semibold text-gray-900 mb-2">${item.title || 'Untitled'}</h3>
-            <p class="text-sm text-gray-600 mb-4">${item.summary || ''}</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-                ${tags.map((tag) => `<span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">#${tag}</span>`).join('')}
-            </div>
-            <a class="inline-flex items-center text-sm font-medium ${config.linkClass}"
-               href="${item.url || '#'}"
-               target="_blank"
-               rel="noopener noreferrer">
-               ${config.buttonText}
-            </a>
-        </article>
-    `;
+async function fetchJson(path) {
+    const resp = await fetch(path);
+    if (!resp.ok) throw new Error(`Failed to load ${path}`);
+    return resp.json();
 }
 
-async function loadSection(config) {
-    const grid = document.getElementById(config.gridId);
-    const count = document.getElementById(config.countId);
-    if (!grid || !count) return;
+function renderTutorialModules(modules) {
+    const container = document.getElementById('tutorial-grid');
+    const count = document.getElementById('module-count');
+    if (!container || !count) return;
 
-    try {
-        const response = await fetch(config.file);
-        if (!response.ok) throw new Error(`Failed to load ${config.file}`);
+    count.textContent = String(modules.length || 0);
 
-        const data = await response.json();
-        const items = Array.isArray(data.items) ? data.items : [];
-        count.textContent = String(items.length);
-
-        if (items.length === 0) {
-            grid.innerHTML = '<p class="col-span-full text-center text-gray-500">暂无数据</p>';
-            return;
-        }
-
-        grid.innerHTML = items.map((item) => renderCard(item, config)).join('');
-    } catch (error) {
-        console.error(error);
-        grid.innerHTML = '<p class="col-span-full text-center text-red-500">加载失败，请稍后重试</p>';
-        count.textContent = '--';
+    if (!modules.length) {
+        container.innerHTML = '<p class="col-span-full text-center text-slate-500">暂无教程模块</p>';
+        return;
     }
+
+    container.innerHTML = modules.map((m, idx) => `
+        <article class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+            <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-semibold px-2 py-1 rounded bg-indigo-100 text-indigo-700">MODULE ${idx + 1}</span>
+                <span class="text-xs text-slate-500">${m.id || ''}</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2">${m.title || ''}</h3>
+            <p class="text-slate-700 mb-4">${m.goal || ''}</p>
+            <h4 class="font-semibold text-slate-900 mb-2">学习步骤</h4>
+            <ol class="list-decimal list-inside space-y-1 text-sm text-slate-700 mb-4">
+                ${(m.lessons || []).map((l) => `<li>${l}</li>`).join('')}
+            </ol>
+            <div class="bg-slate-50 border border-slate-200 rounded-lg p-3 text-sm">
+                <span class="font-semibold">本模块交付物：</span>${m.deliverable || ''}
+            </div>
+        </article>
+    `).join('');
 }
 
-document.addEventListener('DOMContentLoaded', async () => {
+function renderYoutubeText(items) {
+    const container = document.getElementById('youtube-text-grid');
+    const count = document.getElementById('youtube-count');
+    if (!container || !count) return;
+
+    count.textContent = String(items.length || 0);
+    if (!items.length) {
+        container.innerHTML = '<p class="col-span-full text-center text-slate-500">暂无 YouTube 文本</p>';
+        return;
+    }
+
+    container.innerHTML = items.map((it) => `
+        <article class="bg-white border border-red-200 rounded-xl p-5">
+            <div class="text-xs text-red-700 font-semibold mb-2">YouTube 转文本</div>
+            <h3 class="font-bold mb-2">${it.title || ''}</h3>
+            <p class="text-xs text-slate-500 mb-3">作者：${it.author || 'Unknown'}</p>
+            <p class="text-sm text-slate-700 mb-3"><span class="font-semibold">文本摘录：</span>${it.transcript_excerpt || ''}</p>
+            <ul class="list-disc list-inside text-sm text-slate-700 mb-3">
+                ${(it.key_points || []).map((p) => `<li>${p}</li>`).join('')}
+            </ul>
+            <p class="text-sm text-slate-900 mb-3"><span class="font-semibold">行动：</span>${it.action || ''}</p>
+            <div class="flex gap-3 text-sm">
+                <a href="${it.url || '#'}" target="_blank" rel="noopener noreferrer" class="text-red-700 hover:text-red-900">视频链接</a>
+                <a href="${it.source || '#'}" target="_blank" rel="noopener noreferrer" class="text-slate-700 hover:text-slate-900">文本来源</a>
+            </div>
+        </article>
+    `).join('');
+}
+
+function renderXText(items) {
+    const container = document.getElementById('x-text-grid');
+    const count = document.getElementById('x-count');
+    if (!container || !count) return;
+
+    count.textContent = String(items.length || 0);
+    if (!items.length) {
+        container.innerHTML = '<p class="col-span-full text-center text-slate-500">暂无 X 文本</p>';
+        return;
+    }
+
+    container.innerHTML = items.map((it) => `
+        <article class="bg-white border border-sky-200 rounded-xl p-5">
+            <div class="text-xs text-sky-700 font-semibold mb-2">X 转文本</div>
+            <h3 class="font-bold mb-2">${it.title || ''}</h3>
+            <p class="text-xs text-slate-500 mb-3">作者：${it.author || 'Unknown'}</p>
+            <p class="text-sm text-slate-700 mb-3"><span class="font-semibold">文本摘录：</span>${it.text_excerpt || ''}</p>
+            <ul class="list-disc list-inside text-sm text-slate-700 mb-3">
+                ${(it.insights || []).map((p) => `<li>${p}</li>`).join('')}
+            </ul>
+            <p class="text-sm text-slate-900 mb-3"><span class="font-semibold">行动：</span>${it.action || ''}</p>
+            <div class="flex gap-3 text-sm">
+                <a href="${it.url || '#'}" target="_blank" rel="noopener noreferrer" class="text-sky-700 hover:text-sky-900">X 链接</a>
+                <a href="${it.source || '#'}" target="_blank" rel="noopener noreferrer" class="text-slate-700 hover:text-slate-900">文本来源</a>
+            </div>
+        </article>
+    `).join('');
+}
+
+function renderGithub(items) {
+    const container = document.getElementById('github-grid');
+    const count = document.getElementById('github-count');
+    if (!container || !count) return;
+
+    count.textContent = String(items.length || 0);
+    if (!items.length) {
+        container.innerHTML = '<p class="col-span-full text-center text-slate-500">暂无 GitHub 资源</p>';
+        return;
+    }
+
+    container.innerHTML = items.map((it) => `
+        <article class="bg-white border border-gray-200 rounded-xl p-5">
+            <h3 class="font-bold mb-2">${it.title || ''}</h3>
+            <p class="text-xs text-slate-500 mb-3">${it.author || 'Unknown'}</p>
+            <p class="text-sm text-slate-700 mb-3">${it.summary || ''}</p>
+            <div class="flex flex-wrap gap-2 mb-3">
+                ${(it.tags || []).map((tag) => `<span class="text-xs bg-slate-100 px-2 py-1 rounded">#${tag}</span>`).join('')}
+            </div>
+            <a href="${it.url || '#'}" target="_blank" rel="noopener noreferrer" class="text-gray-800 hover:text-black text-sm">打开链接</a>
+        </article>
+    `).join('');
+}
+
+async function init() {
     setupMobileMenu();
     setupSmoothScroll();
 
-    await Promise.all([
-        loadSection(SECTION_CONFIG.youtube),
-        loadSection(SECTION_CONFIG.x),
-        loadSection(SECTION_CONFIG.github)
-    ]);
-});
+    try {
+        const [tutorial, youtube, xData, github] = await Promise.all([
+            fetchJson(FILES.tutorial),
+            fetchJson(FILES.youtube),
+            fetchJson(FILES.x),
+            fetchJson(FILES.github)
+        ]);
+
+        renderTutorialModules(tutorial.modules || []);
+        renderYoutubeText(youtube.items || []);
+        renderXText(xData.items || []);
+        renderGithub(github.items || []);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', init);

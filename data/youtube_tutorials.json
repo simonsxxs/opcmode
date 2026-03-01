@@ -1,44 +1,51 @@
 {
   "metadata": {
-    "title": "YouTube 一人公司教程",
+    "title": "YouTube 视频转文本要点",
     "updated_at": "2026-03-01",
-    "source_note": "通过公开网页检索整理，部分条目为 YouTube 搜索入口"
+    "note": "基于公开视频页面与转写摘要整理"
   },
   "items": [
     {
-      "title": "The $1.8M Solopreneur Playbook",
-      "author": "Starter Story",
-      "url": "https://www.youtube.com/watch?v=vedkm3ZmHIE",
-      "summary": "案例拆解高收入一人创业者的业务模型与执行路径。",
-      "tags": ["solopreneur", "case-study", "monetization"]
-    },
-    {
-      "title": "Dan Koe 一人公司方法论（搜索入口）",
+      "id": "yt_11_lessons",
+      "title": "11 Lessons From Growing A 7-Figure One Person Business",
       "author": "Dan Koe",
-      "url": "https://www.youtube.com/results?search_query=Dan+Koe+one+person+business",
-      "summary": "聚焦个人品牌、数字产品与一人公司增长系统。",
-      "tags": ["one-person-business", "personal-brand", "digital-products"]
+      "url": "https://www.youtube.com/watch?v=JgTG1aoaB5s",
+      "transcript_excerpt": "创业起点来自观察：我不想成为哪种人，也想成为哪种人。遇到问题时不要退出，而是 pivot；先开始，再在行动中学习。",
+      "key_points": [
+        "不要盲从传统建议，先做独立判断",
+        "流量与产品需要同步建设",
+        "缺经验不是借口，行动本身就是经验来源"
+      ],
+      "action": "今天写下你当前业务的 3 个可 pivot 方向。",
+      "source": "https://glasp.co/youtube/JgTG1aoaB5s"
     },
     {
-      "title": "Rob Walling 微型 SaaS / 独立创业（搜索入口）",
-      "author": "Rob Walling",
-      "url": "https://www.youtube.com/results?search_query=Rob+Walling+Micro+SaaS",
-      "summary": "适合想做微型 SaaS 的一人创业者，包含验证与增长思路。",
-      "tags": ["micro-saas", "validation", "growth"]
+      "id": "yt_roadmap",
+      "title": "The One Person Business Roadmap (99% Make This Mistake)",
+      "author": "Dan Koe",
+      "url": "https://www.youtube.com/watch?v=M5IMu7c5f_E",
+      "transcript_excerpt": "一人公司有阶段性，不要和不同目标的公司比较。内容增长和变现必须并行，靠数字工具和模板放大时间杠杆。",
+      "key_points": [
+        "停止错误比较，按自己的阶段推进",
+        "受众建设和产品变现要并行",
+        "工具化、模板化是突破时间上限的关键"
+      ],
+      "action": "把你的获客链路画成 4 步漏斗（内容-线索-咨询-成交）。",
+      "source": "https://glasp.co/youtube/M5IMu7c5f_E"
     },
     {
-      "title": "Starter Story 一人公司访谈合集（搜索入口）",
-      "author": "Starter Story",
-      "url": "https://www.youtube.com/results?search_query=Starter+Story+solopreneur",
-      "summary": "大量真实创业者访谈，适合参考不同商业模式。",
-      "tags": ["interview", "playbook", "business-model"]
-    },
-    {
-      "title": "AI + One Person Business（搜索入口）",
-      "author": "YouTube",
-      "url": "https://www.youtube.com/results?search_query=AI+one+person+business",
-      "summary": "聚合 AI 工具驱动的一人公司实操教程与案例。",
-      "tags": ["ai", "automation", "solo-founder"]
+      "id": "yt_build_10k",
+      "title": "Build A One-Person Business As A Normal Person (From $0 To $10K)",
+      "author": "Dan Koe",
+      "url": "https://www.youtube.com/watch?v=hRgG8omhOJ0",
+      "transcript_excerpt": "一人公司对初学者更友好：先从低成本、可立即交付的模式切入，再逐步产品化，不必一开始就做重资产项目。",
+      "key_points": [
+        "先做可快速验证的轻模式",
+        "从服务中提炼可复制的方法",
+        "收入稳定后再升级产品形态"
+      ],
+      "action": "定义一个 7 天内可交付的“最小服务包”。",
+      "source": "https://ytscribe.com/th/v/hRgG8omhOJ0"
     }
   ]
 }
