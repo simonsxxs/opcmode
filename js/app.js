@@ -1,168 +1,209 @@
 const FILES = {
-    tutorial: 'data/system_tutorial.json',
-    youtube: 'data/youtube_tutorials.json',
-    x: 'data/x_content.json',
-    github: 'data/github_resources.json'
+  tutorial: 'data/system_tutorial.json',
+  youtube: 'data/youtube_tutorials.json',
+  x: 'data/x_content.json',
+  github: 'data/github_resources.json'
 };
 
-function setupMobileMenu() {
-    const menuBtn = document.getElementById('mobile-menu-btn');
-    const menu = document.getElementById('mobile-menu');
-    if (!menuBtn || !menu) return;
-    menuBtn.addEventListener('click', () => menu.classList.toggle('hidden'));
+let state = {
+  modules: [],
+  filteredModules: [],
+  currentModule: null,
+  youtube: [],
+  x: [],
+  github: [],
+  activeTab: 'steps'
+};
+
+function getProgressMap() {
+  try {
+    return JSON.parse(localStorage.getItem('opc_progress') || '{}');
+  } catch {
+    return {};
+  }
 }
 
-function setupSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                document.getElementById('mobile-menu')?.classList.add('hidden');
-            }
-        });
-    });
+function setProgress(moduleId, done) {
+  const data = getProgressMap();
+  data[moduleId] = done;
+  localStorage.setItem('opc_progress', JSON.stringify(data));
+}
+
+function setText(id, value) {
+  const el = document.getElementById(id);
+  if (el) el.textContent = String(value);
 }
 
 async function fetchJson(path) {
-    const resp = await fetch(path);
-    if (!resp.ok) throw new Error(`Failed to load ${path}`);
-    return resp.json();
+  const res = await fetch(path);
+  if (!res.ok) throw new Error(`Failed to load ${path}`);
+  return res.json();
 }
 
-function renderTutorialModules(modules) {
-    const container = document.getElementById('tutorial-grid');
-    const count = document.getElementById('module-count');
-    if (!container || !count) return;
+function renderMaterialCard(item, type) {
+  const desc = item.transcript_excerpt || item.text_excerpt || item.summary || item.description || '';
+  const mainLinkText = type === 'github' ? '打开项目' : (type === 'youtube' ? '打开视频' : '打开 X');
 
-    count.textContent = String(modules.length || 0);
-
-    if (!modules.length) {
-        container.innerHTML = '<p class="col-span-full text-center text-slate-500">暂无教程模块</p>';
-        return;
-    }
-
-    container.innerHTML = modules.map((m, idx) => `
-        <article class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
-            <div class="flex items-center justify-between mb-3">
-                <span class="text-xs font-semibold px-2 py-1 rounded bg-indigo-100 text-indigo-700">MODULE ${idx + 1}</span>
-                <span class="text-xs text-slate-500">${m.id || ''}</span>
-            </div>
-            <h3 class="text-xl font-bold mb-2">${m.title || ''}</h3>
-            <p class="text-slate-700 mb-4">${m.goal || ''}</p>
-            <h4 class="font-semibold text-slate-900 mb-2">学习步骤</h4>
-            <ol class="list-decimal list-inside space-y-1 text-sm text-slate-700 mb-4">
-                ${(m.lessons || []).map((l) => `<li>${l}</li>`).join('')}
-            </ol>
-            <div class="bg-slate-50 border border-slate-200 rounded-lg p-3 text-sm">
-                <span class="font-semibold">本模块交付物：</span>${m.deliverable || ''}
-            </div>
-        </article>
-    `).join('');
+  return `
+    <article class="material">
+      <h4>${item.title || 'Untitled'}</h4>
+      <div class="meta">${item.author || 'Unknown'}</div>
+      <div class="desc">${desc}</div>
+      <div class="links">
+        <a class="link" href="${item.url || '#'}" target="_blank" rel="noopener noreferrer">${mainLinkText}</a>
+        ${item.source ? `<a class="link" href="${item.source}" target="_blank" rel="noopener noreferrer">文本来源</a>` : ''}
+      </div>
+    </article>
+  `;
 }
 
-function renderYoutubeText(items) {
-    const container = document.getElementById('youtube-text-grid');
-    const count = document.getElementById('youtube-count');
-    if (!container || !count) return;
+function renderMaterials() {
+  document.getElementById('youtube-list').innerHTML = state.youtube.map((x) => renderMaterialCard(x, 'youtube')).join('');
+  document.getElementById('x-list').innerHTML = state.x.map((x) => renderMaterialCard(x, 'x')).join('');
+  document.getElementById('github-list').innerHTML = state.github.map((x) => renderMaterialCard(x, 'github')).join('');
 
-    count.textContent = String(items.length || 0);
-    if (!items.length) {
-        container.innerHTML = '<p class="col-span-full text-center text-slate-500">暂无 YouTube 文本</p>';
-        return;
-    }
-
-    container.innerHTML = items.map((it) => `
-        <article class="bg-white border border-red-200 rounded-xl p-5">
-            <div class="text-xs text-red-700 font-semibold mb-2">YouTube 转文本</div>
-            <h3 class="font-bold mb-2">${it.title || ''}</h3>
-            <p class="text-xs text-slate-500 mb-3">作者：${it.author || 'Unknown'}</p>
-            <p class="text-sm text-slate-700 mb-3"><span class="font-semibold">文本摘录：</span>${it.transcript_excerpt || ''}</p>
-            <ul class="list-disc list-inside text-sm text-slate-700 mb-3">
-                ${(it.key_points || []).map((p) => `<li>${p}</li>`).join('')}
-            </ul>
-            <p class="text-sm text-slate-900 mb-3"><span class="font-semibold">行动：</span>${it.action || ''}</p>
-            <div class="flex gap-3 text-sm">
-                <a href="${it.url || '#'}" target="_blank" rel="noopener noreferrer" class="text-red-700 hover:text-red-900">视频链接</a>
-                <a href="${it.source || '#'}" target="_blank" rel="noopener noreferrer" class="text-slate-700 hover:text-slate-900">文本来源</a>
-            </div>
-        </article>
-    `).join('');
+  setText('youtube-count', state.youtube.length);
+  setText('x-count', state.x.length);
+  setText('github-count', state.github.length);
 }
 
-function renderXText(items) {
-    const container = document.getElementById('x-text-grid');
-    const count = document.getElementById('x-count');
-    if (!container || !count) return;
+function createModuleTabHtml(module) {
+  if (!module) return '<p class="desc">未选择模块</p>';
 
-    count.textContent = String(items.length || 0);
-    if (!items.length) {
-        container.innerHTML = '<p class="col-span-full text-center text-slate-500">暂无 X 文本</p>';
-        return;
-    }
+  if (state.activeTab === 'steps') {
+    const steps = (module.lessons || []).map((step) => `<li>${step}</li>`).join('');
+    return `<ol class="steps">${steps}</ol>`;
+  }
 
-    container.innerHTML = items.map((it) => `
-        <article class="bg-white border border-sky-200 rounded-xl p-5">
-            <div class="text-xs text-sky-700 font-semibold mb-2">X 转文本</div>
-            <h3 class="font-bold mb-2">${it.title || ''}</h3>
-            <p class="text-xs text-slate-500 mb-3">作者：${it.author || 'Unknown'}</p>
-            <p class="text-sm text-slate-700 mb-3"><span class="font-semibold">文本摘录：</span>${it.text_excerpt || ''}</p>
-            <ul class="list-disc list-inside text-sm text-slate-700 mb-3">
-                ${(it.insights || []).map((p) => `<li>${p}</li>`).join('')}
-            </ul>
-            <p class="text-sm text-slate-900 mb-3"><span class="font-semibold">行动：</span>${it.action || ''}</p>
-            <div class="flex gap-3 text-sm">
-                <a href="${it.url || '#'}" target="_blank" rel="noopener noreferrer" class="text-sky-700 hover:text-sky-900">X 链接</a>
-                <a href="${it.source || '#'}" target="_blank" rel="noopener noreferrer" class="text-slate-700 hover:text-slate-900">文本来源</a>
-            </div>
-        </article>
-    `).join('');
+  if (state.activeTab === 'deliverable') {
+    return `<div class="deliverable">${module.deliverable || '暂无交付物'}</div>`;
+  }
+
+  const sourceRefs = Array.isArray(module.source_refs) ? module.source_refs : [];
+  if (sourceRefs.length === 0) {
+    return '<div class="desc">暂无来源映射</div>';
+  }
+
+  return `
+    <div class="deliverable">
+      <strong>来源引用 ID</strong>
+      <ul class="steps" style="margin-top:8px;">
+        ${sourceRefs.map((id) => `<li><code>${id}</code></li>`).join('')}
+      </ul>
+    </div>
+  `;
 }
 
-function renderGithub(items) {
-    const container = document.getElementById('github-grid');
-    const count = document.getElementById('github-count');
-    if (!container || !count) return;
+function setActiveModule(module) {
+  state.currentModule = module;
 
-    count.textContent = String(items.length || 0);
-    if (!items.length) {
-        container.innerHTML = '<p class="col-span-full text-center text-slate-500">暂无 GitHub 资源</p>';
-        return;
-    }
+  setText('module-title', module.title || 'Untitled');
+  setText('module-id', module.id || '-');
+  setText('module-goal', module.goal || '');
 
-    container.innerHTML = items.map((it) => `
-        <article class="bg-white border border-gray-200 rounded-xl p-5">
-            <h3 class="font-bold mb-2">${it.title || ''}</h3>
-            <p class="text-xs text-slate-500 mb-3">${it.author || 'Unknown'}</p>
-            <p class="text-sm text-slate-700 mb-3">${it.summary || ''}</p>
-            <div class="flex flex-wrap gap-2 mb-3">
-                ${(it.tags || []).map((tag) => `<span class="text-xs bg-slate-100 px-2 py-1 rounded">#${tag}</span>`).join('')}
-            </div>
-            <a href="${it.url || '#'}" target="_blank" rel="noopener noreferrer" class="text-gray-800 hover:text-black text-sm">打开链接</a>
-        </article>
-    `).join('');
+  document.getElementById('module-tab-content').innerHTML = createModuleTabHtml(module);
+
+  const progress = getProgressMap();
+  const done = Boolean(progress[module.id]);
+  const doneCheckbox = document.getElementById('module-done');
+  doneCheckbox.checked = done;
+  doneCheckbox.onchange = () => setProgress(module.id, doneCheckbox.checked);
+
+  document.querySelectorAll('.module-btn').forEach((btn) => {
+    btn.classList.toggle('active', btn.dataset.id === module.id);
+  });
+}
+
+function renderModuleNav() {
+  const container = document.getElementById('module-nav');
+  const progress = getProgressMap();
+
+  if (!state.filteredModules.length) {
+    container.innerHTML = '<p class="kicker">没有匹配结果</p>';
+    return;
+  }
+
+  container.innerHTML = state.filteredModules.map((module, index) => `
+    <button class="module-btn ${state.currentModule?.id === module.id ? 'active' : ''}" data-id="${module.id}">
+      <small>Module ${index + 1} ${progress[module.id] ? '· 已完成' : ''}</small>
+      <strong>${module.title}</strong>
+    </button>
+  `).join('');
+
+  container.querySelectorAll('.module-btn').forEach((button) => {
+    button.addEventListener('click', () => {
+      const found = state.modules.find((m) => m.id === button.dataset.id);
+      if (found) setActiveModule(found);
+    });
+  });
+}
+
+function applySearch(keyword) {
+  const q = keyword.trim().toLowerCase();
+
+  if (!q) {
+    state.filteredModules = [...state.modules];
+  } else {
+    state.filteredModules = state.modules.filter((module) => {
+      const text = [module.title, module.goal, ...(module.lessons || []), module.deliverable]
+        .filter(Boolean)
+        .join(' ')
+        .toLowerCase();
+      return text.includes(q);
+    });
+  }
+
+  renderModuleNav();
+
+  if (!state.filteredModules.find((m) => m.id === state.currentModule?.id) && state.filteredModules[0]) {
+    setActiveModule(state.filteredModules[0]);
+  }
+}
+
+function setupTabs() {
+  document.querySelectorAll('.tab-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      state.activeTab = btn.dataset.tab;
+      document.querySelectorAll('.tab-btn').forEach((el) => {
+        el.classList.toggle('active', el.dataset.tab === state.activeTab);
+      });
+      document.getElementById('module-tab-content').innerHTML = createModuleTabHtml(state.currentModule);
+    });
+  });
 }
 
 async function init() {
-    setupMobileMenu();
-    setupSmoothScroll();
+  try {
+    const [tutorial, youtube, xData, github] = await Promise.all([
+      fetchJson(FILES.tutorial),
+      fetchJson(FILES.youtube),
+      fetchJson(FILES.x),
+      fetchJson(FILES.github)
+    ]);
 
-    try {
-        const [tutorial, youtube, xData, github] = await Promise.all([
-            fetchJson(FILES.tutorial),
-            fetchJson(FILES.youtube),
-            fetchJson(FILES.x),
-            fetchJson(FILES.github)
-        ]);
+    state.modules = tutorial.modules || [];
+    state.filteredModules = [...state.modules];
+    state.youtube = youtube.items || [];
+    state.x = xData.items || [];
+    state.github = github.items || [];
 
-        renderTutorialModules(tutorial.modules || []);
-        renderYoutubeText(youtube.items || []);
-        renderXText(xData.items || []);
-        renderGithub(github.items || []);
-    } catch (error) {
-        console.error(error);
+    setText('module-count', state.modules.length);
+    renderMaterials();
+
+    setupTabs();
+    renderModuleNav();
+
+    if (state.filteredModules[0]) {
+      setActiveModule(state.filteredModules[0]);
     }
+
+    const searchInput = document.getElementById('search-input');
+    searchInput.addEventListener('input', () => applySearch(searchInput.value));
+  } catch (error) {
+    console.error(error);
+    setText('module-title', '加载失败');
+    setText('module-goal', '请检查数据文件是否存在且格式正确。');
+  }
 }
 
 document.addEventListener('DOMContentLoaded', init);
