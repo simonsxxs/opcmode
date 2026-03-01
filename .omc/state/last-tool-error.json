@@ -1,7 +1,0 @@
-{
-  "tool_name": "Bash",
-  "tool_input_preview": "{\"command\":\"git pull origin main --rebase\",\"timeout\":120000,\"description\":\"拉取远程仓库内容\"}",
-  "error": "Exit code 128\nerror: cannot pull with rebase: You have unstaged changes.\nerror: Please commit or stash them.",
-  "timestamp": "2026-02-28T16:33:11.357Z",
-  "retry_count": 2
-}
