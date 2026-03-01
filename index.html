@@ -1,1466 +1,587 @@
 <!DOCTYPE html>
 <html lang="zh-CN" dir="ltr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>OPCMode 中文教程 | One-Person Company 实战指南</title>
-  <meta name="description" content="OPCMode 中文教程：从零基础到进阶，系统学习一人公司（One-Person Company）实战路径。" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="OPCMode 中文教程" />
-  <meta property="og:description" content="完全免费的一人公司实战学习站，支持路径学习、模块检索与微信答疑。" />
-  <meta property="og:image" content="assets/wechat-qr.svg" />
-  <link rel="icon" href="assets/wechat-qr.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --vp-c-white: #ffffff;
-      --vp-c-bg: #ffffff;
-      --vp-c-bg-alt: #f6f6f7;
-      --vp-c-bg-soft: #f6f6f7;
-      --vp-c-divider: #e2e8f0;
-      --vp-c-text-1: #1f2937;
-      --vp-c-text-2: #475569;
-      --vp-c-text-3: #64748b;
-      --vp-c-brand-1: #10b981;
-      --vp-c-brand-2: #059669;
-      --vp-c-brand-3: #047857;
-      --vp-c-brand-soft: rgba(16, 185, 129, 0.14);
-      --vp-nav-height: 64px;
-      --vp-layout-max: 1152px;
-      --vp-shadow-1: 0 4px 16px rgba(2, 6, 23, 0.06);
-      --vp-shadow-2: 0 10px 28px rgba(2, 6, 23, 0.1);
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>AI+ 一人公司实战课</title>
+    <meta name="description" content="AI 工具教程 + 一人公司实战路线。引流微信：simonsxx1">
+    <meta name="generator" content="VitePress v2.0.0-alpha.15">
+    <link rel="preload stylesheet" href="https://learnopencode.com/assets/style.B3We_K22.css" as="style">
+    <link rel="preload stylesheet" href="https://learnopencode.com/vp-icons.css" as="style">
+    
+    <link rel="preload" href="https://learnopencode.com/assets/inter-roman-latin.Di8DUHzh.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="modulepreload" href="https://learnopencode.com/assets/chunks/theme.BlzhKaVP.js">
+    <link rel="modulepreload" href="https://learnopencode.com/assets/chunks/framework.Dtwt352Q.js">
+    <link rel="modulepreload" href="https://learnopencode.com/assets/chunks/stats.iqDly2P8.js">
+    <link rel="modulepreload" href="https://learnopencode.com/assets/index.md.IjsYFyzo.lean.js">
+    <link rel="icon" href="https://learnopencode.com/favicon.png" type="image/png">
+    <meta name="theme-color" content="#10b981">
+    <meta name="author" content="OpenCode 中文社区">
+    <meta name="keywords" content="OpenCode,AI编程,AI编程助手,OpenCode教程,AI写代码,智谱,DeepSeek,Claude">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="AI+ 一人公司实战课">
+    <meta property="og:title" content="AI+ 一人公司实战课 - AI 编程助手实战指南">
+    <meta property="og:description" content="OpenCode 是终端 AI 编程助手，本教程从零基础到进阶，教你用 AI 写代码、改 Bug、自动化办公。支持智谱、DeepSeek 等国产模型，完全免费开源。">
+    <meta property="og:image" content="https://learnopencode.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI+ 一人公司实战课 - AI 编程助手实战指南">
+    <meta name="twitter:description" content="OpenCode 是终端 AI 编程助手，本教程从零基础到进阶，教你用 AI 写代码、改 Bug、自动化办公。">
+    <meta name="twitter:image" content="https://learnopencode.com/og-image.png">
+    <link rel="canonical" href="https://learnopencode.com/">
+    <meta property="og:url" content="https://learnopencode.com/">
+    <link rel="alternate" hreflang="zh-CN" href="https://learnopencode.com/index">
+    <link rel="alternate" hreflang="en" href="https://learnopencode.com/en/index">
+    <link rel="alternate" hreflang="x-default" href="https://learnopencode.com/index">
+<style>
+.qrcode-placeholder-empty{width:240px;height:240px;margin:0 auto;border-radius:8px;border:2px dashed var(--vp-c-divider);display:flex;align-items:center;justify-content:center;color:var(--vp-c-text-2);background:var(--vp-c-bg)}
+.wechat-id-big{margin:.75rem 0;font-size:1.5rem;font-weight:700;color:var(--vp-c-brand-1)}
+@media (max-width:640px){.qrcode-placeholder-empty{width:200px;height:200px}}
+@media (max-width: 768px){
+  .VPNavBarSearch.search,
+  .VPFlyout.VPNavBarTranslations,
+  .VPNavBarAppearance,
+  .VPSocialLinks.VPNavBarSocialLinks,
+  .VPFlyout.VPNavBarExtra,
+  .VPNavBarHamburger{display:none!important}
+  .VPNav{z-index:9999}
+  .VPNavBar .container{height:auto!important;min-height:64px;flex-wrap:wrap}
+  .VPNavBar .content,.VPNavBar .content-body{width:100%}
+  .VPNavBar .content-body{display:flex!important;position:relative;z-index:20;pointer-events:auto!important}
+  .VPNavBarMenu.menu{display:flex!important;overflow-x:auto;gap:8px;white-space:nowrap;pointer-events:auto!important}
+  .VPNavBarMenu.menu a{pointer-events:auto!important}
+}
+</style>
 
-      --vp-button-brand-border: transparent;
-      --vp-button-brand-text: var(--vp-c-white);
-      --vp-button-brand-bg: var(--vp-c-brand-1);
-      --vp-button-brand-hover-border: transparent;
-      --vp-button-brand-hover-text: var(--vp-c-white);
-      --vp-button-brand-hover-bg: var(--vp-c-brand-2);
-      --vp-button-alt-border: var(--vp-c-divider);
-      --vp-button-alt-text: var(--vp-c-text-1);
-      --vp-button-alt-bg: var(--vp-c-bg-soft);
-      --vp-button-alt-hover-border: var(--vp-c-brand-1);
-      --vp-button-alt-hover-text: var(--vp-c-text-1);
-      --vp-button-alt-hover-bg: #edfdf7;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      color: var(--vp-c-text-1);
-      background: var(--vp-c-bg);
-      font-family: "Inter", "Noto Sans SC", sans-serif;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-      scroll-behavior: smooth;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(var(--vp-layout-max), calc(100% - 48px));
-      margin: 0 auto;
-    }
-
-    .VPNav {
-      position: sticky;
-      top: 0;
-      z-index: 120;
-      border-bottom: 1px solid var(--vp-c-divider);
-      background: rgba(255, 255, 255, 0.9);
-      backdrop-filter: blur(10px);
-    }
-
-    .VPNavBar {
-      height: var(--vp-nav-height);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-    }
-
-    .VPNavTitle {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 700;
-      font-size: 15px;
-      white-space: nowrap;
-    }
-
-    .logo {
-      width: 28px;
-      height: 28px;
-      border-radius: 9px;
-      background: linear-gradient(135deg, var(--vp-c-brand-1), #41d1ff);
-      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
-      flex-shrink: 0;
-    }
-
-    .VPNavMenu {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .VPNavMenu a {
-      color: var(--vp-c-text-2);
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 1;
-      padding: 5px 2px;
-      border-bottom: 2px solid transparent;
-      transition: color .25s, border-color .25s;
-    }
-
-    .VPNavMenu a:hover {
-      color: var(--vp-c-text-1);
-      border-bottom-color: var(--vp-c-brand-1);
-    }
-
-    .VPContent {
-      width: 100%;
-      margin: 0 auto;
-      padding-bottom: 24px;
-    }
-
-    .VPHero {
-      margin-top: calc(var(--vp-nav-height) * -1);
-      padding: calc(var(--vp-nav-height) + 48px) 0 46px;
-    }
-
-    .hero-wrap {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
-
-    .hero-main {
-      position: relative;
-      order: 2;
-      z-index: 3;
-      flex: 0 0 auto;
-      text-align: center;
-      margin: 0 auto;
-      max-width: 680px;
-    }
-
-    .heading {
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .heading .name,
-    .heading .text {
-      max-width: 576px;
-      width: fit-content;
-      letter-spacing: -0.02em;
-      line-height: 1.12;
-      font-size: clamp(32px, 7vw, 56px);
-      font-weight: 800;
-    }
-
-    .heading .name {
-      color: transparent;
-      background: -webkit-linear-gradient(120deg, var(--vp-c-brand-1) 30%, #41d1ff);
-      -webkit-background-clip: text;
-      background-clip: text;
-    }
-
-    .heading .text {
-      margin-top: 2px;
-      color: var(--vp-c-text-1);
-    }
-
-    .tagline {
-      margin: 14px auto 0;
-      max-width: 640px;
-      line-height: 1.65;
-      font-size: clamp(17px, 2.2vw, 24px);
-      font-weight: 500;
-      color: var(--vp-c-text-2);
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 18px -6px 0;
-      align-items: center;
-    }
-
-    .action {
-      padding: 6px;
-    }
-
-    .VPButton {
-      display: inline-block;
-      border: 1px solid transparent;
-      text-align: center;
-      font-weight: 600;
-      white-space: nowrap;
-      transition: color .25s, border-color .25s, background-color .25s, transform .25s;
-      cursor: pointer;
-      font-family: inherit;
-    }
-
-    .VPButton.medium {
-      border-radius: 20px;
-      padding: 0 20px;
-      line-height: 38px;
-      font-size: 14px;
-    }
-
-    .VPButton.brand {
-      border-color: var(--vp-button-brand-border);
-      color: var(--vp-button-brand-text);
-      background-color: var(--vp-button-brand-bg);
-      box-shadow: 0 6px 18px rgba(16, 185, 129, 0.26);
-    }
-
-    .VPButton.brand:hover {
-      border-color: var(--vp-button-brand-hover-border);
-      color: var(--vp-button-brand-hover-text);
-      background-color: var(--vp-button-brand-hover-bg);
-      transform: translateY(-1px);
-    }
-
-    .VPButton.alt {
-      border-color: var(--vp-button-alt-border);
-      color: var(--vp-button-alt-text);
-      background-color: var(--vp-button-alt-bg);
-    }
-
-    .VPButton.alt:hover {
-      border-color: var(--vp-button-alt-hover-border);
-      color: var(--vp-button-alt-hover-text);
-      background-color: var(--vp-button-alt-hover-bg);
-    }
-
-    .hero-tip {
-      margin: 6px 0 0;
-      color: var(--vp-c-text-3);
-      font-size: 13px;
-      line-height: 1.5;
-    }
-
-    .hero-qr {
-      display: none;
-      margin: 12px auto 0;
-      width: min(220px, 100%);
-      border-radius: 14px;
-      border: 1px solid var(--vp-c-divider);
-      background: var(--vp-c-bg-soft);
-      padding: 10px;
-    }
-
-    .hero-qr.open {
-      display: block;
-    }
-
-    .hero-qr img {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      border-radius: 10px;
-      border: 1px solid var(--vp-c-divider);
-      background: var(--vp-c-bg);
-    }
-
-    .hero-qr p {
-      margin: 8px 2px 0;
-      color: var(--vp-c-text-3);
-      font-size: 12px;
-      line-height: 1.5;
-    }
-
-    .hero-image {
-      order: 1;
-      margin: -34px auto 0;
-    }
-
-    .hero-image-container {
-      position: relative;
-      width: min(430px, calc(100vw - 56px));
-      height: 296px;
-    }
-
-    .hero-image-bg {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 360px;
-      height: 360px;
-      border-radius: 50%;
-      background: radial-gradient(circle at center, rgba(65, 209, 255, 0.22) 0%, rgba(16, 185, 129, 0.18) 35%, rgba(16, 185, 129, 0) 72%);
-      transform: translate(-50%, -50%);
-      filter: blur(1px);
-    }
-
-    .hero-carousel {
-      position: relative;
-      width: 100%;
-      max-width: 430px;
-      margin: 0 auto;
-    }
-
-    .hero-slide {
-      position: absolute;
-      inset: 0;
-      border-radius: 16px;
-      border: 1px solid rgba(148, 163, 184, 0.32);
-      background: linear-gradient(150deg, #0f172a 0%, #1e293b 58%, #0f172a 100%);
-      color: #e2e8f0;
-      padding: 14px;
-      opacity: 0;
-      transform: translateY(6px) scale(0.985);
-      transition: opacity .55s ease, transform .55s ease;
-      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.28);
-      overflow: hidden;
-    }
-
-    .hero-slide.active {
-      position: relative;
-      opacity: 1;
-      transform: translateY(0) scale(1);
-    }
-
-    .hero-slide::before {
-      content: "";
-      position: absolute;
-      inset: -40% auto auto -30%;
-      width: 260px;
-      height: 180px;
-      background: radial-gradient(circle at center, rgba(16, 185, 129, 0.35), rgba(16, 185, 129, 0));
-      pointer-events: none;
-    }
-
-    .hero-slide-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-      margin-bottom: 10px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-slide-title {
-      margin: 0;
-      font-size: 14px;
-      font-weight: 700;
-      color: #f8fafc;
-    }
-
-    .hero-slide-tag {
-      border: 1px solid rgba(110, 231, 183, 0.45);
-      border-radius: 999px;
-      padding: 4px 8px;
-      font-size: 11px;
-      color: #bbf7d0;
-      background: rgba(16, 185, 129, 0.15);
-      font-weight: 700;
-    }
-
-    .hero-code {
-      margin: 0;
-      padding: 10px;
-      border-radius: 10px;
-      border: 1px solid rgba(148, 163, 184, 0.28);
-      background: rgba(2, 6, 23, 0.55);
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      font-size: 12px;
-      line-height: 1.55;
-      color: #cbd5e1;
-      white-space: pre-wrap;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-code .accent {
-      color: #6ee7b7;
-    }
-
-    .hero-code .warn {
-      color: #67e8f9;
-    }
-
-    .hero-note {
-      margin: 10px 0 0;
-      font-size: 12px;
-      color: #94a3b8;
-      position: relative;
-      z-index: 1;
-    }
-
-    .section {
-      padding-top: 30px;
-    }
-
-    .block-title {
-      margin: 0;
-      font-size: clamp(1.45rem, 2.2vw, 1.72rem);
-      letter-spacing: -0.01em;
-      color: var(--vp-c-text-1);
-    }
-
-    .block-sub {
-      margin: 10px 0 0;
-      color: var(--vp-c-text-2);
-      font-size: 14px;
-      line-height: 1.7;
-    }
-
-    .VPFeatures {
-      padding-top: 6px;
-    }
-
-    .feature-items {
-      margin-top: 16px;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-    }
-
-    .VPFeature {
-      display: block;
-      border: 1px solid var(--vp-c-bg-soft);
-      border-radius: 12px;
-      height: 100%;
-      background-color: var(--vp-c-bg-soft);
-      transition: border-color .25s, background-color .25s, transform .25s;
-      padding: 20px;
-    }
-
-    .VPFeature:hover {
-      border-color: var(--vp-c-brand-1);
-      transform: translateY(-2px);
-      box-shadow: var(--vp-shadow-1);
-    }
-
-    .feature-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 10px;
-      display: grid;
-      place-items: center;
-      margin-bottom: 16px;
-      background: var(--vp-c-brand-soft);
-      font-size: 24px;
-    }
-
-    .VPFeature h3 {
-      margin: 0;
-      line-height: 1.5;
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--vp-c-text-1);
-    }
-
-    .VPFeature p {
-      margin: 8px 0 0;
-      line-height: 1.7;
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--vp-c-text-2);
-      min-height: 48px;
-    }
-
-    .VPFeature .link {
-      display: inline-flex;
-      align-items: center;
-      margin-top: 8px;
-      line-height: 1.4;
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--vp-c-brand-1);
-    }
-
-    .learning-paths {
-      display: grid;
-      gap: 1rem;
-      margin: 1.5rem 0 0;
-    }
-
-    .path-card {
-      display: flex;
-      flex-direction: column;
-      padding: 1.5rem;
-      border: 1px solid var(--vp-c-divider);
-      border-radius: 12px;
-      background: var(--vp-c-bg-soft);
-      transition: all 0.25s ease;
-    }
-
-    .path-card:hover {
-      border-color: var(--vp-c-brand-1);
-      box-shadow: 0 4px 16px rgba(16, 185, 129, 0.1);
-      transform: translateY(-2px);
-    }
-
-    .path-card .path-icon {
-      font-size: 2rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .path-card h3 {
-      margin: 0 0 0.5rem;
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--vp-c-text-1);
-    }
-
-    .path-card .path-duration {
-      margin: 0 0 0.5rem;
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--vp-c-brand-1);
-    }
-
-    .path-card .path-desc {
-      margin: 0;
-      font-size: 0.9rem;
-      color: var(--vp-c-text-2);
-      line-height: 1.6;
-      flex-grow: 1;
-    }
-
-    .path-card .path-cta {
-      margin-top: 1rem;
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--vp-c-brand-1);
-    }
-
-    .workspace {
-      margin-top: 4px;
-      display: grid;
-      grid-template-columns: 300px minmax(0, 1fr);
-      gap: 14px;
-      padding-top: 24px;
-    }
-
-    .panel {
-      border: 1px solid var(--vp-c-divider);
-      border-radius: 12px;
-      background: var(--vp-c-bg-soft);
-      box-shadow: var(--vp-shadow-1);
-    }
-
-    .sidebar {
-      position: sticky;
-      top: 82px;
-      height: fit-content;
-      padding: 14px;
-    }
-
-    .sidebar h3 {
-      margin: 0;
-      font-size: 15px;
-      color: var(--vp-c-text-1);
-    }
-
-    .search {
-      margin-top: 10px;
-      width: 100%;
-      border: 1px solid var(--vp-c-divider);
-      border-radius: 10px;
-      background: var(--vp-c-bg);
-      font-size: 14px;
-      line-height: 1.3;
-      padding: 10px 11px;
-      outline: none;
-      transition: border-color .2s, box-shadow .2s;
-    }
-
-    .search:focus {
-      border-color: var(--vp-c-brand-1);
-      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.18);
-    }
-
-    .nav-list {
-      margin-top: 10px;
-      max-height: 430px;
-      overflow: auto;
-      display: grid;
-      gap: 8px;
-      padding-right: 4px;
-    }
-
-    .module-btn {
-      width: 100%;
-      border: 1px solid var(--vp-c-divider);
-      border-radius: 10px;
-      background: var(--vp-c-bg);
-      text-align: left;
-      padding: 10px;
-      cursor: pointer;
-      transition: all .2s;
-      color: inherit;
-    }
-
-    .module-btn:hover {
-      border-color: var(--vp-c-brand-1);
-      background: #edfdf7;
-    }
-
-    .module-btn.active {
-      border-color: var(--vp-c-brand-1);
-      background: #edfdf7;
-      box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.12);
-    }
-
-    .module-btn small {
-      display: block;
-      font-size: 12px;
-      color: var(--vp-c-text-3);
-    }
-
-    .module-btn strong {
-      display: block;
-      margin-top: 4px;
-      font-size: 14px;
-      color: var(--vp-c-text-1);
-      line-height: 1.45;
-      font-weight: 600;
-    }
-
-    .content {
-      display: grid;
-      gap: 12px;
-    }
-
-    .card-body {
-      padding: 16px;
-    }
-
-    .module-head {
-      display: flex;
-      align-items: start;
-      justify-content: space-between;
-      gap: 10px;
-    }
-
-    .module-title {
-      margin: 0;
-      font-size: 1.12rem;
-      color: var(--vp-c-text-1);
-    }
-
-    .badge {
-      border: 1px solid rgba(16, 185, 129, 0.35);
-      border-radius: 999px;
-      background: rgba(16, 185, 129, 0.08);
-      color: var(--vp-c-brand-3);
-      font-size: 12px;
-      font-weight: 700;
-      padding: 4px 10px;
-      white-space: nowrap;
-    }
-
-    .goal {
-      margin: 10px 0 12px;
-      border: 1px solid var(--vp-c-divider);
-      border-radius: 10px;
-      background: var(--vp-c-bg);
-      padding: 11px;
-      color: var(--vp-c-text-2);
-      font-size: 14px;
-      line-height: 1.65;
-    }
-
-    .tabs {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-bottom: 12px;
-    }
-
-    .tab-btn {
-      border: 1px solid var(--vp-c-divider);
-      border-radius: 999px;
-      background: var(--vp-c-bg);
-      color: #334155;
-      font-size: 12px;
-      font-weight: 700;
-      padding: 6px 11px;
-      cursor: pointer;
-      transition: all .2s;
-      font-family: inherit;
-    }
-
-    .tab-btn.active {
-      border-color: var(--vp-c-brand-1);
-      background: #edfdf7;
-      color: var(--vp-c-brand-3);
-    }
-
-    .steps {
-      margin: 0;
-      padding-left: 20px;
-      display: grid;
-      gap: 8px;
-      color: var(--vp-c-text-2);
-      font-size: 14px;
-      line-height: 1.6;
-    }
-
-    .deliverable {
-      border: 1px dashed rgba(100, 116, 139, 0.5);
-      border-radius: 10px;
-      background: var(--vp-c-bg);
-      padding: 11px;
-      color: var(--vp-c-text-2);
-      line-height: 1.6;
-      font-size: 14px;
-    }
-
-    .task {
-      margin-top: 12px;
-      border: 1px solid rgba(16, 185, 129, 0.28);
-      border-radius: 10px;
-      background: rgba(16, 185, 129, 0.09);
-      color: #065f46;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 9px;
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .wechat-cta {
-      margin-top: 14px;
-      border: 1px solid rgba(16, 185, 129, 0.3);
-      border-radius: 12px;
-      background: rgba(16, 185, 129, 0.09);
-      padding: 12px;
-      display: grid;
-      gap: 8px;
-    }
-
-    .wechat-id {
-      font-weight: 700;
-    }
-
-    .wechat-actions {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .copy-btn {
-      border: 1px solid rgba(16, 185, 129, 0.45);
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.7);
-      color: #065f46;
-      font-size: 12px;
-      font-weight: 700;
-      padding: 6px 10px;
-      cursor: pointer;
-      transition: all .2s;
-      font-family: inherit;
-    }
-
-    .copy-btn:hover {
-      background: rgba(255, 255, 255, 1);
-      border-color: var(--vp-c-brand-1);
-    }
-
-    .wechat-helper,
-    .kicker {
-      color: var(--vp-c-text-3);
-      font-size: 12px;
-    }
-
-    .wechat-qr-inline {
-      width: 84px;
-      height: 84px;
-      border-radius: 10px;
-      border: 1px solid var(--vp-c-divider);
-      background: #fff;
-      object-fit: cover;
-    }
-
-    .row-title {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-      margin-bottom: 10px;
-      flex-wrap: wrap;
-    }
-
-    .row-title h3 {
-      margin: 0;
-      font-size: 1rem;
-    }
-
-    .grid-material {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
-    }
-
-    .material {
-      border: 1px solid var(--vp-c-divider);
-      border-radius: 10px;
-      background: var(--vp-c-bg);
-      padding: 11px;
-      transition: border-color .2s, box-shadow .2s, transform .2s;
-    }
-
-    .material:hover {
-      border-color: var(--vp-c-brand-1);
-      box-shadow: var(--vp-shadow-1);
-      transform: translateY(-1px);
-    }
-
-    .material h4 {
-      margin: 0;
-      font-size: 14px;
-      line-height: 1.4;
-      color: var(--vp-c-text-1);
-    }
-
-    .meta {
-      margin-top: 6px;
-      font-size: 12px;
-      color: var(--vp-c-text-3);
-    }
-
-    .desc {
-      margin-top: 7px;
-      color: var(--vp-c-text-2);
-      font-size: 13px;
-      line-height: 1.55;
-    }
-
-    .links {
-      margin-top: 8px;
-      display: flex;
-      gap: 7px;
-      flex-wrap: wrap;
-    }
-
-    a.link {
-      text-decoration: none;
-      border: 1px solid var(--vp-c-divider);
-      border-radius: 999px;
-      background: #fff;
-      color: var(--vp-c-brand-3);
-      font-size: 12px;
-      font-weight: 700;
-      padding: 6px 9px;
-      transition: all .2s;
-    }
-
-    a.link:hover {
-      border-color: var(--vp-c-brand-1);
-      background: #edfdf7;
-    }
-
-    .stats-grid {
-      display: grid;
-      gap: 1rem;
-      margin: 1.5rem 0 0;
-    }
-
-    .stat-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 1.5rem;
-      border: 1px solid var(--vp-c-divider);
-      border-radius: 12px;
-      background: var(--vp-c-bg-soft);
-    }
-
-    .stat-item .stat-number {
-      font-size: 2.35rem;
-      font-weight: 700;
-      color: var(--vp-c-brand-1);
-      line-height: 1;
-    }
-
-    .stat-item .stat-label {
-      margin-top: 0.5rem;
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--vp-c-text-1);
-    }
-
-    .stat-item .stat-desc {
-      margin-top: 0.25rem;
-      font-size: 0.85rem;
-      color: var(--vp-c-text-2);
-    }
-
-    .final-cta {
-      margin: 3rem 0 2rem;
-      padding: 2.5rem;
-      text-align: center;
-      border-radius: 16px;
-      background: linear-gradient(135deg, var(--vp-c-brand-soft), transparent);
-      border: 1px solid var(--vp-c-brand-1);
-    }
-
-    .final-cta .cta-highlight {
-      margin: 0;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--vp-c-brand-1);
-    }
-
-    .final-cta .cta-subtitle {
-      margin: 0.5rem 0 1.5rem;
-      font-size: 1rem;
-      color: var(--vp-c-text-2);
-    }
-
-    .final-cta .cta-button {
-      display: inline-block;
-      padding: 0.75rem 2rem;
-      font-size: 1rem;
-      font-weight: 600;
-      color: white;
-      background: var(--vp-c-brand-1);
-      border-radius: 8px;
-      border: 0;
-      text-decoration: none;
-      transition: all 0.25s ease;
-      font-family: inherit;
-      cursor: pointer;
-    }
-
-    .final-cta .cta-button:hover {
-      background: var(--vp-c-brand-2);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
-    }
-
-    .floating-wechat {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 95;
-    }
-
-    .floating-wechat-toggle {
-      border: 0;
-      border-radius: 999px;
-      background: linear-gradient(135deg, var(--vp-c-brand-1), var(--vp-c-brand-2));
-      color: #fff;
-      font-size: 14px;
-      font-weight: 800;
-      padding: 12px 16px;
-      cursor: pointer;
-      box-shadow: 0 8px 20px rgba(16, 185, 129, .35);
-    }
-
-    .floating-wechat-panel {
-      margin-top: 10px;
-      width: 250px;
-      border: 1px solid var(--vp-c-divider);
-      border-radius: 12px;
-      background: #fff;
-      box-shadow: var(--vp-shadow-2);
-      padding: 12px;
-      display: grid;
-      gap: 8px;
-    }
-
-    .floating-wechat-panel img {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      border-radius: 10px;
-      border: 1px solid var(--vp-c-divider);
-      background: #fff;
-    }
-
-    .qr-fallback {
-      display: none;
-      border: 1px dashed #94a3b8;
-      border-radius: 10px;
-      background: var(--vp-c-bg-soft);
-      color: var(--vp-c-text-2);
-      font-size: 12px;
-      padding: 8px;
-      line-height: 1.5;
-    }
-
-    .toast {
-      position: fixed;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: 14px;
-      z-index: 130;
-      background: rgba(15, 23, 42, .95);
-      color: #fff;
-      border-radius: 999px;
-      font-size: 12px;
-      padding: 8px 12px;
-      opacity: 0;
-      pointer-events: none;
-      transition: .25s;
-    }
-
-    .toast.show {
-      opacity: 1;
-    }
-
-    .footer {
-      margin-top: 12px;
-      padding-bottom: 24px;
-      text-align: center;
-      color: var(--vp-c-text-3);
-      font-size: 12px;
-    }
-
-    @media (min-width: 640px) {
-      .learning-paths {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (min-width: 960px) {
-      .VPHero {
-        padding: calc(var(--vp-nav-height) + 80px) 0 64px;
-      }
-
-      .hero-wrap {
-        flex-direction: row;
-        align-items: center;
-      }
-
-      .hero-main {
-        order: 1;
-        width: calc((100% / 3) * 2);
-        max-width: 592px;
-        margin: 0;
-        text-align: left;
-      }
-
-      .heading {
-        align-items: flex-start;
-      }
-
-      .tagline {
-        margin-left: 0;
-      }
-
-      .actions {
-        justify-content: flex-start;
-      }
-
-      .hero-qr {
-        margin-left: 0;
-      }
-
-      .hero-image {
-        order: 2;
-        margin: 0;
-        flex-grow: 1;
-      }
-
-      .hero-image-container {
-        width: 100%;
-        max-width: 430px;
-        height: 300px;
-        margin-left: auto;
-      }
-
-      .learning-paths {
-        grid-template-columns: repeat(4, 1fr);
-      }
-
-      .stats-grid {
-        grid-template-columns: repeat(5, 1fr);
-      }
-    }
-
-    @media (max-width: 1100px) {
-      .workspace {
-        grid-template-columns: 1fr;
-      }
-
-      .sidebar {
-        position: static;
-      }
-
-      .grid-material {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 860px) {
-      .VPNavMenu {
-        display: none;
-      }
-
-      .feature-items {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 760px) {
-      .container {
-        width: min(var(--vp-layout-max), calc(100% - 32px));
-      }
-
-      .feature-items,
-      .grid-material,
-      .stats-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .final-cta {
-        padding: 1.7rem 1.2rem;
-      }
-
-      .floating-wechat {
-        right: 12px;
-        bottom: 12px;
-      }
-
-      .floating-wechat-panel {
-        display: none;
-        width: min(280px, calc(100vw - 24px));
-      }
-
-      .floating-wechat-panel.open {
-        display: grid;
-      }
-    }
-
-    @media (min-width: 761px) {
-      .floating-wechat-toggle {
-        pointer-events: none;
-      }
-
-      .floating-wechat-panel {
-        display: grid;
-      }
-    }
-  </style>
 </head>
-<body>
-  <header class="VPNav">
-    <div class="container VPNavBar">
-      <a class="VPNavTitle" href="#top">
-        <span class="logo" aria-hidden="true"></span>
-        <span>OPCMode 中文教程</span>
-      </a>
-      <nav class="VPNavMenu">
-        <a href="#workspace">开始学习</a>
-        <a href="#path">学习路线</a>
-        <a href="#resources">场景资料</a>
-        <a href="#join">加入答疑</a>
-      </nav>
-    </div>
-  </header>
+  <body>
+    <div id="app">
+<div class="Layout" data-v-1df9f90f>
+<!--[-->
+<!--]-->
+<!--[-->
+<span tabindex="-1" data-v-331ec75c>
+</span>
+<a href="#VPContent" class="VPSkipLink visually-hidden" data-v-331ec75c>Skip to content</a>
+<!--]-->
+<!---->
+<header class="VPNav" data-v-1df9f90f data-v-da52a441>
+<div class="VPNavBar" data-v-da52a441 data-v-70946a35>
+<div class="wrapper" data-v-70946a35>
+<div class="container" data-v-70946a35>
+<div class="title" data-v-70946a35>
+<div class="VPNavBarTitle" data-v-70946a35 data-v-1e38c6bc>
+<a class="title" href="/" data-v-1e38c6bc>
+<!--[-->
+<!--]-->
+<!--[-->
+<!--[-->
+<!--[-->
+<img class="VPImage dark logo" src="https://learnopencode.com/logo-dark.png" alt data-v-8426fc1a>
+<!--]-->
+<!--[-->
+<img class="VPImage light logo" src="https://learnopencode.com/logo-light.png" alt data-v-8426fc1a>
+<!--]-->
+<!--]-->
+<!--]-->
+<span data-v-1e38c6bc>AI+ 一人公司实战课</span>
+<!--[-->
+<!--]-->
+</a>
+</div>
+</div>
+<div class="content" data-v-70946a35>
+<div class="content-body" data-v-70946a35>
+<!--[-->
+<!--]-->
+<div class="VPNavBarSearch search" data-v-70946a35>
+<!--[-->
+<!---->
+<div id="local-search">
+<button type="button" aria-label="搜索文档" aria-keyshortcuts="/ control+k meta+k" class="DocSearch DocSearch-Button">
+<span class="DocSearch-Button-Container">
+<span class="vpi-search DocSearch-Search-Icon">
+</span>
+<span class="DocSearch-Button-Placeholder">搜索文档</span>
+</span>
+<span class="DocSearch-Button-Keys">
+<kbd class="DocSearch-Button-Key">
+</kbd>
+<kbd class="DocSearch-Button-Key">
+</kbd>
+</span>
+</button>
+</div>
+<!--]-->
+</div>
+<nav aria-labelledby="main-nav-aria-label" class="VPNavBarMenu menu" data-v-70946a35 data-v-39714824>
+<span id="main-nav-aria-label" class="visually-hidden" data-v-39714824> Main Navigation </span>
+<!--[-->
+<!--[-->
+<a class="VPLink link VPNavBarMenuLink" href="#start" tabindex="0" data-v-39714824 data-v-52a1d768>
+<!--[-->
+<span data-v-52a1d768>开始学习</span>
+<!--]-->
+</a>
+<!--]-->
+<!--[-->
+<a class="VPLink link VPNavBarMenuLink" href="#选择你的学习路线" tabindex="0" data-v-39714824 data-v-52a1d768>
+<!--[-->
+<span data-v-52a1d768>场景实战</span>
+<!--]-->
+</a>
+<!--]-->
+<!--[-->
+<a class="VPLink link VPNavBarMenuLink" href="#你将获得" tabindex="0" data-v-39714824 data-v-52a1d768>
+<!--[-->
+<span data-v-52a1d768>进阶手册</span>
+<!--]-->
+</a>
+<!--]-->
+<!--[-->
+<a class="VPLink link VPNavBarMenuLink" href="#准备好了吗" tabindex="0" data-v-39714824 data-v-52a1d768>
+<!--[-->
+<span data-v-52a1d768>速查手册</span>
+<!--]-->
+</a>
+<!--]-->
+<!--[-->
+<a class="VPLink link VPNavBarMenuLink" href="#lead-wechat" tabindex="0" data-v-39714824 data-v-52a1d768>
+<!--[-->
+<span data-v-52a1d768>联系微信</span>
+<!--]-->
+</a>
+<!--]-->
+<!--]-->
+</nav>
+<div class="VPFlyout VPNavBarTranslations translations" data-v-70946a35 data-v-4c1766e2 data-v-42cb505d>
+<button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="Change language" data-v-42cb505d>
+<span class="text" data-v-42cb505d>
+<span class="vpi-languages option-icon" data-v-42cb505d>
+</span>
+<!---->
+<span class="vpi-chevron-down text-icon" data-v-42cb505d>
+</span>
+</span>
+</button>
+<div class="menu" data-v-42cb505d>
+<div class="VPMenu" data-v-42cb505d data-v-25a6cce8>
+<!---->
+<!--[-->
+<!--[-->
+<div class="items" data-v-4c1766e2>
+<p class="title" data-v-4c1766e2>简体中文</p>
+<!--[-->
+<div class="VPMenuLink" data-v-4c1766e2 data-v-faf5b206>
+<a class="VPLink link" href="javascript:void(0)" lang="en-US" data-v-faf5b206>
+<!--[-->
+<span data-v-faf5b206>English</span>
+<!--]-->
+</a>
+</div>
+<!--]-->
+</div>
+<!--]-->
+<!--]-->
+</div>
+</div>
+</div>
+<div class="VPNavBarAppearance appearance" data-v-70946a35 data-v-6c893767>
+<button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-6c893767 data-v-5337faa4 data-v-1d5665e3>
+<span class="check" data-v-1d5665e3>
+<span class="icon" data-v-1d5665e3>
+<!--[-->
+<span class="vpi-sun sun" data-v-5337faa4>
+</span>
+<span class="vpi-moon moon" data-v-5337faa4>
+</span>
+<!--]-->
+</span>
+</span>
+</button>
+</div>
+<div class="VPSocialLinks VPNavBarSocialLinks social-links" data-v-70946a35 data-v-0394ad82 data-v-d07f11e6>
+<!--[-->
+<a class="VPSocialLink no-icon" href="https://github.com/vbgate/learn-opencode" aria-label="github" target="_blank" rel="me noopener" data-v-d07f11e6 data-v-591a6b30>
+<span class="vpi-social-github">
+</span>
+</a>
+<!--]-->
+</div>
+<div class="VPFlyout VPNavBarExtra extra" data-v-70946a35 data-v-bf2fac68 data-v-42cb505d>
+<button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="extra navigation" data-v-42cb505d>
+<span class="vpi-more-horizontal icon" data-v-42cb505d>
+</span>
+</button>
+<div class="menu" data-v-42cb505d>
+<div class="VPMenu" data-v-42cb505d data-v-25a6cce8>
+<!---->
+<!--[-->
+<!--[-->
+<div class="group translations" data-v-bf2fac68>
+<p class="trans-title" data-v-bf2fac68>简体中文</p>
+<!--[-->
+<div class="VPMenuLink" data-v-bf2fac68 data-v-faf5b206>
+<a class="VPLink link" href="javascript:void(0)" lang="en-US" data-v-faf5b206>
+<!--[-->
+<span data-v-faf5b206>English</span>
+<!--]-->
+</a>
+</div>
+<!--]-->
+</div>
+<div class="group" data-v-bf2fac68>
+<div class="item appearance" data-v-bf2fac68>
+<p class="label" data-v-bf2fac68>Appearance</p>
+<div class="appearance-action" data-v-bf2fac68>
+<button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-bf2fac68 data-v-5337faa4 data-v-1d5665e3>
+<span class="check" data-v-1d5665e3>
+<span class="icon" data-v-1d5665e3>
+<!--[-->
+<span class="vpi-sun sun" data-v-5337faa4>
+</span>
+<span class="vpi-moon moon" data-v-5337faa4>
+</span>
+<!--]-->
+</span>
+</span>
+</button>
+</div>
+</div>
+</div>
+<div class="group" data-v-bf2fac68>
+<div class="item social-links" data-v-bf2fac68>
+<div class="VPSocialLinks social-links-list" data-v-bf2fac68 data-v-d07f11e6>
+<!--[-->
+<a class="VPSocialLink no-icon" href="https://github.com/vbgate/learn-opencode" aria-label="github" target="_blank" rel="me noopener" data-v-d07f11e6 data-v-591a6b30>
+<span class="vpi-social-github">
+</span>
+</a>
+<!--]-->
+</div>
+</div>
+</div>
+<!--]-->
+<!--]-->
+</div>
+</div>
+</div>
+<!--[-->
+<!--]-->
+<button type="button" class="VPNavBarHamburger hamburger" aria-label="mobile navigation" aria-expanded="false" aria-controls="VPNavScreen" data-v-70946a35 data-v-e5dd9c1c>
+<span class="container" data-v-e5dd9c1c>
+<span class="top" data-v-e5dd9c1c>
+</span>
+<span class="middle" data-v-e5dd9c1c>
+</span>
+<span class="bottom" data-v-e5dd9c1c>
+</span>
+</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="divider" data-v-70946a35>
+<div class="divider-line" data-v-70946a35>
+</div>
+</div>
+</div>
+<!---->
+</header>
+<!---->
+<!---->
+<div class="VPContent is-home" id="VPContent" data-v-1df9f90f data-v-c87f25bf>
+<div class="VPHome" data-v-c87f25bf data-v-8b561e3d>
+<!--[-->
+<!--]-->
+<div class="VPHero has-image VPHomeHero" data-v-8b561e3d data-v-1e96e9e8>
+<div class="container" data-v-1e96e9e8>
+<div class="main" data-v-1e96e9e8>
+<!--[-->
+<!--]-->
+<!--[-->
+<h1 class="heading" data-v-1e96e9e8>
+<span class="name clip" data-v-1e96e9e8>AI+</span>
+<span class="text" data-v-1e96e9e8>一人公司实战教程</span>
+</h1>
+<p class="tagline" data-v-1e96e9e8>完全免费 · 零基础学会用 AI 搭建可收费的一人业务</p>
+<!--]-->
+<!--[-->
+<!--]-->
+<div class="actions" data-v-1e96e9e8>
+<!--[-->
+<div class="action" data-v-1e96e9e8>
+<a class="VPButton medium brand" href="#start" data-v-1e96e9e8 data-v-01bff58b>
+<!--[-->开始学习<!--]-->
+</a>
+</div>
+<div class="action" data-v-1e96e9e8>
+<a class="VPButton medium alt" href="#选择你的学习路线" data-v-1e96e9e8 data-v-01bff58b>
+<!--[-->场景实战<!--]-->
+</a>
+</div>
+<div class="action" data-v-1e96e9e8>
+<a class="VPButton medium alt" href="#lead-wechat" data-v-1e96e9e8 data-v-01bff58b>
+<!--[-->联系微信<!--]-->
+</a>
+</div>
+<!--]-->
+</div>
+<!--[-->
+<!--]-->
+</div>
+<div class="image" data-v-1e96e9e8>
+<div class="image-container" data-v-1e96e9e8>
+<div class="image-bg" data-v-1e96e9e8>
+</div>
+<!--[-->
+<!--[-->
+<!--[-->
+<!--[-->
+<!--[-->
+<div class="hero-carousel" data-v-541b59dd>
+<!--[-->
+<img src="https://learnopencode.com/hero/b1.png" class="active" alt="Hero Image" data-v-541b59dd>
+<img src="https://learnopencode.com/hero/b2.png" class="" alt="Hero Image" data-v-541b59dd>
+<img src="https://learnopencode.com/hero/b3.png" class="" alt="Hero Image" data-v-541b59dd>
+<img src="https://learnopencode.com/hero/b4.png" class="" alt="Hero Image" data-v-541b59dd>
+<!--]-->
+</div>
+<!--]-->
+<!--]-->
+<!--]-->
+<!--]-->
+<!--]-->
+</div>
+</div>
+</div>
+</div>
+<!--[-->
+<!--]-->
+<!--[-->
+<!--]-->
+<div class="VPFeatures VPHomeFeatures" data-v-8b561e3d data-v-a6181336>
+<div class="container" data-v-a6181336>
+<div class="items" data-v-a6181336>
+<!--[-->
+<div class="grid-6 item" data-v-a6181336>
+<a class="VPLink link no-icon VPFeature" href="#start" data-v-a6181336 data-v-5219619b>
+<!--[-->
+<article class="box" data-v-5219619b>
+<!--[-->
+<img class="VPImage" src="https://learnopencode.com/icons/rocket.svg" height="48" width="48" alt data-v-8426fc1a>
+<!--]-->
+<h2 class="title" data-v-5219619b>30 分钟快速起步</h2>
+<p class="details" data-v-5219619b>一键安装、配置网络、连接模型，30 分钟完成第一次对话</p>
+<div class="link-text" data-v-5219619b>
+<p class="link-text-value" data-v-5219619b>开始安装 <span class="vpi-arrow-right link-text-icon" data-v-5219619b>
+</span>
+</p>
+</div>
+</article>
+<!--]-->
+</a>
+</div>
+<div class="grid-6 item" data-v-a6181336>
+<a class="VPLink link no-icon VPFeature" href="#你将获得" data-v-a6181336 data-v-5219619b>
+<!--[-->
+<article class="box" data-v-5219619b>
+<!--[-->
+<img class="VPImage" src="https://learnopencode.com/icons/globe.svg" height="48" width="48" alt data-v-8426fc1a>
+<!--]-->
+<h2 class="title" data-v-5219619b>国内用户友好</h2>
+<p class="details" data-v-5219619b>原生支持智谱、DeepSeek、MiniMax 等国产模型，国内直连</p>
+<div class="link-text" data-v-5219619b>
+<p class="link-text-value" data-v-5219619b>配置国产模型 <span class="vpi-arrow-right link-text-icon" data-v-5219619b>
+</span>
+</p>
+</div>
+</article>
+<!--]-->
+</a>
+</div>
+<div class="grid-6 item" data-v-a6181336>
+<a class="VPLink link vp-external-link-icon no-icon VPFeature" href="https://github.com/vbgate/learn-opencode" target="_blank" rel="noreferrer" data-v-a6181336 data-v-5219619b>
+<!--[-->
+<article class="box" data-v-5219619b>
+<!--[-->
+<img class="VPImage" src="https://learnopencode.com/icons/heart.svg" height="48" width="48" alt data-v-8426fc1a>
+<!--]-->
+<h2 class="title" data-v-5219619b>完全免费开源</h2>
+<p class="details" data-v-5219619b>课程和工具都开源，学习无门槛，欢迎贡献改进</p>
+<div class="link-text" data-v-5219619b>
+<p class="link-text-value" data-v-5219619b>GitHub 仓库 <span class="vpi-arrow-right link-text-icon" data-v-5219619b>
+</span>
+</p>
+</div>
+</article>
+<!--]-->
+</a>
+</div>
+<div class="grid-6 item" data-v-a6181336>
+<div class="VPLink no-icon VPFeature" data-v-a6181336 data-v-5219619b>
+<!--[-->
+<article class="box" data-v-5219619b>
+<!--[-->
+<img class="VPImage" src="https://learnopencode.com/icons/code.svg" height="48" width="48" alt data-v-8426fc1a>
+<!--]-->
+<h2 class="title" data-v-5219619b>基于源码解读</h2>
+<p class="details" data-v-5219619b>不是瞎编的教程，每个功能都基于 OpenCode 官方源码分析</p>
+<!---->
+</article>
+<!--]-->
+</div>
+</div>
+<div class="grid-6 item" data-v-a6181336>
+<a class="VPLink link no-icon VPFeature" href="#你将获得" data-v-a6181336 data-v-5219619b>
+<!--[-->
+<article class="box" data-v-5219619b>
+<!--[-->
+<img class="VPImage" src="https://learnopencode.com/icons/files.svg" height="48" width="48" alt data-v-8426fc1a>
+<!--]-->
+<h2 class="title" data-v-5219619b>多文件上下文</h2>
+<p class="details" data-v-5219619b>同时读取整个项目，理解代码关系，不再一个文件一个文件喂</p>
+<div class="link-text" data-v-5219619b>
+<p class="link-text-value" data-v-5219619b>项目初始化 <span class="vpi-arrow-right link-text-icon" data-v-5219619b>
+</span>
+</p>
+</div>
+</article>
+<!--]-->
+</a>
+</div>
+<div class="grid-6 item" data-v-a6181336>
+<a class="VPLink link no-icon VPFeature" href="#你将获得" data-v-a6181336 data-v-5219619b>
+<!--[-->
+<article class="box" data-v-5219619b>
+<!--[-->
+<img class="VPImage" src="https://learnopencode.com/icons/wrench.svg" height="48" width="48" alt data-v-8426fc1a>
+<!--]-->
+<h2 class="title" data-v-5219619b>深度定制</h2>
+<p class="details" data-v-5219619b>自定义 Agent、Skill、命令、主题，打造你的专属 AI 工具</p>
+<div class="link-text" data-v-5219619b>
+<p class="link-text-value" data-v-5219619b>进阶手册 <span class="vpi-arrow-right link-text-icon" data-v-5219619b>
+</span>
+</p>
+</div>
+</article>
+<!--]-->
+</a>
+</div>
+<!--]-->
+</div>
+</div>
+</div>
+<!--[-->
+<!--]-->
+<div class="vp-doc container" style="" data-v-8b561e3d data-v-8e2d4988>
+<!--[-->
+<div style="position:relative;" data-v-8b561e3d>
+<div>
+<h2 id="选择你的学习路线" tabindex="-1">选择你的学习路线 <a class="header-anchor" href="#选择你的学习路线" aria-label="Permalink to “选择你的学习路线”">​</a>
+</h2>
+<div class="learning-paths">
+<a href="#start" class="path-card">
+<span class="path-icon">🚀</span>
+<h3>完全新手</h3>
+<p class="path-duration">约 3 小时</p>
+<p class="path-desc">完成必修课程（第 1-3 阶段），掌握 OpenCode 核心用法</p>
+<span class="path-cta">开始学习 →</span>
+</a>
+<a href="#选择你的学习路线" class="path-card">
+<span class="path-icon">✍️</span>
+<h3>内容创作者</h3>
+<p class="path-duration">约 6-7 小时</p>
+<p class="path-desc">必修 + 内容创作线（A1-A9），建立高效内容生产线</p>
+<span class="path-cta">开始学习 →</span>
+</a>
+<a href="#选择你的学习路线" class="path-card">
+<span class="path-icon">💻</span>
+<h3>程序员</h3>
+<p class="path-duration">约 5-6 小时</p>
+<p class="path-desc">必修 + 开发专线（B1-B5），用 AI 提升开发效率</p>
+<span class="path-cta">开始学习 →</span>
+</a>
+<a href="#选择你的学习路线" class="path-card">
+<span class="path-icon">📊</span>
+<h3>效率爱好者</h3>
+<p class="path-duration">约 4-5 小时</p>
+<p class="path-desc">必修 + 效率提升（C1-C4），让 AI 帮你干杂活</p>
+<span class="path-cta">开始学习 →</span>
+</a>
+</div>
+<h2 id="你将获得" tabindex="-1">你将获得 <a class="header-anchor" href="#你将获得" aria-label="Permalink to “你将获得”">​</a>
+</h2>
+<div class="stats-grid">
+<div class="stat-item">
+<span class="stat-number">42.9万</span>
+<span class="stat-label">教程字数</span>
+<span class="stat-desc">深度详解，干货满满</span>
+</div>
+<div class="stat-item">
+<span class="stat-number">82</span>
+<span class="stat-label">学霸笔记</span>
+<span class="stat-desc">每节课精华，一图搞定</span>
+</div>
+<div class="stat-item">
+<span class="stat-number">18</span>
+<span class="stat-label">实战项目</span>
+<span class="stat-desc">每课都有动手练习</span>
+</div>
+<div class="stat-item">
+<span class="stat-number">20+</span>
+<span class="stat-label">Prompt 模板</span>
+<span class="stat-desc">复制即用，拿来就能干活</span>
+</div>
+<div class="stat-item">
+<span class="stat-number">800+</span>
+<span class="stat-label">代码示例</span>
+<span class="stat-desc">手把手教学，看完就会用</span>
+</div>
+</div>
+<div id="lead-wechat" class="community-hero">
+<p class="community-tagline">刚开始做一人公司时我也一头雾水，所以整理了这份入门课和起步清单，扫码加我微信，希望能帮你少走点弯路。</p>
+</div>
+<div class="qrcode-section">
+<div class="qrcode-card">
+<div class="qrcode-placeholder-empty">二维码占位（暂空）</div>
+<p class="qrcode-hint">二维码先空着，后续直接替换图片即可</p>
+</div>
+<div class="qrcode-card">
+<h3>微信一对一咨询</h3>
+<p class="wechat-id-big" id="wechatId">simonsxx1</p>
+<button class="link-button" id="copyWechatBtn" type="button">复制微信号</button>
+<p class="qrcode-hint" id="copyHint">添加时备注：AI+一人公司</p>
+</div>
+</div>
 
-  <div class="VPContent" id="top">
-    <section class="VPHero has-image">
-      <div class="container hero-wrap">
-        <div class="hero-main">
-          <h1 class="heading">
-            <span class="name">OPCMode</span>
-            <span class="text">一人公司中文实战课</span>
-          </h1>
-          <p class="tagline">完全免费 · 零基础也能按步骤完成从定位到执行的一人公司学习路径。</p>
-
-          <div class="actions">
-            <div class="action"><a class="VPButton medium brand" href="#workspace">开始学习</a></div>
-            <div class="action"><a class="VPButton medium alt" href="#resources">场景实战</a></div>
-            <div class="action"><button type="button" class="VPButton medium alt copy-btn" data-copy-wechat>复制微信号</button></div>
-            <div class="action"><button type="button" id="hero-qr-toggle" class="VPButton medium alt">查看二维码</button></div>
-          </div>
-
-          <p class="hero-tip">微信：<strong data-wechat-id>simonsxx1</strong>（备注“教程”）</p>
-
-          <div id="hero-qr" class="hero-qr">
-            <img src="assets/wechat-qr.svg" alt="微信二维码" data-wechat-qr />
-            <div class="qr-fallback">二维码暂未就绪，请先复制微信号：<strong data-wechat-id>simonsxx1</strong></div>
-            <p>扫码或复制后到微信添加</p>
-          </div>
-        </div>
-
-        <div class="hero-image">
-          <div class="hero-image-container">
-            <div class="hero-image-bg"></div>
-            <div id="hero-carousel" class="hero-carousel" aria-hidden="true">
-              <article class="hero-slide active">
-                <div class="hero-slide-top">
-                  <h3 class="hero-slide-title">阶段 1：定位与验证</h3>
-                  <span class="hero-slide-tag">Phase A</span>
-                </div>
-                <pre class="hero-code"><span class="accent">目标用户：</span>谁愿意付费？
-<span class="warn">最小动作：</span>做一个可交付样本
-结果：拿到第一批真实反馈</pre>
-                <p class="hero-note">用小闭环快速判断方向，不靠空想。</p>
-              </article>
-
-              <article class="hero-slide">
-                <div class="hero-slide-top">
-                  <h3 class="hero-slide-title">阶段 2：内容与转化</h3>
-                  <span class="hero-slide-tag">Phase B</span>
-                </div>
-                <pre class="hero-code"><span class="accent">内容矩阵：</span>短文 + 长文 + 演示
-<span class="warn">转化动作：</span>固定 CTA + 私域承接
-结果：稳定获得咨询与成交</pre>
-                <p class="hero-note">把输出变成连续系统，而不是偶发爆发。</p>
-              </article>
-
-              <article class="hero-slide">
-                <div class="hero-slide-top">
-                  <h3 class="hero-slide-title">阶段 3：产品化交付</h3>
-                  <span class="hero-slide-tag">Phase C</span>
-                </div>
-                <pre class="hero-code"><span class="accent">模板化：</span>SOP + Prompt + 复盘表
-<span class="warn">交付标准：</span>结果可测、流程可复用
-结果：效率提升与价格提升</pre>
-                <p class="hero-note">从“做项目”升级到“做产品”。</p>
-              </article>
-
-              <article class="hero-slide">
-                <div class="hero-slide-top">
-                  <h3 class="hero-slide-title">阶段 4：增长与协同</h3>
-                  <span class="hero-slide-tag">Phase D</span>
-                </div>
-                <pre class="hero-code"><span class="accent">增长机制：</span>复购 + 转介绍 + 联盟
-<span class="warn">协同方式：</span>轻外包 + AI 自动化
-结果：一人公司可持续运转</pre>
-                <p class="hero-note">先稳现金流，再扩能力边界。</p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="VPFeatures container">
-      <h2 class="block-title">你将获得</h2>
-      <p class="block-sub">快速上手、路径学习、实操优先的教程体验</p>
-
-      <div class="feature-items">
-        <article class="VPFeature">
-          <div class="feature-icon">🚀</div>
-          <h3>30 分钟快速起步</h3>
-          <p>先做最小可执行动作，快速进入状态。</p>
-          <a class="link" href="#workspace">开始学习 →</a>
-        </article>
-
-        <article class="VPFeature">
-          <div class="feature-icon">🧭</div>
-          <h3>分阶段路线</h3>
-          <p>按阶段推进，不在信息里迷路。</p>
-          <a class="link" href="#path">查看路线 →</a>
-        </article>
-
-        <article class="VPFeature">
-          <div class="feature-icon">💻</div>
-          <h3>实战模块</h3>
-          <p>每个模块都有步骤、交付物和来源映射。</p>
-          <a class="link" href="#workspace">进入模块 →</a>
-        </article>
-
-        <article class="VPFeature">
-          <div class="feature-icon">📚</div>
-          <h3>素材库</h3>
-          <p>YouTube、X、GitHub 三类资料集中管理。</p>
-          <a class="link" href="#resources">查看素材 →</a>
-        </article>
-
-        <article class="VPFeature">
-          <div class="feature-icon">✅</div>
-          <h3>学习进度</h3>
-          <p>完成状态本地保存，复习更高效。</p>
-          <a class="link" href="#workspace">继续学习 →</a>
-        </article>
-
-        <article class="VPFeature" id="join">
-          <div class="feature-icon">💬</div>
-          <h3>微信答疑</h3>
-          <p>遇到卡点可直接添加微信获取答疑。</p>
-          <a class="link" href="#final-cta">获取方式 →</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="section container" id="path">
-      <h2 class="block-title">选择你的学习路线</h2>
-      <p class="block-sub">不同角色对应不同学习节奏</p>
-
-      <div class="learning-paths">
-        <a href="#workspace" class="path-card">
-          <span class="path-icon">🚀</span>
-          <h3>完全新手</h3>
-          <p class="path-duration">约 3 小时</p>
-          <p class="path-desc">按顺序完成必修模块，快速建立整体认知。</p>
-          <span class="path-cta">开始学习 →</span>
-        </a>
-
-        <a href="#resources" class="path-card">
-          <span class="path-icon">✍️</span>
-          <h3>内容创作者</h3>
-          <p class="path-duration">约 6 小时</p>
-          <p class="path-desc">重点看素材转化与交付物，提升稳定输出能力。</p>
-          <span class="path-cta">开始学习 →</span>
-        </a>
-
-        <a href="#resources" class="path-card">
-          <span class="path-icon">💻</span>
-          <h3>开发者</h3>
-          <p class="path-duration">约 5 小时</p>
-          <p class="path-desc">优先学习参考项目与系统化实现方式。</p>
-          <span class="path-cta">开始学习 →</span>
-        </a>
-
-        <a href="#workspace" class="path-card">
-          <span class="path-icon">📊</span>
-          <h3>效率提升</h3>
-          <p class="path-duration">约 4 小时</p>
-          <p class="path-desc">聚焦可复用流程，把动作沉淀成模板。</p>
-          <span class="path-cta">开始学习 →</span>
-        </a>
-      </div>
-    </section>
-
-    <main class="container workspace" id="workspace">
-      <aside class="panel sidebar">
-        <h3>教程模块目录</h3>
-        <input id="search-input" class="search" placeholder="搜索模块或关键词..." />
-        <div id="module-nav" class="nav-list"></div>
-      </aside>
-
-      <section class="content">
-        <article class="panel">
-          <div class="card-body">
-            <div class="module-head">
-              <h2 id="module-title" class="module-title">加载中...</h2>
-              <span id="module-id" class="badge">-</span>
-            </div>
-            <p id="module-goal" class="goal"></p>
-
-            <div class="tabs">
-              <button class="tab-btn active" data-tab="steps">执行步骤</button>
-              <button class="tab-btn" data-tab="deliverable">交付物</button>
-              <button class="tab-btn" data-tab="sources">来源映射</button>
-            </div>
-
-            <div id="module-tab-content"></div>
-
-            <label class="task">
-              <input id="module-done" type="checkbox" />
-              <span>标记当前模块已学习完成</span>
-            </label>
-
-            <section class="wechat-cta">
-              <strong>学不会？加微信领取答疑资料</strong>
-              <div class="wechat-id">微信：<span data-wechat-id>simonsxx1</span></div>
-              <div class="wechat-actions">
-                <button type="button" class="copy-btn" data-copy-wechat>复制微信号</button>
-                <span class="wechat-helper">扫码或复制后到微信添加</span>
-              </div>
-              <img class="wechat-qr-inline" src="assets/wechat-qr.svg" alt="微信二维码" data-wechat-qr />
-              <div class="qr-fallback">二维码暂未就绪，请先复制微信号：<strong data-wechat-id>simonsxx1</strong></div>
-            </section>
-          </div>
-        </article>
-
-        <section id="resources">
-          <article class="panel">
-            <div class="card-body">
-              <div class="row-title">
-                <h3>YouTube 转文本素材</h3>
-                <span class="kicker">视频摘要 + 行动项</span>
-              </div>
-              <div id="youtube-list" class="grid-material"></div>
-            </div>
-          </article>
-        </section>
-
-        <article class="panel">
-          <div class="card-body">
-            <div class="row-title">
-              <h3>X 转文本素材</h3>
-              <span class="kicker">观点摘录 + 可执行动作</span>
-            </div>
-            <div id="x-list" class="grid-material"></div>
-          </div>
-        </article>
-
-        <article class="panel">
-          <div class="card-body">
-            <div class="row-title">
-              <h3>GitHub 参考项目</h3>
-              <span class="kicker">工具链与实现参考</span>
-            </div>
-            <div id="github-list" class="grid-material"></div>
-          </div>
-        </article>
-      </section>
-    </main>
-
-    <section class="section container">
-      <h2 class="block-title">你将获得</h2>
-      <p class="block-sub">教程规模与资料覆盖一目了然</p>
-
-      <div class="stats-grid">
-        <div class="stat-item"><span id="module-count" class="stat-number">--</span><span class="stat-label">教程模块</span><span class="stat-desc">系统路径学习</span></div>
-        <div class="stat-item"><span id="youtube-count" class="stat-number">--</span><span class="stat-label">YouTube 文本</span><span class="stat-desc">视频重点提炼</span></div>
-        <div class="stat-item"><span id="x-count" class="stat-number">--</span><span class="stat-label">X 文本</span><span class="stat-desc">高质量观点沉淀</span></div>
-        <div class="stat-item"><span id="github-count" class="stat-number">--</span><span class="stat-label">GitHub 资源</span><span class="stat-desc">实操参考项目</span></div>
-        <div class="stat-item"><span class="stat-number">24/7</span><span class="stat-label">持续答疑</span><span class="stat-desc">有问题随时问</span></div>
-      </div>
-
-      <div class="final-cta" id="final-cta">
-        <p class="cta-highlight">准备好了吗？</p>
-        <p class="cta-subtitle">只需要一台电脑和 30 分钟，马上开始第一阶段学习。</p>
-        <button type="button" class="cta-button" data-copy-wechat>复制微信号并开始</button>
-        <p class="block-sub" style="margin-top: 10px;">微信：<strong data-wechat-id>simonsxx1</strong></p>
-      </div>
-    </section>
-
-    <footer class="container footer">
-      仓库：<a class="link" href="https://github.com/simonsxxs/opcmode" target="_blank" rel="noopener noreferrer">simonsxxs/opcmode</a>
-    </footer>
-  </div>
-
-  <div class="floating-wechat" aria-live="polite">
-    <button id="wechat-float-toggle" type="button" class="floating-wechat-toggle">加我微信</button>
-    <aside id="wechat-float-panel" class="floating-wechat-panel">
-      <strong>微信：<span data-wechat-id>simonsxx1</span></strong>
-      <button type="button" class="copy-btn" data-copy-wechat>复制微信号</button>
-      <img src="assets/wechat-qr.svg" alt="微信二维码" data-wechat-qr />
-      <div class="qr-fallback">二维码暂未就绪，请先复制微信号：<strong data-wechat-id>simonsxx1</strong></div>
-      <div class="wechat-helper">备注“教程”，优先回复</div>
-    </aside>
-  </div>
-
-  <div id="copy-toast" class="toast">微信号已复制：simonsxx1</div>
-
-  <script src="js/app.js"></script>
+<h2 id="准备好了吗" tabindex="-1">准备好了吗 <a class="header-anchor" href="#准备好了吗" aria-label="Permalink to “准备好了吗”">​</a>
+</h2>
+<div class="final-cta">
+<p class="cta-highlight">以上内容全部免费</p>
+<p class="cta-subtitle">只需要一台电脑和 30 分钟时间</p>
+<a href="#start" class="cta-button">立即开始学习</a>
+</div>
+</div>
+</div>
+<!--]-->
+</div>
+</div>
+</div>
+<footer class="VPFooter" data-v-1df9f90f data-v-c3855bb3>
+<div class="container" data-v-c3855bb3>
+<p class="message" data-v-c3855bb3>AI+ 一人公司实战课 | 微信：simonsxx1</p>
+<!---->
+</div>
+</footer>
+<!--[-->
+<!---->
+<!--]-->
+</div>
+</div>
+    <script src="./script.js"></script>
 </body>
 </html>
