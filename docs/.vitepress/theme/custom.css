@@ -1,0 +1,649 @@
+/* ========================================
+   原版网站样式还原 - VitePress 主题
+   ======================================== */
+
+/* ---------- 基础变量 ---------- */
+:root {
+  /* 品牌色 - 绿色 */
+  --vp-c-brand-1: #10b981;
+  --vp-c-brand-2: #34d399;
+  --vp-c-brand-3: #059669;
+  --vp-c-brand-soft: rgba(16, 185, 129, 0.14);
+
+  /* 文本色 */
+  --vp-c-text-1: #1e293b;
+  --vp-c-text-2: #475569;
+  --vp-c-text-3: #64748b;
+
+  /* 背景色 */
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-soft: #f8fafc;
+  --vp-c-bg-mute: #f1f5f9;
+  --vp-c-bg-alt: #f8fafc;
+
+  /* 边框 */
+  --vp-c-divider: #e2e8f0;
+  --vp-c-gutter: #e2e8f0;
+
+  /* 圆角 */
+  --vp-radius: 8px;
+  --vp-radius-lg: 12px;
+
+  /* 字体 */
+  --vp-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --vp-font-family-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+/* 暗黑模式 */
+.dark {
+  --vp-c-text-1: #f8fafc;
+  --vp-c-text-2: #cbd5e1;
+  --vp-c-text-3: #94a3b8;
+  --vp-c-bg: #0f172a;
+  --vp-c-bg-soft: #1e293b;
+  --vp-c-bg-mute: #334155;
+  --vp-c-bg-alt: #1e293b;
+  --vp-c-divider: #334155;
+  --vp-c-gutter: #334155;
+}
+
+/* ---------- 导航栏样式 ---------- */
+.VPNav {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.8) !important;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.dark .VPNav {
+  background: rgba(15, 23, 42, 0.8) !important;
+}
+
+.VPNavBarTitle {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.VPNavBarTitle .title {
+  color: var(--vp-c-text-1);
+}
+
+.VPNavBarMenuLink {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--vp-c-text-2);
+  transition: color 0.25s;
+}
+
+.VPNavBarMenuLink:hover {
+  color: var(--vp-c-brand-1);
+}
+
+/* ---------- Hero 区域 ---------- */
+.VPHero {
+  padding: 4rem 0 3rem;
+}
+
+.VPHero .heading {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.VPHero .heading .clip {
+  background: linear-gradient(120deg, var(--vp-c-brand-1) 30%, var(--vp-c-brand-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.VPHero .tagline {
+  font-size: 1.25rem;
+  color: var(--vp-c-text-2);
+  margin-top: 1rem;
+}
+
+.VPHero .actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.VPButton {
+  border-radius: var(--vp-radius);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.25s;
+}
+
+.VPButton.brand {
+  background: var(--vp-c-brand-1);
+  color: white;
+  border: none;
+}
+
+.VPButton.brand:hover {
+  background: var(--vp-c-brand-3);
+}
+
+.VPButton.alt {
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1);
+  border: 1px solid var(--vp-c-divider);
+}
+
+.VPButton.alt:hover {
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
+}
+
+/* ---------- Features 区域 ---------- */
+.VPFeatures {
+  padding: 3rem 0;
+}
+
+.VPFeatures .items {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+  .VPFeatures .items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .VPFeatures .items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .VPFeatures .items {
+    grid-template-columns: 1fr;
+  }
+}
+
+.VPFeature {
+  display: block;
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: var(--vp-radius-lg);
+  padding: 1.5rem;
+  transition: all 0.3s;
+  height: 100%;
+  text-decoration: none;
+}
+
+.VPFeature:hover {
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.1);
+}
+
+.VPFeature .icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1rem;
+}
+
+.VPFeature .title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.VPFeature .details {
+  font-size: 0.9rem;
+  color: var(--vp-c-text-2);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.VPFeature .link-text {
+  font-size: 0.9rem;
+  color: var(--vp-c-brand-1);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* ---------- 文档内容样式 ---------- */
+.vp-doc {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.vp-doc h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--vp-c-brand-1);
+  letter-spacing: -0.01em;
+}
+
+.vp-doc h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-top: 0.5rem;
+}
+
+.vp-doc h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--vp-c-text-2);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.vp-doc p {
+  margin-bottom: 1.25rem;
+  color: var(--vp-c-text-2);
+}
+
+.vp-doc a {
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.vp-doc a:hover {
+  text-decoration: underline;
+}
+
+.vp-doc ul, .vp-doc ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.vp-doc li {
+  margin-bottom: 0.5rem;
+  color: var(--vp-c-text-2);
+}
+
+.vp-doc blockquote {
+  border-left: 4px solid var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 var(--vp-radius) var(--vp-radius) 0;
+}
+
+.vp-doc blockquote p {
+  margin: 0;
+}
+
+.vp-doc code {
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.9em;
+}
+
+.vp-doc :not(pre) > code {
+  background: var(--vp-c-bg-mute);
+  color: var(--vp-c-brand-1);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+.vp-doc pre {
+  background: #1e1e1e;
+  border-radius: var(--vp-radius);
+  padding: 1.25rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.vp-doc pre code {
+  color: #e2e8f0;
+  background: transparent;
+  padding: 0;
+}
+
+.vp-doc table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+.vp-doc th {
+  background: var(--vp-c-bg-soft);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.875rem 1rem;
+  border-bottom: 2px solid var(--vp-c-divider);
+  color: var(--vp-c-text-1);
+}
+
+.vp-doc td {
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid var(--vp-c-divider);
+  color: var(--vp-c-text-2);
+}
+
+.vp-doc tr:hover {
+  background: var(--vp-c-bg-soft);
+}
+
+.vp-doc img {
+  max-width: 100%;
+  border-radius: var(--vp-radius);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  margin: 1.5rem 0;
+}
+
+/* ---------- 提示框样式 ---------- */
+.vp-doc .tip {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid var(--vp-c-brand-1);
+  border-radius: var(--vp-radius);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.vp-doc .tip::before {
+  content: '💡 ';
+  font-weight: 600;
+}
+
+.vp-doc .warning {
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid #f59e0b;
+  border-radius: var(--vp-radius);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.vp-doc .warning::before {
+  content: '⚠️ ';
+  font-weight: 600;
+}
+
+/* ---------- 侧边栏样式 ---------- */
+.VPSidebar {
+  background: var(--vp-c-bg);
+  border-right: 1px solid var(--vp-c-divider);
+}
+
+.VPSidebarItem .text {
+  font-size: 14px;
+  color: var(--vp-c-text-2);
+}
+
+.VPSidebarItem.is-active .text {
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+}
+
+.VPSidebarItem.is-link:hover .text {
+  color: var(--vp-c-brand-1);
+}
+
+/* ---------- 搜索样式 ---------- */
+.DocSearch-Button {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: var(--vp-radius);
+}
+
+.DocSearch-Button:hover {
+  border-color: var(--vp-c-brand-1);
+}
+
+/* ---------- 页脚样式 ---------- */
+.VPFooter {
+  background: var(--vp-c-bg-soft);
+  border-top: 1px solid var(--vp-c-divider);
+  padding: 2rem 0;
+}
+
+.VPFooter .message {
+  text-align: center;
+  color: var(--vp-c-text-2);
+  font-size: 0.9rem;
+}
+
+.VPFooter a {
+  color: var(--vp-c-brand-1);
+}
+
+/* ---------- 目录大纲样式 ---------- */
+.VPDocOutlineItem {
+  font-size: 13px;
+}
+
+.VPDocOutlineItem.root {
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+}
+
+.VPDocOutlineItem a:hover {
+  color: var(--vp-c-brand-1);
+}
+
+/* ---------- 移动端导航 ---------- */
+.VPNavScreen {
+  background: var(--vp-c-bg);
+}
+
+.VPNavScreenMenuLink {
+  color: var(--vp-c-text-1);
+}
+
+.VPNavScreenMenuLink:hover {
+  color: var(--vp-c-brand-1);
+}
+
+/* ---------- 自定义组件样式 ---------- */
+
+/* 学习路线卡片网格 */
+.learning-paths {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+@media (max-width: 1024px) {
+  .learning-paths {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .learning-paths {
+    grid-template-columns: 1fr;
+  }
+}
+
+.path-card {
+  display: block;
+  padding: 1.5rem;
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: var(--vp-radius-lg);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.path-card:hover {
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(16, 185, 129, 0.12);
+}
+
+.path-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.path-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+  margin: 0 0 0.5rem;
+}
+
+.path-duration {
+  color: var(--vp-c-brand-1);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+
+.path-desc {
+  color: var(--vp-c-text-2);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0 0 1rem;
+}
+
+.path-cta {
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* 数据统计网格 */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  margin: 2.5rem 0;
+}
+
+@media (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--vp-c-bg-soft);
+  border-radius: var(--vp-radius-lg);
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--vp-c-brand-1);
+  line-height: 1.2;
+}
+
+.stat-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+  margin: 0.5rem 0;
+}
+
+.stat-desc {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--vp-c-text-3);
+  line-height: 1.5;
+}
+
+/* 底部行动召唤 */
+.final-cta {
+  background: linear-gradient(135deg, var(--vp-c-brand-soft), rgba(52, 211, 153, 0.1));
+  border: 1px solid var(--vp-c-brand-1);
+  border-radius: var(--vp-radius-lg);
+  padding: 2rem;
+  margin: 2.5rem 0;
+  text-align: center;
+}
+
+.cta-highlight {
+  font-size: 1.1rem;
+  color: var(--vp-c-text-1);
+  margin-bottom: 0.5rem;
+}
+
+.cta-subtitle {
+  color: var(--vp-c-text-3);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background: var(--vp-c-brand-1);
+  color: white;
+  padding: 0.875rem 2rem;
+  border-radius: var(--vp-radius);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background: var(--vp-c-brand-3);
+  text-decoration: none;
+}
+
+/* ---------- 响应式优化 ---------- */
+@media (max-width: 768px) {
+  .VPHero {
+    padding: 2.5rem 0 2rem;
+  }
+
+  .VPHero .heading {
+    font-size: 2rem;
+  }
+
+  .VPHero .tagline {
+    font-size: 1.1rem;
+  }
+
+  .vp-doc h1 {
+    font-size: 1.75rem;
+  }
+
+  .vp-doc h2 {
+    font-size: 1.35rem;
+  }
+
+  .vp-doc h3 {
+    font-size: 1.15rem;
+  }
+
+  .stat-number {
+    font-size: 1.75rem;
+  }
+}
+
+/* ---------- 平滑滚动 ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---------- 选中文字样式 ---------- */
+::selection {
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+}
