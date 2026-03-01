@@ -5,6 +5,14 @@ const FILES = {
   github: 'data/github_resources.json'
 };
 
+const siteConfig = {
+  wechat: {
+    id: 'simonsxx1',
+    qrImage: 'assets/wechat-qr.svg',
+    ctaText: '扫码或复制后到微信添加'
+  }
+};
+
 let state = {
   modules: [],
   filteredModules: [],
@@ -32,6 +40,118 @@ function setProgress(moduleId, done) {
 function setText(id, value) {
   const el = document.getElementById(id);
   if (el) el.textContent = String(value);
+}
+
+function showToast(message) {
+  const toast = document.getElementById('copy-toast');
+  if (!toast) return;
+
+  toast.textContent = message;
+  toast.classList.add('show');
+  clearTimeout(showToast.timerId);
+  showToast.timerId = setTimeout(() => {
+    toast.classList.remove('show');
+  }, 1800);
+}
+
+function fallbackCopyText(text) {
+  const textarea = document.createElement('textarea');
+  textarea.value = text;
+  textarea.style.position = 'fixed';
+  textarea.style.left = '-9999px';
+  document.body.appendChild(textarea);
+  textarea.focus();
+  textarea.select();
+
+  let ok = false;
+  try {
+    ok = document.execCommand('copy');
+  } catch {
+    ok = false;
+  }
+
+  document.body.removeChild(textarea);
+  return ok;
+}
+
+async function copyWechatId() {
+  const id = siteConfig.wechat.id;
+  let copied = false;
+
+  if (navigator.clipboard && window.isSecureContext) {
+    try {
+      await navigator.clipboard.writeText(id);
+      copied = true;
+    } catch {
+      copied = false;
+    }
+  }
+
+  if (!copied) {
+    copied = fallbackCopyText(id);
+  }
+
+  if (copied) {
+    showToast(`微信号已复制：${id}`);
+  } else {
+    showToast(`复制失败，请手动复制：${id}`);
+  }
+}
+
+function setupWechatLead() {
+  document.querySelectorAll('[data-wechat-id]').forEach((node) => {
+    node.textContent = siteConfig.wechat.id;
+  });
+
+  document.querySelectorAll('[data-copy-wechat]').forEach((button) => {
+    button.addEventListener('click', copyWechatId);
+  });
+
+  document.querySelectorAll('[data-wechat-qr]').forEach((img) => {
+    img.src = siteConfig.wechat.qrImage;
+    img.addEventListener('error', () => {
+      img.style.display = 'none';
+      const fallback = img.nextElementSibling;
+      if (fallback && fallback.classList.contains('qr-fallback')) {
+        fallback.style.display = 'block';
+      }
+    });
+  });
+
+  const heroQr = document.getElementById('hero-qr');
+  const heroToggle = document.getElementById('hero-qr-toggle');
+  if (heroQr && heroToggle) {
+    heroToggle.addEventListener('click', () => {
+      heroQr.classList.toggle('open');
+    });
+  }
+
+  const floatToggle = document.getElementById('wechat-float-toggle');
+  const floatPanel = document.getElementById('wechat-float-panel');
+  if (floatToggle && floatPanel) {
+    floatToggle.addEventListener('click', () => {
+      floatPanel.classList.toggle('open');
+    });
+  }
+}
+
+function setupHeroCarousel() {
+  const carousel = document.getElementById('hero-carousel');
+  if (!carousel) return;
+
+  const slides = Array.from(carousel.querySelectorAll('.hero-slide'));
+  if (slides.length <= 1) return;
+
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    return;
+  }
+
+  let currentIndex = 0;
+  setInterval(() => {
+    slides[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % slides.length;
+    slides[currentIndex].classList.add('active');
+  }, 6000);
 }
 
 async function fetchJson(path) {
@@ -174,6 +294,9 @@ function setupTabs() {
 
 async function init() {
   try {
+    setupWechatLead();
+    setupHeroCarousel();
+
     const [tutorial, youtube, xData, github] = await Promise.all([
       fetchJson(FILES.tutorial),
       fetchJson(FILES.youtube),
