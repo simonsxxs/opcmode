@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "title": "GitHub 一人公司/教程资源",
+    "updated_at": "2026-03-01",
+    "source_note": "通过公开网页检索整理，含仓库与关键词检索入口"
+  },
+  "items": [
+    {
+      "title": "rhofkens/business-idea-multi-agent",
+      "author": "rhofkens",
+      "url": "https://github.com/rhofkens/business-idea-multi-agent",
+      "summary": "多智能体商业点子生成系统，包含 Solopreneur 模式。",
+      "tags": ["solopreneur", "ai-agent", "business-ideas"]
+    },
+    {
+      "title": "The-Pocket/PocketFlow-Tutorial-Codebase-Knowledge",
+      "author": "The-Pocket",
+      "url": "https://github.com/The-Pocket/PocketFlow-Tutorial-Codebase-Knowledge",
+      "summary": "把代码仓库转成可学习教程的 AI 项目，可用于一人公司内容生产。",
+      "tags": ["tutorial", "ai", "knowledge-base"]
+    },
+    {
+      "title": "GitHub: solopreneur repositories（搜索入口）",
+      "author": "GitHub Search",
+      "url": "https://github.com/search?q=solopreneur&type=repositories",
+      "summary": "检索最新 solopreneur 相关开源项目。",
+      "tags": ["search", "repositories", "solopreneur"]
+    },
+    {
+      "title": "GitHub: one person business repositories（搜索入口）",
+      "author": "GitHub Search",
+      "url": "https://github.com/search?q=one+person+business&type=repositories",
+      "summary": "检索“一人公司”相关仓库与教程代码。",
+      "tags": ["search", "one-person-business", "opensource"]
+    },
+    {
+      "title": "GitHub: indie hacker saas repositories（搜索入口）",
+      "author": "GitHub Search",
+      "url": "https://github.com/search?q=indie+hacker+saas&type=repositories",
+      "summary": "检索独立开发者 SaaS 项目，适合参考产品与技术实现。",
+      "tags": ["indie-hacker", "saas", "search"]
+    }
+  ]
+}

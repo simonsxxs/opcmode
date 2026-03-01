@@ -1,386 +1,44 @@
 {
   "metadata": {
-    "collection_date": "2026-03-01",
-    "total_posts": 25,
-    "topics": ["one person business", "solopreneur", "AI startup", "OPC", "indie hacker"],
-    "sources": ["Web Search"]
+    "title": "X 一人公司教程与观点",
+    "updated_at": "2026-03-01",
+    "source_note": "通过公开网页检索整理，含账号与关键词检索入口"
   },
-  "posts": [
+  "items": [
     {
-      "id": 1,
-      "author": "Sam Altman (@sama)",
-      "author_title": "OpenAI CEO",
-      "content_summary": "AI时代将出现一人创立的十亿美元独角兽公司。2024年初预测，在红杉资本AI峰会上再次成为焦点：未来可能出现第一家真正意义上的「一人独角兽公司」。",
-      "key_insights": [
-        "未来将出现一人创立的十亿美元公司",
-        "AI时代创业门槛大幅降低",
-        "传统创业中'融资-招聘-开发'的线性路径正在崩塌"
-      ],
-      "link": "https://x.com/sama",
-      "date": "2024-2025",
-      "tags": ["AI", "一人独角兽", "创业预测"]
+      "title": "Tatsuya@Solopreneur",
+      "author": "@tty215_devg",
+      "url": "https://x.com/tty215_devg",
+      "summary": "独立开发者视角，持续分享 solo dev + AI 的产品构建过程。",
+      "tags": ["solopreneur", "indiedev", "build-in-public"]
     },
     {
-      "id": 2,
-      "author": "Naval Ravikant (@naval)",
-      "author_title": "AngelList创始人, 投资人",
-      "content_summary": "通过做独一无二的自己，来逃离竞争。找到那件对你来说是玩乐，但对别人来说是工作的事情，然后将它'产品化'。财富是能在你睡觉时也为你赚钱的资产。",
-      "key_insights": [
-        "财富是能在你睡觉时也为你赚钱的资产",
-        "拥有股权，实现财务自由",
-        "建立独特知识，发挥杠杆作用",
-        "学会构建和销售是成功的关键",
-        "把自己产品化(Productize Yourself)"
-      ],
-      "link": "https://x.com/naval",
-      "date": "持续分享",
-      "tags": ["财富哲学", "个人成长", "创业思维"]
+      "title": "Pieter Levels",
+      "author": "@levelsio",
+      "url": "https://x.com/levelsio",
+      "summary": "独立产品与公开收入讨论，常见一人公司实战观点。",
+      "tags": ["indie-hacker", "revenue", "product"]
     },
     {
-      "id": 3,
-      "author": "Pieter Levels (@levelsio)",
-      "author_title": "Indie Hacker, PhotoAI创始人",
-      "content_summary": "代表作PhotoAI月收入$58K MRR。展示了独立开发者如何通过AI产品实现可观收入。",
-      "key_insights": [
-        "AI产品可以快速变现",
-        "独立开发者可以实现高收入",
-        "专注解决具体问题的AI工具"
-      ],
-      "link": "https://twitter.com/levelsio",
-      "date": "2023-2024",
-      "tags": ["AI产品", "独立开发", "变现"]
+      "title": "Naval Ravikant",
+      "author": "@naval",
+      "url": "https://x.com/naval",
+      "summary": "长期输出杠杆、产品化与个人创业方法论。",
+      "tags": ["leverage", "wealth", "mindset"]
     },
     {
-      "id": 4,
-      "author": "Tibo (@tibo_maker)",
-      "author_title": "Tweet Hunter & Taplio创始人",
-      "content_summary": "代表作Tweet Hunter和Taplio，年收入$10m ARR。展示了独立创业者如何通过SaaS产品实现规模化收入。",
-      "key_insights": [
-        "SaaS产品可以实现千万级年收入",
-        "社交媒体工具是热门创业方向",
-        "独立创业者可以建立规模化业务"
-      ],
-      "link": "https://twitter.com/tibo_maker",
-      "date": "2023-2024",
-      "tags": ["SaaS", "社交媒体工具", "规模化"]
+      "title": "X: solopreneur tips（搜索入口）",
+      "author": "X Search",
+      "url": "https://x.com/search?q=solopreneur%20tips&src=typed_query",
+      "summary": "快速检索最新 solopreneur 教程帖和经验线程。",
+      "tags": ["search", "tips", "threads"]
     },
     {
-      "id": 5,
-      "author": "Courtland Allen (@csallen)",
-      "author_title": "Indie Hackers创始人",
-      "content_summary": "Indie Hackers是一个聚集了独立创业者和产品开发者的社区，分享成功案例、经验分享、建议和启发。2017年被Stripe收购。",
-      "key_insights": [
-        "独立开发者社区的重要性",
-        "分享和学习成功案例",
-        "Indie Hackers被Stripe收购证明了独立创业的价值"
-      ],
-      "link": "https://twitter.com/csallen",
-      "date": "2016-至今",
-      "tags": ["社区", "独立创业", "资源分享"]
-    },
-    {
-      "id": 6,
-      "author": "Paul Jarvis",
-      "author_title": "《一人公司》作者",
-      "content_summary": "在《一人公司》中分享了他的商业理念：你不需要建立一个帝国或雇佣员工就能拥有一个繁荣的企业，小型企业往往比大型企业更令人满意。",
-      "key_insights": [
-        "不需要建立帝国就能拥有繁荣企业",
-        "小型企业可能比大型企业更令人满意",
-        "一人公司是一种可持续的商业模式"
-      ],
-      "link": "https://pjrvs.com",
-      "date": "2019",
-      "tags": ["一人公司", "商业理念", "小型企业"]
-    },
-    {
-      "id": 7,
-      "author": "Allen Walton",
-      "author_title": "SpyGuySecurity.com创始人",
-      "content_summary": "27岁，从时薪11美元的监控摄像机店员工，创办了一年营收接近七位数的隐藏摄像机网店。利用Google Adwords快速获取客户，展示了个人创业的可能性。",
-      "key_insights": [
-        "从打工到一人创业的成功转型",
-        "利用Google Adwords获取客户",
-        "专注细分市场可以成功"
-      ],
-      "link": "https://spyguysecurity.com",
-      "date": "2014-2015",
-      "tags": ["电商", "个人创业", "细分市场"]
-    },
-    {
-      "id": 8,
-      "author": "Dan Mezheritsky",
-      "author_title": "Fitness on the Go创始人",
-      "content_summary": "29岁，加拿大温哥华，创办上门私人健身教练品牌。从雇佣员工转为与承包人合作，发现这种模式能创造更积极、平等的相互关系。",
-      "key_insights": [
-        "承包模式比雇佣模式更灵活",
-        "建立平等的合作关系",
-        "轻资产运营模式"
-      ],
-      "link": "N/A",
-      "date": "2005-2015",
-      "tags": ["健身", "承包模式", "轻资产"]
-    },
-    {
-      "id": 9,
-      "author": "胡政涛",
-      "author_title": "AtomicArch创始人",
-      "content_summary": "在杭州市上城区鸿鹄汇一人创业加速社区，以独立开发者身份写下14万行代码，从零开发出一款AI原生的建筑设计平台。在北美实现这个产品至少需要150万美元和一个5人团队，而现在一个人加一个AI助手，研发费用一年不到20万元。",
-      "key_insights": [
-        "AI大幅降低创业成本",
-        "一人+AI可以替代传统团队",
-        "AI原生产品开发效率极高"
-      ],
-      "link": "N/A",
-      "date": "2025",
-      "tags": ["AI原生", "建筑设计", "成本降低"]
-    },
-    {
-      "id": 10,
-      "author": "庞昊洋",
-      "author_title": "AI影视公司创始人",
-      "content_summary": "2001年出生，2025年初单枪匹马来到良渚，成立AI影视公司。借助多款AI视频、图片工具，脚本可视化、镜头预演与风格测试可以在短时间内完成。一年过去，公司从超级个体成长为4人精干团队。",
-      "key_insights": [
-        "AI工具让影视制作周期大幅缩短",
-        "00后成为AI创业主力",
-        "超级个体可以快速扩展为小团队"
-      ],
-      "link": "N/A",
-      "date": "2025",
-      "tags": ["AI影视", "00后创业", "超级个体"]
-    },
-    {
-      "id": 11,
-      "author": "Shlomo",
-      "author_title": "Base44创始人",
-      "content_summary": "以色列90后程序员，独立开发网站Base44，7周拥有超14万用户，5个月实现19万美元净利润。第6个月被8000万美元收购。基本上一个人独立运作，直到被收购前一个半月才招第一个员工。",
-      "key_insights": [
-        "一人公司可以实现快速成长和退出",
-        "AI辅助开发可以大幅减少人力需求",
-        "高价值退出是一人公司的终极目标"
-      ],
-      "link": "N/A",
-      "date": "2025",
-      "tags": ["快速退出", "高估值", "AI辅助开发"]
-    },
-    {
-      "id": 12,
-      "author": "Greg Isenberg",
-      "author_title": "创业者, 产品人",
-      "content_summary": "在播客中深度分析AI时代一人公司趋势：从公司架构的根本性颠覆，到创业路径的重构，再到从零起步的实战指南。",
-      "key_insights": [
-        "公司架构正在根本性颠覆",
-        "创业路径正在重构",
-        "AI时代独立创业者的新机遇"
-      ],
-      "link": "https://x.com/gregisenberg",
-      "date": "2026-02",
-      "tags": ["AI时代", "创业路径", "架构颠覆"]
-    },
-    {
-      "id": 13,
-      "author": "Dharmesh Shah",
-      "author_title": "HubSpot创始人",
-      "content_summary": "描述成功的商业运营商特征：谦卑、开放学习、痴迷于客户而不是竞争、专注于推动公司前进的活动。",
-      "key_insights": [
-        "成功创业者需要谦卑",
-        "痴迷于客户而非竞争",
-        "专注推动公司前进的活动"
-      ],
-      "link": "https://twitter.com/dharmesh",
-      "date": "持续分享",
-      "tags": ["创业特质", "客户导向", "HubSpot"]
-    },
-    {
-      "id": 14,
-      "author": "Tim Ferriss",
-      "author_title": "《每周工作四小时》作者",
-      "content_summary": "外包大师，提倡通过外包和自动化实现生活方式设计。许多百万美元生意受到他的启发。",
-      "key_insights": [
-        "外包可以释放时间",
-        "自动化是规模化关键",
-        "生活方式设计的重要性"
-      ],
-      "link": "https://twitter.com/tferriss",
-      "date": "持续分享",
-      "tags": ["外包", "生活方式设计", "自动化"]
-    },
-    {
-      "id": 15,
-      "author": "MJ DeMarco",
-      "author_title": "《百万富翁快车道》作者",
-      "content_summary": "艾伦·沃尔顿称他的创业著作改变了命运。训练大脑从消费者视角转变成生产者视角：你向其他人提供价值，进而从中收获价值。",
-      "key_insights": [
-        "从消费者视角转向生产者视角",
-        "提供价值才能收获价值",
-        "改变思维模式是创业第一步"
-      ],
-      "link": "N/A",
-      "date": "持续影响",
-      "tags": ["思维模式", "价值创造", "创业启蒙"]
-    },
-    {
-      "id": 16,
-      "author": "稚晖君",
-      "author_title": "智元机器人创始人",
-      "content_summary": "表示跟人交流会耗费精力。一人公司不用搞办公室政治，不用费心协调利益与资源冲突，不用建立公司管理制度，创业变得更像纯粹的内容创作。",
-      "key_insights": [
-        "一人公司避免办公室政治",
-        "减少协调成本",
-        "创业回归纯粹创作"
-      ],
-      "link": "N/A",
-      "date": "2025",
-      "tags": ["智元机器人", "办公室政治", "纯粹创作"]
-    },
-    {
-      "id": 17,
-      "author": "袁哲",
-      "author_title": "浙江大学经济学院研究员",
-      "content_summary": "技术平权让能力不再是门槛，唯一的门槛只剩下创意和判断力本身。创业者不再必须雇佣昂贵的技术或销售团队，AI能完成从写代码、生成营销内容到社交媒体互动的诸多工作。",
-      "key_insights": [
-        "技术平权降低创业门槛",
-        "创意和判断力成为核心门槛",
-        "AI替代传统团队职能"
-      ],
-      "link": "N/A",
-      "date": "2026-01",
-      "tags": ["技术平权", "创意", "判断力"]
-    },
-    {
-      "id": 18,
-      "author": "王超",
-      "author_title": "鸿鹄汇合伙人",
-      "content_summary": "传统创业者像是背着步枪上战场的士兵，而我们要找的，是在AI加持下穿着外骨骼装甲的特种兵。在收到的700多份申请中，仅有27个项目被选中入驻。",
-      "key_insights": [
-        "AI加持下的创业者是'特种兵'",
-        "超级个体筛选标准高",
-        "95后、00后是主力"
-      ],
-      "link": "N/A",
-      "date": "2026-01",
-      "tags": ["超级个体", "AI加持", "创业筛选"]
-    },
-    {
-      "id": 19,
-      "author": "张新",
-      "author_title": "宁波市禾集教育咨询创始人",
-      "content_summary": "大学生创业，之前在外租房办公，一个月开销不小。现在有了OPC社区免费工位，可以更专注于研发。",
-      "key_insights": [
-        "OPC社区降低创业成本",
-        "大学生创业新选择",
-        "免费资源支持初创者"
-      ],
-      "link": "N/A",
-      "date": "2026-01",
-      "tags": ["大学生创业", "OPC社区", "免费资源"]
-    },
-    {
-      "id": 20,
-      "author": "大林",
-      "author_title": "TalkPal创始人, 独立开发者",
-      "content_summary": "使用BuildingAI平台，三周完成原本需要3-5人团队几个月的工作。BuildingAI不是一个单一的AI工具，而是一个'搭载了AI引擎的操作系统'。",
-      "key_insights": [
-        "AI平台大幅提升开发效率",
-        "一人可以完成传统团队工作",
-        "All-in-One解决方案的重要性"
-      ],
-      "link": "N/A",
-      "date": "2026-02",
-      "tags": ["BuildingAI", "开发效率", "口语陪练"]
-    },
-    {
-      "id": 21,
-      "author": "创业者李孟",
-      "author_title": "创业博主",
-      "content_summary": "AI时代一个人创业的核心：赛道判断力、资源链接力、AI协同力、风险控制力。AI是给'有准备的人'减负的工具，不是给'想躺赚的人'的捷径。",
-      "key_insights": [
-        "赛道判断力是核心",
-        "资源链接力不可替代",
-        "AI协同力需要清晰指令",
-        "风险控制力决定成败"
-      ],
-      "link": "N/A",
-      "date": "2026-01",
-      "tags": ["创业核心能力", "AI协同", "风险控制"]
-    },
-    {
-      "id": 22,
-      "author": "中国日报网",
-      "author_title": "媒体",
-      "content_summary": "Solopreneur(个体企业创业经营者)是指'自己创建、经营公司的人'。他们也许会用承包商，但日常业务由他们自己全权负责。多亏有了在线市场，近年来，个体企业创业经营者的人数暴增。",
-      "key_insights": [
-        "Solopreneur定义",
-        "在线市场促进个体创业",
-        "日常业务全权负责"
-      ],
-      "link": "https://www.chinadaily.com.cn",
-      "date": "2015-09",
-      "tags": ["Solopreneur", "定义", "在线市场"]
-    },
-    {
-      "id": 23,
-      "author": "维基百科/百度百科",
-      "author_title": "知识平台",
-      "content_summary": "独立创业者(Solopreneur)是指独自组织、管理并承担企业风险，没有合伙人或全职员工的个人创业者。他们可能使用承包商，但对企业日常运营负全责。",
-      "key_insights": [
-        "独立创业者定义",
-        "独自承担风险",
-        "使用承包商但不雇全职员工"
-      ],
-      "link": "N/A",
-      "date": "持续更新",
-      "tags": ["定义", "独立创业", "风险承担"]
-    },
-    {
-      "id": 24,
-      "author": "中国新闻网",
-      "author_title": "媒体",
-      "content_summary": "江苏将OPC写入政府工作报告：支持人工智能OPC创新创业，让'单人成军'蔚然成林。OPC(One Person Company)是指一个人就可以组建一个创业队伍、创新团队，独立完成从创意萌芽到项目落地的全过程。",
-      "key_insights": [
-        "OPC写入政府工作报告",
-        "'单人成军'成为政策导向",
-        "江苏率先支持OPC发展"
-      ],
-      "link": "https://www.chinanews.com",
-      "date": "2026-02",
-      "tags": ["OPC政策", "江苏", "政府支持"]
-    },
-    {
-      "id": 25,
-      "author": "深圳市工业和信息化局",
-      "author_title": "政府部门",
-      "content_summary": "印发《深圳市打造人工智能OPC创业生态引领地行动计划(2026—2027年)》，到2027年底，建成超10家OPC社区，培育超千家高成长性人工智能创业企业，集聚超万名人工智能创新创业人才。",
-      "key_insights": [
-        "深圳OPC行动计划",
-        "2027年建成超10家OPC社区",
-        "培育超千家AI创业企业"
-      ],
-      "link": "https://www.szns.gov.cn",
-      "date": "2026-01",
-      "tags": ["深圳政策", "OPC社区", "AI创业"]
+      "title": "X: one person business（搜索入口）",
+      "author": "X Search",
+      "url": "https://x.com/search?q=one%20person%20business&src=typed_query",
+      "summary": "检索“一人公司”相关讨论与实战教程。",
+      "tags": ["search", "one-person-business", "tutorial"]
     }
-  ],
-  "insights_summary": {
-    "key_themes": [
-      "AI大幅降低创业门槛和成本",
-      "一人公司/超级个体成为新趋势",
-      "创意和判断力取代资本成为核心门槛",
-      "政府开始支持OPC创业模式",
-      "从'融资-招聘-开发'转向'AI辅助-快速验证'"
-    ],
-    "success_factors": [
-      "赛道判断力：选择AI能发挥优势的领域",
-      "AI协同力：清晰指令和持续调试",
-      "资源链接力：建立客户和供应链关系",
-      "风险控制力：财务和心理双重准备",
-      "把自己产品化：找到独特优势并放大"
-    ],
-    "popular_niches": [
-      "AI+内容创作（文案、视频、设计）",
-      "AI+软件开发（代码生成、自动化）",
-      "AI+咨询服务（法律、医疗、教育）",
-      "AI+电商（选品、客服、营销）",
-      "垂直领域AI工具（建筑、影视、数据分析）"
-    ]
-  }
+  ]
 }

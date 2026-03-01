@@ -3,233 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>一人公司创业指南 | One Person Business Hub</title>
+    <title>一人公司教程导航 | X + YouTube + GitHub</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Noto Sans SC', 'sans-serif'],
-                    },
-                    colors: {
-                        primary: '#3B82F6',
-                        secondary: '#10B981',
-                        accent: '#8B5CF6',
-                    }
-                }
-            }
-        }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
     <style>
-        .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
         }
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+
+        .hero-bg {
+            background-image: radial-gradient(circle at 12% 18%, rgba(56, 189, 248, 0.35), transparent 28%),
+                              radial-gradient(circle at 88% 12%, rgba(248, 113, 113, 0.25), transparent 30%),
+                              linear-gradient(120deg, #0f172a 0%, #111827 40%, #0b1220 100%);
         }
     </style>
 </head>
-<body class="bg-gray-50 font-sans">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <span class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                        One Person Business Hub
-                    </span>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="text-gray-700 hover:text-blue-600 transition">首页</a>
-                    <a href="#youtube" class="text-gray-700 hover:text-blue-600 transition">YouTube教程</a>
-                    <a href="#x-content" class="text-gray-700 hover:text-blue-600 transition">X精华</a>
-                    <a href="#ai-section" class="text-gray-700 hover:text-blue-600 transition">AI+创业</a>
-                </div>
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-700">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                </div>
+<body class="bg-slate-50 text-slate-900">
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="font-black text-lg sm:text-xl">One-Person Company 教程导航</div>
+            <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+                <a href="#youtube" class="hover:text-red-600">YouTube</a>
+                <a href="#x" class="hover:text-sky-600">X</a>
+                <a href="#github" class="hover:text-gray-900">GitHub</a>
             </div>
+            <button id="mobile-menu-btn" class="md:hidden p-2 rounded border border-slate-300">菜单</button>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <div class="px-4 py-2 space-y-2">
-                <a href="#home" class="block py-2 text-gray-700">首页</a>
-                <a href="#youtube" class="block py-2 text-gray-700">YouTube教程</a>
-                <a href="#x-content" class="block py-2 text-gray-700">X精华</a>
-                <a href="#ai-section" class="block py-2 text-gray-700">AI+创业</a>
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white">
+            <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-3 text-sm">
+                <a href="#youtube">YouTube</a>
+                <a href="#x">X</a>
+                <a href="#github">GitHub</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="gradient-bg text-white py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6">
-                一人公司创业指南
-            </h1>
-            <p class="text-xl md:text-2xl mb-8 text-blue-100">
-                汇集全网优质资源，助你开启独立创业之路
-            </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#youtube" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition">
-                    观看教程
-                </a>
-                <a href="#ai-section" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition">
-                    AI+创业
-                </a>
-            </div>
-            <div class="mt-12 flex justify-center gap-8 text-sm">
-                <div class="text-center">
-                    <div class="text-3xl font-bold" id="video-count">--</div>
-                    <div class="text-blue-200">精选视频</div>
+    <header class="hero-bg text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+            <p class="uppercase text-xs tracking-[0.2em] text-sky-200 mb-3">Collected on 2026-03-01</p>
+            <h1 class="text-3xl sm:text-5xl font-black leading-tight max-w-3xl mb-4">在 X、YouTube、GitHub 上搜集的一人公司教程集合</h1>
+            <p class="text-slate-200 max-w-2xl">覆盖一人公司、独立开发、AI 自动化创业。点击卡片可直接跳转到教程、账号或平台搜索入口。</p>
+
+            <div class="mt-8 grid grid-cols-3 gap-3 max-w-xl">
+                <div class="bg-white/10 border border-white/20 rounded-xl p-3 text-center">
+                    <div id="youtube-count" class="text-2xl font-bold">--</div>
+                    <div class="text-xs text-slate-200">YouTube</div>
                 </div>
-                <div class="text-center">
-                    <div class="text-3xl font-bold" id="post-count">--</div>
-                    <div class="text-blue-200">精华帖子</div>
+                <div class="bg-white/10 border border-white/20 rounded-xl p-3 text-center">
+                    <div id="x-count" class="text-2xl font-bold">--</div>
+                    <div class="text-xs text-slate-200">X</div>
                 </div>
-                <div class="text-center">
-                    <div class="text-3xl font-bold">AI</div>
-                    <div class="text-blue-200">智能赋能</div>
+                <div class="bg-white/10 border border-white/20 rounded-xl p-3 text-center">
+                    <div id="github-count" class="text-2xl font-bold">--</div>
+                    <div class="text-xs text-slate-200">GitHub</div>
                 </div>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- YouTube Tutorials Section -->
-    <section id="youtube" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    YouTube 创业教程
-                </h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">
-                    精选优质视频教程，涵盖从0到1的创业全流程
-                </p>
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-14">
+        <section id="youtube">
+            <div class="flex items-end justify-between mb-5">
+                <h2 class="text-2xl sm:text-3xl font-bold">YouTube 教程</h2>
+                <span class="text-sm text-slate-500">视频教程与搜索入口</span>
             </div>
-            <div id="youtube-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Content will be loaded dynamically -->
-                <div class="text-center py-12 text-gray-500">
-                    正在加载视频内容...
-                </div>
+            <div id="youtube-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <p class="col-span-full text-center text-slate-500">加载中...</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- X Content Section -->
-    <section id="x-content" class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    X 平台精华内容
-                </h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">
-                    汇集 X 平台上的高质量创业干货和实战经验分享
-                </p>
+        <section id="x">
+            <div class="flex items-end justify-between mb-5">
+                <h2 class="text-2xl sm:text-3xl font-bold">X 教程/观点</h2>
+                <span class="text-sm text-slate-500">账号与主题检索入口</span>
             </div>
-            <div id="x-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Content will be loaded dynamically -->
-                <div class="text-center py-12 text-gray-500">
-                    正在加载 X 平台内容...
-                </div>
+            <div id="x-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <p class="col-span-full text-center text-slate-500">加载中...</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- AI + One Person Business Section -->
-    <section id="ai-section" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    AI + 一人公司
-                </h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">
-                    利用 AI 工具提升效率，让一个人也能创造无限可能
-                </p>
+        <section id="github">
+            <div class="flex items-end justify-between mb-5">
+                <h2 class="text-2xl sm:text-3xl font-bold">GitHub 教程资源</h2>
+                <span class="text-sm text-slate-500">仓库与关键词检索</span>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8 card-hover">
-                    <div class="w-14 h-14 bg-blue-500 rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">AI 内容创作</h3>
-                    <p class="text-gray-600">
-                        使用 ChatGPT、Claude 等 AI 工具快速生成高质量内容，建立个人品牌
-                    </p>
-                </div>
-                <div class="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-8 card-hover">
-                    <div class="w-14 h-14 bg-green-500 rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">自动化开发</h3>
-                    <p class="text-gray-600">
-                        借助 AI 编程助手，快速构建产品原型，降低技术门槛
-                    </p>
-                </div>
-                <div class="bg-gradient-to-br from-purple-50 to-pink-100 rounded-2xl p-8 card-hover">
-                    <div class="w-14 h-14 bg-purple-500 rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">数据分析</h3>
-                    <p class="text-gray-600">
-                        利用 AI 分析市场趋势和用户行为，做出更明智的商业决策
-                    </p>
-                </div>
+            <div id="github-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <p class="col-span-full text-center text-slate-500">加载中...</p>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">One Person Business Hub</h3>
-                    <p class="text-gray-400">
-                        致力于帮助创业者收集和整理优质资源，实现独立创业梦想。
-                    </p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-4">快速链接</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#youtube" class="hover:text-white transition">YouTube教程</a></li>
-                        <li><a href="#x-content" class="hover:text-white transition">X精华内容</a></li>
-                        <li><a href="#ai-section" class="hover:text-white transition">AI+创业</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-4">GitHub</h3>
-                    <p class="text-gray-400 mb-4">
-                        本项目开源在 GitHub，欢迎 Star 和贡献。
-                    </p>
-                    <a href="https://github.com/simonsxxs/opcmodev1" target="_blank" class="inline-flex items-center text-blue-400 hover:text-blue-300">
-                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                        访问仓库
-                    </a>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 One Person Business Hub. All rights reserved.</p>
-            </div>
+    <footer class="bg-slate-900 text-slate-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-sm">
+            <p>数据更新时间：2026-03-01。仓库：<a href="https://github.com/simonsxxs/opcmode" class="text-sky-300 hover:text-sky-200" target="_blank" rel="noopener noreferrer">simonsxxs/opcmode</a></p>
         </div>
     </footer>
 
