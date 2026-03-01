@@ -1,0 +1,62 @@
+import{_ as n,c as s,o as i,a5 as o,j as e,a as t,az as l}from"./chunks/framework.Dtwt352Q.js";const b=JSON.parse('{"title":"Git Basics: Your First Commit and Sync to GitHub","description":"Learn the minimal Git loop: init/clone, status/add/commit, branch, push/pull, and sync your local repo to GitHub. Also understand why OpenCode recommends using Git (/undo, project identification).","frontmatter":{"title":"Git Basics: Your First Commit and Sync to GitHub","subtitle":"A minimal working loop for Git beginners","course":"OpenCode Practical Course","stage":"Phase 2","lesson":"2.6","duration":"15 minutes","practice":"20 minutes","level":"Beginner","description":"Learn the minimal Git loop: init/clone, status/add/commit, branch, push/pull, and sync your local repo to GitHub. Also understand why OpenCode recommends using Git (/undo, project identification).","tags":["Git","GitHub","Version Control","Beginner"],"prerequisite":["2.1 Interface and Basic Operations"]},"headers":[],"relativePath":"en/2-daily/06-git-basics.md","filePath":"en/2-daily/06-git-basics.md","lastUpdated":1772014034000}'),r={name:"en/2-daily/06-git-basics.md"};function c(d,a,u,p,h,m){return i(),s("div",null,[...a[0]||(a[0]=[o("",17),e("div",{class:"language-bash"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"bash"),e("pre",null,[e("code",{"v-pre":""},"git --version")])],-1),e("p",null,'If you see "command not found," install by system:',-1),e("div",{class:"vp-code-group"},[e("div",{class:"tabs"},[e("input",{type:"radio",name:"group-108",id:"tab-109",checked:""}),e("label",{"data-title":"macOS (Homebrew)",for:"tab-109"},"macOS (Homebrew)"),e("input",{type:"radio",name:"group-108",id:"tab-110"}),e("label",{"data-title":"Ubuntu/Debian",for:"tab-110"},"Ubuntu/Debian"),e("input",{type:"radio",name:"group-108",id:"tab-111"}),e("label",{"data-title":"Windows (winget)",for:"tab-111"},"Windows (winget)")]),e("div",{class:"blocks"},[e("div",{class:"language-bash active"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"bash"),e("pre",null,[e("code",{"v-pre":""},"brew install git")])]),e("div",{class:"language-bash"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"bash"),e("pre",null,[e("code",{"v-pre":""},"sudo apt update && sudo apt install -y git")])]),e("div",{class:"language-powershell"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"powershell"),e("pre",null,[e("code",{"v-pre":""},"winget install --id Git.Git -e")])])])],-1),o("",5),e("div",{class:"language-text"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"text"),e("pre",null,[e("code",{"v-pre":""},`Working Tree
+  |  git add
+  v
+Index (Staging Area)
+  |  git commit
+  v
+Commits (History)`)])],-1),o("",11),e("div",{class:"language-bash"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"bash"),e("pre",null,[e("code",{"v-pre":""},`git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+
+# Verify
+git config --global --get user.name
+git config --global --get user.email`)])],-1),o("",4),e("div",{class:"vp-code-group"},[e("div",{class:"tabs"},[e("input",{type:"radio",name:"group-266",id:"tab-267",checked:""}),e("label",{"data-title":"I have a local folder (recommended for beginners)",for:"tab-267"},"I have a local folder (recommended for beginners)"),e("input",{type:"radio",name:"group-266",id:"tab-268"}),e("label",{"data-title":"I'm cloning an existing repo from GitHub",for:"tab-268"},"I'm cloning an existing repo from GitHub")]),e("div",{class:"blocks"},[e("div",{class:"language-bash active"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"bash"),e("pre",null,[e("code",{"v-pre":""},`# Navigate to your project directory
+cd /path/to/your/project
+
+# Initialize repository
+git init`)])]),e("div",{class:"language-bash"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"bash"),e("pre",null,[e("code",{"v-pre":""},`git clone https://github.com/<owner>/<repo>.git
+cd <repo>`)])])])],-1),e("p",null,[e("strong",null,"You should see"),t(": "),e("code",null,"git init"),t(" will indicate repository initialized; "),e("code",null,"git clone"),t(" will download the code locally.")],-1),e("p",null,[t("Add a "),e("code",null,".gitignore"),t(" (to avoid committing generated files, caches, secrets):")],-1),e("div",{class:"language-bash"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"bash"),e("pre",null,[e("code",{"v-pre":""},`# Dependencies and build outputs
+node_modules/
+dist/
+build/
+
+# Logs
+*.log
+
+# Local environment variables (don't commit to repo)
+.env
+.env.local
+
+# System/editor misc
+.DS_Store
+.idea/`)])],-1),e("div",{class:"tip custom-block"},[e("p",{class:"custom-block-title"},"Don't want to write it yourself? Let OpenCode help"),e("p",null,[t("You can just say one sentence and let OpenCode generate/update "),e("code",null,".gitignore"),t(" based on the current project and "),e("code",null,"git status"),t(":")]),e("div",{class:"language-text"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"text"),e("pre",null,[e("code",{"v-pre":""},`Check which files shouldn't be committed and add them to .gitignore.
+
+Requirements:
+1) First run and reference git status / git diff (just look, don't commit/push directly)
+2) Only modify/create .gitignore, then show the content and explain why each entry should be ignored
+3) If you find .env, secrets, tokens or similar sensitive files, stop and warn me first`)])])],-1),e("div",{class:"warning custom-block"},[e("p",{class:"custom-block-title"},[t("A common beginner trap with "),e("code",null,".gitignore")]),e("p",null,[e("code",null,".gitignore"),t(' only works for files "not yet tracked by Git."')]),e("p",null,[t("If you've already committed a file, adding it to "),e("code",null,".gitignore"),t(" won't remove it. The correct approach is to first remove it from Git tracking (but keep the local file), then commit:")]),e("div",{class:"language-bash"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"bash"),e("pre",null,[e("code",{"v-pre":""},`git rm --cached <file>
+git commit -m "chore: stop tracking <file>"`)])]),e("p",null,[t("If that file contains secrets/passwords, don't just do "),e("code",null,"rm --cached"),t(" - you also need to immediately revoke and regenerate the secret on the corresponding platform.")])],-1),e("div",{class:"warning custom-block"},[e("p",{class:"custom-block-title"},"If you already have a project-specific .gitignore"),e("p",null,"Keep your existing content; don't force it to match this one.")],-1),e("h3",{id:"step-3-make-your-first-commit",tabindex:"-1"},[t("Step 3: Make your first commit "),e("a",{class:"header-anchor",href:"#step-3-make-your-first-commit","aria-label":"Permalink to “Step 3: Make your first commit”"},"​")],-1),e("p",null,[e("strong",null,"Why"),t(' The first commit is like "save point 0." From this moment, you can always return to this state.')],-1),e("div",{class:"language-bash"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"bash"),e("pre",null,[e("code",{"v-pre":""},`# Check current status
+git status
+
+# Add changes to staging area (first time usually add all)
+git add .
+
+# Commit
+git commit -m "init"`)])],-1),e("p",null,[e("strong",null,"You should see"),t(": "),e("code",null,"git status"),t(' changes from a bunch of red "untracked/modified" to "working tree clean."')],-1),e("p",null,"Check the commit history:",-1),e("div",{class:"language-bash"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"bash"),e("pre",null,[e("code",{"v-pre":""},"git log --oneline -5")])],-1),o("",4),e("div",{class:"language-bash"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"bash"),e("pre",null,[e("code",{"v-pre":""},"git branch --show-current")])],-1),e("p",null,[t("If you see "),e("code",null,"master"),t(", consider renaming it to "),e("code",null,"main"),t(":")],-1),e("div",{class:"language-bash"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"bash"),e("pre",null,[e("code",{"v-pre":""},"git branch -M main")])],-1),e("ol",{start:"3"},[e("li",null,[t("Connect remote and push "),e("code",null,"main"),t(":")])],-1),e("div",{class:"language-bash"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"bash"),e("pre",null,[e("code",{"v-pre":""},`git remote -v
+
+# If you initialized with git init: add origin
+# If you cloned from GitHub: origin usually exists, skip this line
+git remote add origin https://github.com/<owner>/<repo>.git
+
+# Ensure you're on main before pushing
+git checkout main
+git push -u origin main`)])],-1),o("",5),e("div",{class:"language-text"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"text"),e("pre",null,[e("code",{"v-pre":""},"Summarize the changes, commit and push.")])],-1),e("details",{class:"details custom-block"},[e("summary",null,"Want to be safer (recommended)"),e("p",null,`If you don't want to "blind push," use this (also short, but safer):`),e("div",{class:"language-text"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"text"),e("pre",null,[e("code",{"v-pre":""},`First check git status + git diff, summarize changes and give me a commit message;
+I'll confirm before you execute commit and push.
+
+Note: If you find .env, secrets, tokens or similar files, stop and warn me first.`)])])],-1),e("p",null,[t("If you prefer a more hands-on approach, you can also run key commands with "),e("code",null,"!"),t(":")],-1),e("div",{class:"language-bash"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"bash"),e("pre",null,[e("code",{"v-pre":""},`git status
+git diff`)])],-1),e("p",null,[e("strong",null,"You should see"),t(":")],-1),e("ul",null,[e("li",null,"OpenCode first summarizes changes, then provides a commit message"),e("li",null,"After successful push, you can see the latest commit on GitHub")],-1),e("div",{class:"warning custom-block"},[e("p",{class:"custom-block-title"},"Is it risky to let it push with one sentence?"),e("p",null,[t("Yes, that's why the pattern is: first "),e("code",null,"status/diff"),t(", then commit/push. You always retain the final opportunity for manual confirmation.")])],-1),e("details",{class:"details custom-block"},[e("summary",null,"Collaboration path (optional): Branch + PR"),e("p",null,"Common scenarios where you need this path:"),e("ul",null,[e("li",null,[t("Your repo has "),e("code",null,"main"),t(" branch protection (no direct push allowed)")]),e("li",null,"You want CI / code review before each merge")]),e("div",{class:"language-bash"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"bash"),e("pre",null,[e("code",{"v-pre":""},`# Create branch and commit
+git checkout -b feature/first-change
+git add -A
+git commit -m "feat: first change"
+git push -u origin feature/first-change`)])]),e("p",null,[t("Then create a PR on GitHub: base = "),e("code",null,"main"),t(", compare = "),e("code",null,"feature/first-change"),t(".")]),e("p",null,"After merging, sync locally:"),e("div",{class:"language-bash"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"bash"),e("pre",null,[e("code",{"v-pre":""},`git checkout main
+git pull`)])])],-1),e("h3",{id:"step-6-keep-local-and-github-in-sync",tabindex:"-1"},[t("Step 6: Keep local and GitHub in sync "),e("a",{class:"header-anchor",href:"#step-6-keep-local-and-github-in-sync","aria-label":"Permalink to “Step 6: Keep local and GitHub in sync”"},"​")],-1),e("p",null,[e("strong",null,"Why"),t(" Whenever your code changes on GitHub (you pushed from another computer, merged a PR, or someone else pushed), you need to pull updates locally.")],-1),e("p",null,"Recommended habit:",-1),e("ul",null,[e("li",null,[t("Start work: "),e("code",null,"pull")]),e("li",null,[t("Finish work: "),e("code",null,"commit + push")])],-1),e("div",{class:"language-bash"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"bash"),e("pre",null,[e("code",{"v-pre":""},`git checkout main
+git pull`)])],-1),e("p",null,"(Optional) Delete local branch:",-1),e("div",{class:"language-bash"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"bash"),e("pre",null,[e("code",{"v-pre":""},"git branch -d feature/first-change")])],-1),o("",18)])])}const y=n(r,[["render",c]]);export{b as __pageData,y as default};

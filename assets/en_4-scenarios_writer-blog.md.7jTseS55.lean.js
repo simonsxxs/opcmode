@@ -1,0 +1,204 @@
+import{_ as o,I as i,c as s,o as l,a5 as a,j as e,J as d,a as n,aS as c}from"./chunks/framework.Dtwt352Q.js";const w=JSON.parse('{"title":"A2 Blog & Newsletter Writing","description":"Use OpenCode to batch-generate blog topics, manage article series, and maintain consistent writing style for your blog or newsletter.","frontmatter":{"title":"A2 Blog & Newsletter Writing","subtitle":"Batch Topics, Series Management, Style Consistency","course":"OpenCode Practical Guide","stage":"Stage 4","lesson":"A2","duration":"15 min","practice":"25 min","level":"Beginner","description":"Use OpenCode to batch-generate blog topics, manage article series, and maintain consistent writing style for your blog or newsletter.","tags":["blog","newsletter","content-creation"],"prerequisite":["A1 Writing Workflow"]},"headers":[],"relativePath":"en/4-scenarios/writer-blog.md","filePath":"en/4-scenarios/writer-blog.md","lastUpdated":1772014034000}'),p={name:"en/4-scenarios/writer-blog.md"};function u(g,t,m,h,b,y){const r=i("AdInArticle");return l(),s("div",null,[t[0]||(t[0]=a("",25)),t[1]||(t[1]=e("div",{class:"language-bash"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"bash"),e("pre",null,[e("code",{"v-pre":""},`mkdir ~/my-blog
+cd ~/my-blog
+opencode`)])],-1)),t[2]||(t[2]=e("p",null,"Ask AI to create the directory structure:",-1)),t[3]||(t[3]=e("div",{class:"language-"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"}),e("pre",null,[e("code",{"v-pre":""},`Help me set up a blog content management structure:
+- topics/ (store topic planning)
+- assets/ (store reusable materials)
+- posts/ (organize by series)
+- style-guide.md (writing style guidelines)
+
+Create these directories and empty files`)])],-1)),t[4]||(t[4]=a("",5)),t[5]||(t[5]=e("div",{class:"language-"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"}),e("pre",null,[e("code",{"v-pre":""},`Help me create a writing agent, save to .opencode/agent/blogger.md:
+
+---
+name: blogger
+description: Professional content creator assistant, skilled at topic ideation, outlining, and copy editing
+mode: subagent
+temperature: 0.8
+---
+
+Blog niche: Career growth and productivity
+Target audience: 25-35 year old professionals
+Tone: Professional but approachable, like chatting with a friend
+Article structure: Hook with a question → Deliver value → End with a memorable insight
+Banned words: synergy, leverage, disrupt, game-changer, paradigm shift
+Word count: 12000+-22000+ words`)])],-1)),t[6]||(t[6]=e("p",null,[e("strong",null,"You should see"),n(": AI created the agent configuration file")],-1)),t[7]||(t[7]=e("div",{class:"tip custom-block"},[e("p",{class:"custom-block-title"},"💡 This is OpenCode's Unique Value"),e("p",null,"Every time you write, AI will automatically follow this style — no need to repeat.")],-1)),t[8]||(t[8]=e("h3",{id:"step-3-batch-generate-topic-calendar",tabindex:"-1"},[n("Step 3: Batch Generate Topic Calendar "),e("a",{class:"header-anchor",href:"#step-3-batch-generate-topic-calendar","aria-label":"Permalink to “Step 3: Batch Generate Topic Calendar”"},"​")],-1)),d(r),t[9]||(t[9]=e("p",null,[e("strong",null,"Why"),e("br"),n(" Plan a month at once, avoid daily topic anxiety.")],-1)),t[10]||(t[10]=e("div",{class:"language-"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"}),e("pre",null,[e("code",{"v-pre":""},`Based on my blog niche (career growth), generate a 30-day content calendar:
+
+Requirements:
+1. 3 posts per week, 12 posts total
+2. Include: title, core insight, target keywords
+3. Consider seasonal themes (year-end reflection, new year planning)
+4. Mark difficulty (Easy/Medium/Deep)
+
+Save as topics/2025-january-calendar.md`)])],-1)),t[11]||(t[11]=e("h3",{id:"step-4-build-article-series-structure",tabindex:"-1"},[n("Step 4: Build Article Series Structure "),e("a",{class:"header-anchor",href:"#step-4-build-article-series-structure","aria-label":"Permalink to “Step 4: Build Article Series Structure”"},"​")],-1)),t[12]||(t[12]=e("p",null,[e("strong",null,"Why"),e("br"),n(" Series articles boost subscriber loyalty, but need unified management.")],-1)),t[13]||(t[13]=e("div",{class:"language-"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"}),e("pre",null,[e("code",{"v-pre":""},`I want to write a "Workplace Communication" series, 5 articles total.
+
+Help me:
+1. Create posts/workplace-communication-series/ directory
+2. Create outline.md (series plan, each article's position, publish order)
+3. Create empty files for each article (01-xxx.md format)
+
+Series plan:
+- Article 1: Why Your Communication Always Fails
+- Article 2: 3 Techniques for Upward Communication
+- Article 3: Core Principles of Cross-team Communication
+- Article 4: How to Navigate Difficult Conversations
+- Article 5: Build Your Personal Brand Through Communication`)])],-1)),t[14]||(t[14]=e("h3",{id:"step-5-generate-articles-using-asset-library",tabindex:"-1"},[n("Step 5: Generate Articles Using Asset Library "),e("a",{class:"header-anchor",href:"#step-5-generate-articles-using-asset-library","aria-label":"Permalink to “Step 5: Generate Articles Using Asset Library”"},"​")],-1)),t[15]||(t[15]=e("p",null,[e("strong",null,"Why"),e("br"),n(" Reuse existing materials to improve efficiency.")],-1)),t[16]||(t[16]=e("p",null,"First, add some assets:",-1)),t[17]||(t[17]=e("div",{class:"language-"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"}),e("pre",null,[e("code",{"v-pre":""},`Create these files under assets/:
+
+quotes.md - Collected insights and quotes
+cases.md - Real workplace case studies
+data.md - Research data and statistics`)])],-1)),t[18]||(t[18]=e("p",null,"Then write articles based on assets:",-1)),t[19]||(t[19]=e("div",{class:"language-"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"}),e("pre",null,[e("code",{"v-pre":""},`Write a blog post based on the topic "3 Techniques for Upward Communication".
+
+Requirements:
+1. Follow the style in AGENTS.md
+2. Reference quotes from @assets/quotes.md
+3. Use cases from @assets/cases.md
+4. Around 2000 words
+
+Save as posts/workplace-communication-series/02-upward-communication-techniques.md`)])],-1)),t[20]||(t[20]=e("hr",null,null,-1)),t[21]||(t[21]=e("h2",{id:"📋-magic-prompts",tabindex:"-1"},[n("📋 Magic Prompts "),e("a",{class:"header-anchor",href:"#📋-magic-prompts","aria-label":"Permalink to “📋 Magic Prompts”"},"​")],-1)),t[22]||(t[22]=e("h3",{id:"📅-30-day-topic-planning",tabindex:"-1"},[n("📅 30-Day Topic Planning "),e("a",{class:"header-anchor",href:"#📅-30-day-topic-planning","aria-label":"Permalink to “📅 30-Day Topic Planning”"},"​")],-1)),t[23]||(t[23]=e("blockquote",null,[e("p",null,"Expected result: Generate complete content calendar, plan a month at once")],-1)),t[24]||(t[24]=e("div",{class:"language-"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"}),e("pre",null,[e("code",{"v-pre":""},`## Role
+You are a senior content strategist, expert at topic planning and editorial calendars.
+
+## Task
+Generate a 30-day content calendar based on blog positioning.
+
+## Input
+### Required
+- Blog niche: [YOUR NICHE]
+- Target audience: [AUDIENCE PROFILE]
+- Publishing frequency: [N] posts per week
+
+### Optional
+- Current events: [Seasonal topics to include?]
+- Previous topics: [Already covered topics?]
+
+## Output Format
+Generate topic table:
+| Date | Title | Core Insight | Target Keywords | Difficulty | Type |
+|------|-------|--------------|-----------------|------------|------|
+
+### Difficulty Labels
+- Easy (30 min)
+- Medium (1 hour)
+- Deep (2 hours)
+
+### Type Labels
+- How-to: Practical tips, methods
+- Story: Case studies, experiences
+- Opinion: Commentary, reflections
+- Roundup: Summaries, lists
+
+## Constraints
+- ✅ Each topic includes core insight, not just title
+- ✅ Consider timeliness (holidays, seasons, events)
+- ✅ Vary difficulty and type
+- ❌ Avoid homogeneous topics
+- ❌ Avoid repeating covered content`)])],-1)),t[25]||(t[25]=e("h3",{id:"🎨-style-lock-template",tabindex:"-1"},[n("🎨 Style Lock Template "),e("a",{class:"header-anchor",href:"#🎨-style-lock-template","aria-label":"Permalink to “🎨 Style Lock Template”"},"​")],-1)),t[26]||(t[26]=e("blockquote",null,[e("p",null,"Expected result: Generate Agent configuration, lock in blog style")],-1)),t[27]||(t[27]=e("div",{class:"language-"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"}),e("pre",null,[e("code",{"v-pre":""},`## Role
+You are a brand strategist, expert at defining and locking in brand voice.
+
+## Task
+Create a writing style configuration (AGENTS.md) for the blog.
+
+## Input
+### Required
+- Blog name: [BLOG NAME]
+- Niche: [FIELD]
+- Target audience: [Age, profession, pain points]
+
+### Optional
+- Tone style: [e.g., "Professional but friendly"?]
+- Reference blogs: [Style references?]
+
+## Output Format
+Generate AGENTS.md configuration:
+
+\`\`\`yaml
+---
+name: [BLOG NAME]
+description: [One-line description]
+---
+
+## Blog Positioning
+[Positioning description]
+
+## Target Audience Profile
+- Age:
+- Profession:
+- Pain points:
+- Needs:
+
+## Tone & Voice
+[Detailed description, including positive and negative examples]
+
+## Article Structure Template
+1. Opening: [How to hook]
+2. Body: [Core content structure]
+3. Closing: [How to wrap up]
+
+## Banned Words
+[Words to avoid, comma separated]
+
+## Signature Phrases
+[Personal style phrase examples]
+
+## Word Count Range
+[Word count]
+\`\`\`
+
+## Constraints
+- ✅ Style description should be specific with examples
+- ✅ Banned words should be practical
+- ✅ Article structure should be reusable
+- ❌ Avoid vague descriptions`)])],-1)),t[28]||(t[28]=e("h3",{id:"📚-series-article-planning",tabindex:"-1"},[n("📚 Series Article Planning "),e("a",{class:"header-anchor",href:"#📚-series-article-planning","aria-label":"Permalink to “📚 Series Article Planning”"},"​")],-1)),t[29]||(t[29]=e("blockquote",null,[e("p",null,"Expected result: Generate series structure, maintain content coherence")],-1)),t[30]||(t[30]=e("div",{class:"language-"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"}),e("pre",null,[e("code",{"v-pre":""},`## Role
+You are a content architect, expert at planning serialized content.
+
+## Task
+Design overall structure and positioning for each article in a series.
+
+## Input
+### Required
+- Series theme: [THEME]
+- Article count: [N] articles
+- Series goal: [What readers will gain]
+
+### Optional
+- Target audience: [Audience profile?]
+- Publishing cadence: [Posts per week?]
+
+## Output Format
+1. **Series Overview**
+   - Series positioning
+   - Target audience
+   - Core value
+
+2. **Article Plan**
+   | # | Title | Core Content | Relation to Previous | Relation to Next |
+   |---|-------|--------------|---------------------|------------------|
+
+3. **Progression Logic**
+   - From [starting point] to [end point]
+   - Each article's advancement relationship
+
+4. **Directory Structure**
+   \`\`\`
+   series-name/
+   ├── outline.md
+   ├── 01-xxx.md
+   ├── 02-xxx.md
+   └── ...
+   \`\`\`
+
+## Constraints
+- ✅ Each article has standalone value, but connects to series
+- ✅ Clear progression logic
+- ✅ Consider reader's learning curve
+- ❌ Avoid content overlap
+- ❌ Avoid large jumps in difficulty`)])],-1)),t[31]||(t[31]=a("",11)),t[32]||(t[32]=e("div",{class:"language-bash"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"bash"),e("pre",null,[e("code",{"v-pre":""},"mkdir -p .opencode/command")])],-1)),t[33]||(t[33]=e("p",null,[n("Create "),e("code",null,".opencode/command/blog.md"),n(":")],-1)),t[34]||(t[34]=e("div",{class:"language-markdown"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"markdown"),e("pre",null,[e("code",{"v-pre":""},`---
+description: Quickly generate a blog post
+---
+
+Write a blog post based on the following topic:
+
+Topic: $ARGUMENTS
+
+Requirements:
+1. Follow the style in AGENTS.md
+2. Reference relevant materials from @assets/
+3. Around 2000 words
+4. Save to posts/ directory`)])],-1)),t[35]||(t[35]=a("",11))])}const C=o(p,[["render",u]]);export{w as __pageData,C as default};

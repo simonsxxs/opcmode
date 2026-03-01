@@ -1,0 +1,15 @@
+import{_ as d,c as o,o as n,a5 as a,j as t,a as e,ap as r}from"./chunks/framework.Dtwt352Q.js";const g=JSON.parse('{"title":"连接模型：第一次对话","description":"连接智谱 GLM-4.7（国内首选），完成 OpenCode 的第一次对话。","frontmatter":{"title":"连接模型：第一次对话","subtitle":"发送你的第一句话","course":"OpenCode 中文实战课","stage":"第一阶段","lesson":"1.4","duration":"15 分钟","practice":"10 分钟","level":"新手","description":"连接智谱 GLM-4.7（国内首选），完成 OpenCode 的第一次对话。","tags":["模型","API Key","智谱","GLM"],"prerequisite":["1.2 安装"]},"headers":[],"relativePath":"1-start/04-connect.md","filePath":"1-start/04-connect.md","lastUpdated":1772014034000}'),i={name:"1-start/04-connect.md"};function s(c,l,h,p,u,b){return n(),o("div",null,[...l[0]||(l[0]=[a("",36),t("div",{class:"language-"},[t("button",{title:"Copy Code",class:"copy"}),t("span",{class:"lang"}),t("pre",null,[t("code",{"v-pre":""},"/connect")])],-1),t("p",null,"会弹出提供商选择界面，按提示操作即可。",-1),t("h3",{id:"方式二-终端用-opencode-auth-login",tabindex:"-1"},[e("方式二：终端用 opencode auth login "),t("a",{class:"header-anchor",href:"#方式二-终端用-opencode-auth-login","aria-label":"Permalink to “方式二：终端用 opencode auth login”"},"​")],-1),t("p",null,[e("在启动 OpenCode "),t("strong",null,"之前"),e("，在终端运行：")],-1),t("div",{class:"language-bash"},[t("button",{title:"Copy Code",class:"copy"}),t("span",{class:"lang"},"bash"),t("pre",null,[t("code",{"v-pre":""},"opencode auth login")])],-1),t("p",null,"你会看到提供商列表：",-1),t("div",{class:"language-"},[t("button",{title:"Copy Code",class:"copy"}),t("span",{class:"lang"}),t("pre",null,[t("code",{"v-pre":""},`? Select provider
+❯ OpenCode (recommended)
+  Anthropic (Claude Max or API key)
+  GitHub Copilot (ChatGPT Plus/Pro or API key)
+  OpenAI (ChatGPT Plus/Pro or API key)
+  Google
+  ...`)])],-1),t("p",null,"选择后按提示输入 API Key 或完成 OAuth。",-1),t("h3",{id:"查看已配置的提供商",tabindex:"-1"},[e("查看已配置的提供商 "),t("a",{class:"header-anchor",href:"#查看已配置的提供商","aria-label":"Permalink to “查看已配置的提供商”"},"​")],-1),t("div",{class:"language-bash"},[t("button",{title:"Copy Code",class:"copy"}),t("span",{class:"lang"},"bash"),t("pre",null,[t("code",{"v-pre":""},`opencode auth list
+# 或简写
+opencode auth ls`)])],-1),t("p",null,"你会看到：",-1),t("div",{class:"language-"},[t("button",{title:"Copy Code",class:"copy"}),t("span",{class:"lang"}),t("pre",null,[t("code",{"v-pre":""},`Credentials ~/.local/share/opencode/auth.json
+√ OpenCode api
+
+Environment
+√ OpenCode OPENCODE_API_KEY`)])],-1),a("",7),t("div",{class:"language-"},[t("button",{title:"Copy Code",class:"copy"}),t("span",{class:"lang"}),t("pre",null,[t("code",{"v-pre":""},"/models")])],-1),t("p",null,[e("用 "),t("kbd",null,"↑"),e(),t("kbd",null,"↓"),e(" 选择，按 "),t("kbd",null,"Enter"),e(" 确认。")],-1),t("div",{class:"tip custom-block"},[t("p",{class:"custom-block-title"},"设置默认模型"),t("p",null,[e("在 "),t("code",null,"opencode.json"),e(" 中配置 "),t("code",null,"model"),e(" 字段，可以设置默认使用的模型：")]),t("div",{class:"language-json"},[t("button",{title:"Copy Code",class:"copy"}),t("span",{class:"lang"},"json"),t("pre",null,[t("code",{"v-pre":""},`{
+  "model": "deepseek/deepseek-chat"
+}`)])])],-1),a("",9)])])}const P=d(i,[["render",s]]);export{g as __pageData,P as default};

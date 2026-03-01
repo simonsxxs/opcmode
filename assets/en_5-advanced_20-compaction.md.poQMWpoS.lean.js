@@ -1,0 +1,34 @@
+import{_ as i,I as r,c as l,o as s,a5 as a,j as e,J as d,a as o,bs as c}from"./chunks/framework.Dtwt352Q.js";const v=JSON.parse('{"title":"5.20 Context Compaction","description":"Learn the context compaction mechanism, understand Context percentage calculation, master compaction commands and auto-trigger principles.","frontmatter":{"title":"5.20 Context Compaction","subtitle":"Smart Management of Long Conversations","course":"OpenCode Practical Course","stage":"Stage 5","lesson":"5.20","duration":"15 minutes","level":"Advanced","description":"Learn the context compaction mechanism, understand Context percentage calculation, master compaction commands and auto-trigger principles.","tags":["context","compaction","model configuration"],"prerequisite":["5.1a Configuration Basics","2.1 Interface and Basic Operations"]},"headers":[],"relativePath":"en/5-advanced/20-compaction.md","filePath":"en/5-advanced/20-compaction.md","lastUpdated":1772014034000}'),p={name:"en/5-advanced/20-compaction.md"};function u(m,t,g,h,b,f){const n=r("AdInArticle");return s(),l("div",null,[t[0]||(t[0]=a("",28)),t[1]||(t[1]=e("div",{class:"language-"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"}),e("pre",null,[e("code",{"v-pre":""},"Context Percentage = (input + output + reasoning + cache.read + cache.write) / model.limit.context * 100")])],-1)),t[2]||(t[2]=a("",4)),t[3]||(t[3]=e("div",{class:"language-typescript"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"typescript"),e("pre",null,[e("code",{"v-pre":""},`Trigger condition: token_count >= (input_limit - reserved)
+Where reserved = min(20000, model_max_output)`)])],-1)),t[4]||(t[4]=a("",7)),d(n),t[5]||(t[5]=e("h4",{id:"step-1-prune-tool-outputs",tabindex:"-1"},[o("Step 1: Prune Tool Outputs "),e("a",{class:"header-anchor",href:"#step-1-prune-tool-outputs","aria-label":"Permalink to “Step 1: Prune Tool Outputs”"},"​")],-1)),t[6]||(t[6]=e("div",{class:"language-typescript"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"typescript"),e("pre",null,[e("code",{"v-pre":""},`// Retain last 40K tokens of tool outputs
+PRUNE_PROTECT = 40_000
+PRUNE_MINIMUM = 20_000`)])],-1)),t[7]||(t[7]=e("ul",null,[e("li",null,"Traverse messages from end to beginning"),e("li",null,"Accumulate tool output tokens until reaching 40,000"),e("li",null,[o("Mark tool outputs beyond this as "),e("code",null,"compacted")]),e("li",null,"Only execute if cleanup amount > 20,000 (avoid trivial cleanups)")],-1)),t[8]||(t[8]=e("h4",{id:"step-2-call-compaction-agent",tabindex:"-1"},[o("Step 2: Call Compaction Agent "),e("a",{class:"header-anchor",href:"#step-2-call-compaction-agent","aria-label":"Permalink to “Step 2: Call Compaction Agent”"},"​")],-1)),t[9]||(t[9]=e("ul",null,[e("li",null,[o("Creates a hidden agent (name: "),e("code",null,"compaction"),o(")")]),e("li",null,[o("Disables all tool permissions ("),e("code",null,'PermissionNext.fromConfig({ "*": "deny" })'),o(")")]),e("li",null,[o("Sends summary prompt:"),e("div",{class:"language-"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"}),e("pre",null,[e("code",{"v-pre":""},`"Provide a detailed prompt for continuing our conversation above. 
+Focus on information that would be helpful for continuing the conversation, 
+including what we did, what we're doing, which files we're working on, 
+and what we're going to do next considering new session will not have access to our conversation."`)])])])],-1)),t[10]||(t[10]=a("",15)),t[11]||(t[11]=e("div",{class:"language-"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"}),e("pre",null,[e("code",{"v-pre":""},`Context
+145,234 tokens 73% used`)])],-1)),t[12]||(t[12]=a("",6)),t[13]||(t[13]=e("div",{class:"language-"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"}),e("pre",null,[e("code",{"v-pre":""},"/compact")])],-1)),t[14]||(t[14]=e("p",null,"Or alias:",-1)),t[15]||(t[15]=e("div",{class:"language-"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"}),e("pre",null,[e("code",{"v-pre":""},"/summarize")])],-1)),t[16]||(t[16]=a("",5)),t[17]||(t[17]=e("div",{class:"language-"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"}),e("pre",null,[e("code",{"v-pre":""},`Context
+45,678 tokens 23% used`)])],-1)),t[18]||(t[18]=a("",14)),t[19]||(t[19]=e("div",{class:"language-json"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"json"),e("pre",null,[e("code",{"v-pre":""},`{
+  "compaction": {
+    "reserved": 30000
+  }
+}`)])],-1)),t[20]||(t[20]=a("",5)),t[21]||(t[21]=e("div",{class:"language-json"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"json"),e("pre",null,[e("code",{"v-pre":""},`{
+  "compaction": {
+    "auto": false
+  }
+}`)])],-1)),t[22]||(t[22]=e("p",null,"Or via command line:",-1)),t[23]||(t[23]=e("div",{class:"language-bash"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"bash"),e("pre",null,[e("code",{"v-pre":""},"OPENCODE_DISABLE_AUTOCOMPACT=true opencode")])],-1)),t[24]||(t[24]=e("h3",{id:"disable-tool-output-pruning",tabindex:"-1"},[o("Disable Tool Output Pruning "),e("a",{class:"header-anchor",href:"#disable-tool-output-pruning","aria-label":"Permalink to “Disable Tool Output Pruning”"},"​")],-1)),t[25]||(t[25]=e("p",null,"Prune automatically clears old tool outputs. If you want to retain all tool outputs:",-1)),t[26]||(t[26]=e("p",null,[e("strong",null,"opencode.json")],-1)),t[27]||(t[27]=e("div",{class:"language-json"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"json"),e("pre",null,[e("code",{"v-pre":""},`{
+  "compaction": {
+    "prune": false
+  }
+}`)])],-1)),t[28]||(t[28]=e("p",null,"Or via command line:",-1)),t[29]||(t[29]=e("div",{class:"language-bash"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"bash"),e("pre",null,[e("code",{"v-pre":""},"OPENCODE_DISABLE_PRUNE=true opencode")])],-1)),t[30]||(t[30]=e("h3",{id:"customize-model-context-limits",tabindex:"-1"},[o("Customize Model Context Limits "),e("a",{class:"header-anchor",href:"#customize-model-context-limits","aria-label":"Permalink to “Customize Model Context Limits”"},"​")],-1)),t[31]||(t[31]=e("p",null,"If you want to modify a model's context or output limits (e.g., trigger compaction earlier):",-1)),t[32]||(t[32]=e("p",null,[e("strong",null,"opencode.json")],-1)),t[33]||(t[33]=e("div",{class:"language-json"},[e("button",{title:"Copy Code",class:"copy"}),e("span",{class:"lang"},"json"),e("pre",null,[e("code",{"v-pre":""},`{
+  "provider": {
+    "openai": {
+      "models": {
+        "gpt-5.2": {
+          "limit": {
+            "context": 100000,
+            "output": 10000
+          }
+        }
+      }
+    }
+  }
+}`)])],-1)),t[34]||(t[34]=a("",23))])}const y=i(p,[["render",u]]);export{v as __pageData,y as default};

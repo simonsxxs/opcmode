@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Prompt 模板库 - AI 编程助手实战指南</title>
+    <meta name="description" content="开箱即用的 Prompt 模板，一键复制直接使用">
+    <meta name="generator" content="VitePress v2.0.0-alpha.15">
+    <link rel="preload stylesheet" href="/assets/style.B3We_K22.css" as="style">
+    <link rel="preload stylesheet" href="/vp-icons.css" as="style">
+    
+    <script type="module" src="/assets/app.B9UH4D8d.js"></script>
+    <link rel="preload" href="/assets/inter-roman-latin.Di8DUHzh.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="modulepreload" href="/assets/chunks/theme.BlzhKaVP.js">
+    <link rel="modulepreload" href="/assets/chunks/framework.Dtwt352Q.js">
+    <link rel="modulepreload" href="/assets/appendix_prompts.md.D8rLVU14.lean.js">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <meta name="theme-color" content="#10b981">
+    <meta name="author" content="OpenCode 中文社区">
+    <meta name="keywords" content="OpenCode,AI编程,AI编程助手,OpenCode教程,AI写代码,智谱,DeepSeek,Claude">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="OpenCode 中文教程">
+    <meta property="og:title" content="OpenCode 中文教程 - AI 编程助手实战指南">
+    <meta property="og:description" content="OpenCode 是终端 AI 编程助手，本教程从零基础到进阶，教你用 AI 写代码、改 Bug、自动化办公。支持智谱、DeepSeek 等国产模型，完全免费开源。">
+    <meta property="og:image" content="https://learnopencode.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OpenCode 中文教程 - AI 编程助手实战指南">
+    <meta name="twitter:description" content="OpenCode 是终端 AI 编程助手，本教程从零基础到进阶，教你用 AI 写代码、改 Bug、自动化办公。">
+    <meta name="twitter:image" content="https://learnopencode.com/og-image.png">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"OpenCode 中文教程","alternateName":"OpenCode 中文实战课","url":"https://learnopencode.com","description":"OpenCode 是终端 AI 编程助手，本教程从零基础到进阶，教你用 AI 写代码、改 Bug、自动化办公。","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"OpenCode 中文社区","logo":{"@type":"ImageObject","url":"https://learnopencode.com/logo.svg"}}}</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1238777311285568" crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1R6TQGK2HZ"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-1R6TQGK2HZ");</script>
+    <script id="check-dark-mode">(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"auto",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
+    <script id="check-mac-os">document.documentElement.classList.toggle("mac",/Mac|iPhone|iPod|iPad/i.test(navigator.platform));</script>
+    <link rel="canonical" href="https://learnopencode.com/appendix/prompts.html">
+    <meta property="og:url" content="https://learnopencode.com/appendix/prompts.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://learnopencode.com/appendix/prompts">
+    <link rel="alternate" hreflang="en" href="https://learnopencode.com/en/appendix/prompts">
+    <link rel="alternate" hreflang="x-default" href="https://learnopencode.com/appendix/prompts">
+  </head>
+  <body>
+    <div id="app"><div class="Layout" data-v-1df9f90f><!--[--><!--]--><!--[--><span tabindex="-1" data-v-331ec75c></span><a href="#VPContent" class="VPSkipLink visually-hidden" data-v-331ec75c>Skip to content</a><!--]--><!----><header class="VPNav" data-v-1df9f90f data-v-da52a441><div class="VPNavBar" data-v-da52a441 data-v-70946a35><div class="wrapper" data-v-70946a35><div class="container" data-v-70946a35><div class="title" data-v-70946a35><div class="VPNavBarTitle has-sidebar" data-v-70946a35 data-v-1e38c6bc><a class="title" href="/" data-v-1e38c6bc><!--[--><!--]--><!--[--><!--[--><!--[--><img class="VPImage dark logo" src="/logo-dark.png" alt data-v-8426fc1a><!--]--><!--[--><img class="VPImage light logo" src="/logo-light.png" alt data-v-8426fc1a><!--]--><!--]--><!--]--><span data-v-1e38c6bc>OpenCode 中文教程</span><!--[--><!--]--></a></div></div><div class="content" data-v-70946a35><div class="content-body" data-v-70946a35><!--[--><!--]--><div class="VPNavBarSearch search" data-v-70946a35><!--[--><!----><div id="local-search"><button type="button" aria-label="搜索文档" aria-keyshortcuts="/ control+k meta+k" class="DocSearch DocSearch-Button"><span class="DocSearch-Button-Container"><span class="vpi-search DocSearch-Search-Icon"></span><span class="DocSearch-Button-Placeholder">搜索文档</span></span><span class="DocSearch-Button-Keys"><kbd class="DocSearch-Button-Key"></kbd><kbd class="DocSearch-Button-Key"></kbd></span></button></div><!--]--></div><nav aria-labelledby="main-nav-aria-label" class="VPNavBarMenu menu" data-v-70946a35 data-v-39714824><span id="main-nav-aria-label" class="visually-hidden" data-v-39714824> Main Navigation </span><!--[--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/1-start/" tabindex="0" data-v-39714824 data-v-52a1d768><!--[--><span data-v-52a1d768>开始学习</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/4-scenarios/" tabindex="0" data-v-39714824 data-v-52a1d768><!--[--><span data-v-52a1d768>场景实战</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/5-advanced/" tabindex="0" data-v-39714824 data-v-52a1d768><!--[--><span data-v-52a1d768>进阶手册</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/appendix/" tabindex="0" data-v-39714824 data-v-52a1d768><!--[--><span data-v-52a1d768>速查手册</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/community.html" tabindex="0" data-v-39714824 data-v-52a1d768><!--[--><span data-v-52a1d768>加入社群</span><!--]--></a><!--]--><!--]--></nav><div class="VPFlyout VPNavBarTranslations translations" data-v-70946a35 data-v-4c1766e2 data-v-42cb505d><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="Change language" data-v-42cb505d><span class="text" data-v-42cb505d><span class="vpi-languages option-icon" data-v-42cb505d></span><!----><span class="vpi-chevron-down text-icon" data-v-42cb505d></span></span></button><div class="menu" data-v-42cb505d><div class="VPMenu" data-v-42cb505d data-v-25a6cce8><!----><!--[--><!--[--><div class="items" data-v-4c1766e2><p class="title" data-v-4c1766e2>简体中文</p><!--[--><div class="VPMenuLink" data-v-4c1766e2 data-v-faf5b206><a class="VPLink link" href="/en/appendix/prompts.html" lang="en-US" data-v-faf5b206><!--[--><span data-v-faf5b206>English</span><!--]--></a></div><!--]--></div><!--]--><!--]--></div></div></div><div class="VPNavBarAppearance appearance" data-v-70946a35 data-v-6c893767><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-6c893767 data-v-5337faa4 data-v-1d5665e3><span class="check" data-v-1d5665e3><span class="icon" data-v-1d5665e3><!--[--><span class="vpi-sun sun" data-v-5337faa4></span><span class="vpi-moon moon" data-v-5337faa4></span><!--]--></span></span></button></div><div class="VPSocialLinks VPNavBarSocialLinks social-links" data-v-70946a35 data-v-0394ad82 data-v-d07f11e6><!--[--><a class="VPSocialLink no-icon" href="https://github.com/vbgate/learn-opencode" aria-label="github" target="_blank" rel="me noopener" data-v-d07f11e6 data-v-591a6b30><span class="vpi-social-github"></span></a><!--]--></div><div class="VPFlyout VPNavBarExtra extra" data-v-70946a35 data-v-bf2fac68 data-v-42cb505d><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="extra navigation" data-v-42cb505d><span class="vpi-more-horizontal icon" data-v-42cb505d></span></button><div class="menu" data-v-42cb505d><div class="VPMenu" data-v-42cb505d data-v-25a6cce8><!----><!--[--><!--[--><div class="group translations" data-v-bf2fac68><p class="trans-title" data-v-bf2fac68>简体中文</p><!--[--><div class="VPMenuLink" data-v-bf2fac68 data-v-faf5b206><a class="VPLink link" href="/en/appendix/prompts.html" lang="en-US" data-v-faf5b206><!--[--><span data-v-faf5b206>English</span><!--]--></a></div><!--]--></div><div class="group" data-v-bf2fac68><div class="item appearance" data-v-bf2fac68><p class="label" data-v-bf2fac68>Appearance</p><div class="appearance-action" data-v-bf2fac68><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-bf2fac68 data-v-5337faa4 data-v-1d5665e3><span class="check" data-v-1d5665e3><span class="icon" data-v-1d5665e3><!--[--><span class="vpi-sun sun" data-v-5337faa4></span><span class="vpi-moon moon" data-v-5337faa4></span><!--]--></span></span></button></div></div></div><div class="group" data-v-bf2fac68><div class="item social-links" data-v-bf2fac68><div class="VPSocialLinks social-links-list" data-v-bf2fac68 data-v-d07f11e6><!--[--><a class="VPSocialLink no-icon" href="https://github.com/vbgate/learn-opencode" aria-label="github" target="_blank" rel="me noopener" data-v-d07f11e6 data-v-591a6b30><span class="vpi-social-github"></span></a><!--]--></div></div></div><!--]--><!--]--></div></div></div><!--[--><!--]--><button type="button" class="VPNavBarHamburger hamburger" aria-label="mobile navigation" aria-expanded="false" aria-controls="VPNavScreen" data-v-70946a35 data-v-e5dd9c1c><span class="container" data-v-e5dd9c1c><span class="top" data-v-e5dd9c1c></span><span class="middle" data-v-e5dd9c1c></span><span class="bottom" data-v-e5dd9c1c></span></span></button></div></div></div></div><div class="divider" data-v-70946a35><div class="divider-line" data-v-70946a35></div></div></div><!----></header><div class="VPLocalNav has-sidebar empty" data-v-1df9f90f data-v-db738f89><div class="container" data-v-db738f89><button class="menu" aria-expanded="false" aria-controls="VPSidebarNav" data-v-db738f89><span class="vpi-align-left menu-icon" data-v-db738f89></span><span class="menu-text" data-v-db738f89>Menu</span></button><div class="VPLocalNavOutlineDropdown" style="--vp-vh:0px;" data-v-db738f89 data-v-0bf0e06f><button data-v-0bf0e06f>Return to top</button><!----></div></div></div><aside class="VPSidebar" data-v-1df9f90f data-v-af661f50><div class="curtain" data-v-af661f50></div><nav class="nav" id="VPSidebarNav" aria-labelledby="sidebar-aria-label" tabindex="-1" data-v-af661f50><span class="visually-hidden" id="sidebar-aria-label" data-v-af661f50> Sidebar Navigation </span><!--[--><!--]--><!--[--><div class="no-transition group" data-v-8d50c081><section class="VPSidebarItem level-0 collapsible" data-v-8d50c081 data-v-d81de50c><div class="item" role="button" tabindex="0" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><h2 class="text" data-v-d81de50c>🚀 快速起步</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-d81de50c><span class="vpi-chevron-right caret-icon" data-v-d81de50c></span></div></div><div class="items" data-v-d81de50c><!--[--><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/1-start/" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>阶段导读</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/1-start/01-intro.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>1.1 这是什么</p><!--]--></a><!----></div><!----></div><section class="VPSidebarItem level-1 collapsible collapsed" data-v-d81de50c data-v-d81de50c><div class="item" role="button" tabindex="0" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><h3 class="text" data-v-d81de50c>1.2 安装</h3><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-d81de50c><span class="vpi-chevron-right caret-icon" data-v-d81de50c></span></div></div><div class="items" data-v-d81de50c><!--[--><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/1-start/02-install.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>安装：5 分钟搞定</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/1-start/02a-install-alternatives.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>备用安装方式</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/1-start/02b-install-troubleshoot.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>装不上怎么办？</p><!--]--></a><!----></div><!----></div><!--]--></div></section><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/1-start/03-network.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>1.3 网络配置</p><!--]--></a><!----></div><!----></div><section class="VPSidebarItem level-1 collapsible collapsed" data-v-d81de50c data-v-d81de50c><div class="item" role="button" tabindex="0" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><h3 class="text" data-v-d81de50c>1.4 连接模型</h3><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-d81de50c><span class="vpi-chevron-right caret-icon" data-v-d81de50c></span></div></div><div class="items" data-v-d81de50c><!--[--><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/1-start/04-connect.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>总览：第一次对话</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/1-start/04a-free-models.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>免费模型（OpenCode Zen）</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/1-start/04c-zhipu.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>[推荐] 智谱 GLM-4.7</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/1-start/04b-deepseek.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>DeepSeek</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/1-start/04d-minimax.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>MiniMax</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/1-start/04e-claude.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>Claude（Anthropic）</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/1-start/04f-claudecode-relay.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>Claude Code 中转</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/1-start/04g-ollama.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>Ollama（本地）</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/1-start/04h-openai.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>OpenAI（GPT / Codex）</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/1-start/04i-alibaba.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>通义千问</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/1-start/04j-github-copilot.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>GitHub Copilot</p><!--]--></a><!----></div><!----></div><!--]--></div></section><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/1-start/05-update.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>1.5 自动更新</p><!--]--></a><!----></div><!----></div><!--]--></div></section></div><div class="no-transition group" data-v-8d50c081><section class="VPSidebarItem level-0 collapsible" data-v-8d50c081 data-v-d81de50c><div class="item" role="button" tabindex="0" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><h2 class="text" data-v-d81de50c>💪 日常使用</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-d81de50c><span class="vpi-chevron-right caret-icon" data-v-d81de50c></span></div></div><div class="items" data-v-d81de50c><!--[--><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/2-daily/" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>阶段导读</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/2-daily/01-interface.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>2.1 界面与操作</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/2-daily/01b-copy-paste.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>2.1b 如何复制内容</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/2-daily/01c-basic-tools.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>2.1c AI 的基础工具</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/2-daily/02-sessions.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>2.2 管理对话</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/2-daily/03-shortcuts.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>2.3 常用快捷键</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/2-daily/04-global-rules.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>2.4 全局提示词</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/2-daily/05-env-management.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>2.5 环境管理</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/2-daily/06-git-basics.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>2.6 Git 入门</p><!--]--></a><!----></div><!----></div><!--]--></div></section></div><div class="no-transition group" data-v-8d50c081><section class="VPSidebarItem level-0 collapsible" data-v-8d50c081 data-v-d81de50c><div class="item" role="button" tabindex="0" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><h2 class="text" data-v-d81de50c>⚡ 高效工作流</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-d81de50c><span class="vpi-chevron-right caret-icon" data-v-d81de50c></span></div></div><div class="items" data-v-d81de50c><!--[--><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/3-workflow/" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>阶段导读</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/3-workflow/01-plan-build.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>3.1 Plan vs Build</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/3-workflow/02-agents.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>3.2 认识 Agent</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/3-workflow/03-init.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>3.3 项目初始化</p><!--]--></a><!----></div><!----></div><!--]--></div></section></div><div class="no-transition group" data-v-8d50c081><section class="VPSidebarItem level-0 collapsible" data-v-8d50c081 data-v-d81de50c><div class="item" role="button" tabindex="0" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><h2 class="text" data-v-d81de50c>🎯 场景实战</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-d81de50c><span class="vpi-chevron-right caret-icon" data-v-d81de50c></span></div></div><div class="items" data-v-d81de50c><!--[--><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/4-scenarios/" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>选择你的路线</p><!--]--></a><!----></div><!----></div><section class="VPSidebarItem level-1 collapsible" data-v-d81de50c data-v-d81de50c><div class="item" role="button" tabindex="0" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><h3 class="text" data-v-d81de50c>✍️ 内容创作</h3><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-d81de50c><span class="vpi-chevron-right caret-icon" data-v-d81de50c></span></div></div><div class="items" data-v-d81de50c><!--[--><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/4-scenarios/writer-workflow.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>A1 创作工作流</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/4-scenarios/writer-wechat.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>A2 公众号创作</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/4-scenarios/writer-xiaohongshu.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>A3 小红书运营</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/4-scenarios/writer-copywriting.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>A4 营销文案</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/4-scenarios/writer-translate.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>A5 翻译润色</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/4-scenarios/writer-novel.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>A6 小说创作</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/4-scenarios/writer-script.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>A7 剧本写作</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/4-scenarios/writer-webnovel.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>A8 网文创作</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/4-scenarios/writer-workstation.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>A9 创作工作站</p><!--]--></a><!----></div><!----></div><!--]--></div></section><section class="VPSidebarItem level-1 collapsible" data-v-d81de50c data-v-d81de50c><div class="item" role="button" tabindex="0" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><h3 class="text" data-v-d81de50c>💻 我是程序员</h3><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-d81de50c><span class="vpi-chevron-right caret-icon" data-v-d81de50c></span></div></div><div class="items" data-v-d81de50c><!--[--><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/4-scenarios/coder-daily.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>B1 开发日常</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/4-scenarios/coder-refactor.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>B2 重构与测试</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/4-scenarios/coder-docs-git.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>B3 文档与 Git</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/4-scenarios/coder-cicd.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>B4 CI/CD 集成</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/4-scenarios/coder-agents.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>B5 专属 Agent</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/4-scenarios/coder-intranet.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>B6 内网/离线部署</p><!--]--></a><!----></div><!----></div><!--]--></div></section><section class="VPSidebarItem level-1 collapsible" data-v-d81de50c data-v-d81de50c><div class="item" role="button" tabindex="0" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><h3 class="text" data-v-d81de50c>📊 效率提升</h3><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-d81de50c><span class="vpi-chevron-right caret-icon" data-v-d81de50c></span></div></div><div class="items" data-v-d81de50c><!--[--><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/4-scenarios/office-files.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>C1 文件整理</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/4-scenarios/office-data.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>C2 数据处理</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/4-scenarios/office-learn.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>C3 AI 学编程</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/4-scenarios/office-automation.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>C4 自动化脚本</p><!--]--></a><!----></div><!----></div><!--]--></div></section><!--]--></div></section></div><div class="no-transition group" data-v-8d50c081><section class="VPSidebarItem level-0 collapsible" data-v-8d50c081 data-v-d81de50c><div class="item" role="button" tabindex="0" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><h2 class="text" data-v-d81de50c>🔧 进阶手册</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-d81de50c><span class="vpi-chevron-right caret-icon" data-v-d81de50c></span></div></div><div class="items" data-v-d81de50c><!--[--><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>阶段导读</p><!--]--></a><!----></div><!----></div><section class="VPSidebarItem level-1 collapsible collapsed" data-v-d81de50c data-v-d81de50c><div class="item" role="button" tabindex="0" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><h3 class="text" data-v-d81de50c>5.1 配置全解</h3><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-d81de50c><span class="vpi-chevron-right caret-icon" data-v-d81de50c></span></div></div><div class="items" data-v-d81de50c><!--[--><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/01a-config-basics.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.1a 配置基础</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/01b-config-advanced.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.1b 配置进阶</p><!--]--></a><!----></div><!----></div><!--]--></div></section><section class="VPSidebarItem level-1 collapsible collapsed" data-v-d81de50c data-v-d81de50c><div class="item" role="button" tabindex="0" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><h3 class="text" data-v-d81de50c>5.2 Agent 系统</h3><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-d81de50c><span class="vpi-chevron-right caret-icon" data-v-d81de50c></span></div></div><div class="items" data-v-d81de50c><!--[--><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/02a-agent-quickstart.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.2a 快速入门</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/02b-agent-patterns.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.2b 设计模式</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/02c-agent-permissions.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.2c 权限与安全</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/02d-agent-advanced.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.2d 高级技巧</p><!--]--></a><!----></div><!----></div><!--]--></div></section><section class="VPSidebarItem level-1 collapsible collapsed" data-v-d81de50c data-v-d81de50c><div class="item" role="button" tabindex="0" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><h3 class="text" data-v-d81de50c>5.3 Skill</h3><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-d81de50c><span class="vpi-chevron-right caret-icon" data-v-d81de50c></span></div></div><div class="items" data-v-d81de50c><!--[--><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/03a-skills-basics.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.3a Skill 基础</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/03b-skills-advanced.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.3b Skill 进阶</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/03c-skills-patterns.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.3c 高级模式</p><!--]--></a><!----></div><!----></div><!--]--></div></section><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/04-commands.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.4 快捷命令</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/05-permissions.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.5 权限管控</p><!--]--></a><!----></div><!----></div><section class="VPSidebarItem level-1 collapsible collapsed" data-v-d81de50c data-v-d81de50c><div class="item" role="button" tabindex="0" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><h3 class="text" data-v-d81de50c>5.6 主题与快捷键</h3><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-d81de50c><span class="vpi-chevron-right caret-icon" data-v-d81de50c></span></div></div><div class="items" data-v-d81de50c><!--[--><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/06a-themes.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.6a 主题系统</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/06b-keybinds.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.6b 快捷键</p><!--]--></a><!----></div><!----></div><!--]--></div></section><section class="VPSidebarItem level-1 collapsible collapsed" data-v-d81de50c data-v-d81de50c><div class="item" role="button" tabindex="0" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><h3 class="text" data-v-d81de50c>5.7 MCP 扩展</h3><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-d81de50c><span class="vpi-chevron-right caret-icon" data-v-d81de50c></span></div></div><div class="items" data-v-d81de50c><!--[--><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/07a-mcp-basics.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.7a MCP 基础</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/07b-mcp-advanced.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.7b MCP 进阶</p><!--]--></a><!----></div><!----></div><!--]--></div></section><section class="VPSidebarItem level-1 collapsible collapsed" data-v-d81de50c data-v-d81de50c><div class="item" role="button" tabindex="0" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><h3 class="text" data-v-d81de50c>5.8 IDE 集成</h3><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-d81de50c><span class="vpi-chevron-right caret-icon" data-v-d81de50c></span></div></div><div class="items" data-v-d81de50c><!--[--><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/08a-ide-vscode.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.8a VS Code 扩展</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/08b-acp.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.8b ACP 协议</p><!--]--></a><!----></div><!----></div><!--]--></div></section><section class="VPSidebarItem level-1 collapsible collapsed" data-v-d81de50c data-v-d81de50c><div class="item" role="button" tabindex="0" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><h3 class="text" data-v-d81de50c>5.9 远程模式</h3><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-d81de50c><span class="vpi-chevron-right caret-icon" data-v-d81de50c></span></div></div><div class="items" data-v-d81de50c><!--[--><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/09a-remote-basics.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.9a 远程基础</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/09b-remote-api.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.9b API 参考</p><!--]--></a><!----></div><!----></div><!--]--></div></section><section class="VPSidebarItem level-1 collapsible collapsed" data-v-d81de50c data-v-d81de50c><div class="item" role="button" tabindex="0" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><h3 class="text" data-v-d81de50c>5.10 SDK 开发</h3><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-d81de50c><span class="vpi-chevron-right caret-icon" data-v-d81de50c></span></div></div><div class="items" data-v-d81de50c><!--[--><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/10a-sdk-basics.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.10a SDK 基础</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/10b-sdk-reference.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.10b API 参考</p><!--]--></a><!----></div><!----></div><!--]--></div></section><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/11-enterprise.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.11 企业版</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/11a-enterprise-auth.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.11a 企业认证集成</p><!--]--></a><!----></div><!----></div><section class="VPSidebarItem level-1 collapsible collapsed" data-v-d81de50c data-v-d81de50c><div class="item" role="button" tabindex="0" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><h3 class="text" data-v-d81de50c>5.12 插件开发</h3><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-d81de50c><span class="vpi-chevron-right caret-icon" data-v-d81de50c></span></div></div><div class="items" data-v-d81de50c><!--[--><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/12a-plugins-basics.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.12a 插件基础</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/12b-plugins-advanced.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.12b 插件进阶</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/12c-hooks.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.12c Hook 教程</p><!--]--></a><!----></div><!----></div><!--]--></div></section><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/13-custom-tools.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.13 自定义工具</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/14-github.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.14 GitHub 集成</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/15-gitlab.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.15 GitLab 集成</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/16-share.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.16 会话分享</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/17-tools.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.17 内置工具</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/18-formatters.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.18 代码格式化器</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/19-lsp.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.19 LSP 代码智能</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/20-compaction.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.20 上下文压缩</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/21-thinking-depth.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.21 思考深度配置</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/22-debugging.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.22 调试与诊断</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/23-web-search.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.23 网络搜索与获取</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/5-advanced/24-cli-automation.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>5.24 CLI 自动化</p><!--]--></a><!----></div><!----></div><!--]--></div></section></div><div class="no-transition group" data-v-8d50c081><section class="VPSidebarItem level-0 collapsible has-active" data-v-8d50c081 data-v-d81de50c><div class="item" role="button" tabindex="0" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><h2 class="text" data-v-d81de50c>📚 速查手册</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-d81de50c><span class="vpi-chevron-right caret-icon" data-v-d81de50c></span></div></div><div class="items" data-v-d81de50c><!--[--><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/appendix/" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>速查总览</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/appendix/keybinds.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>A. 快捷键速查</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/appendix/commands.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>B. 斜杠命令</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/appendix/cli.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>C. CLI 参考</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/appendix/config-ref.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>D. 配置选项</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/appendix/providers.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>E. 模型提供商</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/appendix/prompts.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>F. Prompt 模板库</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/appendix/faq.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>G. 常见问题</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/appendix/troubleshoot.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>H. 故障排除</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/appendix/ecosystem.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>I. 生态系统</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/appendix/migration.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>J. 迁移指南</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/appendix/zen.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>K. OpenCode Zen</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/appendix/experimental-features.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>L. 实验性功能</p><!--]--></a><!----></div><!----></div><!--]--></div></section></div><div class="no-transition group" data-v-8d50c081><section class="VPSidebarItem level-0 collapsible collapsed" data-v-8d50c081 data-v-d81de50c><div class="item" role="button" tabindex="0" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><h2 class="text" data-v-d81de50c>📝 OpenCode 更新日志</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-d81de50c><span class="vpi-chevron-right caret-icon" data-v-d81de50c></span></div></div><div class="items" data-v-d81de50c><!--[--><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>更新日志</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.2.13.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.2.13</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.2.12.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.2.12</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.2.11.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.2.11</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.2.10.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.2.10</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.2.9.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.2.9</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.2.8.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.2.8</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.2.7.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.2.7</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.2.6.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.2.6</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.2.5.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.2.5</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.2.4.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.2.4</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.2.3.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.2.3</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.2.2.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.2.2</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.2.1.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.2.1</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.2.0.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.2.0</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.65.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.65</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.64.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.64</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.63.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.63</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.62.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.62</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.61.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.61</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.60.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.60</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.59.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.59</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.58.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.58</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.57.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.57</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.56.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.56</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.55.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.55</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.54.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.54</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.53.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.53</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.52.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.52</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.51.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.51</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.50.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.50</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.49.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.49</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.48.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.48</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.47.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.47</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.46.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.46</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.45.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.45</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.44.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.44</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.43.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.43</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.42.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.42</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.41.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.41</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.40.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.40</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.39.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.39</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.38.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.38</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.37.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.37</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.36.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.36</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.35.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.35</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.34.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.34</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.33.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.33</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.32.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.32</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.31.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.31</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.30.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.30</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.29.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.29</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.28.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.28</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.27.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.27</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.26.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.26</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.25.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.25</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.24.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.24</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.23.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.23</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.21.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.21</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.20.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.20</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.19.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.19</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.18.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.18</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.17.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.17</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.16.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.16</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.15.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.15</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.14.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.14</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.13.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.13</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.12.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.12</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.11.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.11</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.10.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.10</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.8.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.8</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.7.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.7</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.6.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.6</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.4.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.4</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.3.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.3</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.2.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.2</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-d81de50c data-v-d81de50c><div class="item" data-v-d81de50c><div class="indicator" data-v-d81de50c></div><a class="VPLink link link" href="/changelog/v1.1.1.html" data-v-d81de50c><!--[--><p class="text" data-v-d81de50c>v1.1.1</p><!--]--></a><!----></div><!----></div><!--]--></div></section></div><!--]--><!--[--><!--]--></nav></aside><div class="VPContent has-sidebar" id="VPContent" data-v-1df9f90f data-v-c87f25bf><div class="VPDoc has-sidebar has-aside" data-v-c87f25bf data-v-7011f0d8><!--[--><!--]--><div class="container" data-v-7011f0d8><div class="aside" data-v-7011f0d8><div class="aside-curtain" data-v-7011f0d8></div><div class="aside-container" data-v-7011f0d8><div class="aside-content" data-v-7011f0d8><div class="VPDocAside" data-v-7011f0d8 data-v-3f215769><!--[--><!--]--><!--[--><!--]--><nav aria-labelledby="doc-outline-aria-label" class="VPDocAsideOutline" data-v-3f215769 data-v-60d5052e><div class="content" data-v-60d5052e><div class="outline-marker" data-v-60d5052e></div><div aria-level="2" class="outline-title" id="doc-outline-aria-label" role="heading" data-v-60d5052e>本页目录</div><ul class="VPDocOutlineItem root" data-v-60d5052e data-v-1ce71065><!--[--><!--]--></ul></div></nav><!--[--><!--]--><div class="spacer" data-v-3f215769></div><!--[--><!--]--><!----><!--[--><!--]--><!--[--><!--]--></div></div></div></div><div class="content" data-v-7011f0d8><div class="content-container" data-v-7011f0d8><!--[--><!--]--><main class="main" data-v-7011f0d8><div style="position:relative;" class="vp-doc _appendix_prompts" data-v-7011f0d8><div><h1 id="prompt-模板库" tabindex="-1">Prompt 模板库 <a class="header-anchor" href="#prompt-模板库" aria-label="Permalink to “Prompt 模板库”">​</a></h1><blockquote><p>精选实用模板，复制粘贴即可使用</p></blockquote><hr><h2 id="写作类模板" tabindex="-1">写作类模板 <a class="header-anchor" href="#写作类模板" aria-label="Permalink to “写作类模板”">​</a></h2><h3 id="📖-小说大纲生成" tabindex="-1">📖 小说大纲生成 <a class="header-anchor" href="#📖-小说大纲生成" aria-label="Permalink to “📖 小说大纲生成”">​</a></h3><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre><code v-pre>## 角色
+你是资深小说编辑，曾参与多部畅销书的策划。擅长结构设计、人物塑造和冲突构建。
+
+## 任务
+根据用户提供的信息，生成一份完整的小说大纲。
+
+## 输入信息
+### 必填项
+- 类型：【玄幻/都市/言情/悬疑/科幻】
+- 篇幅：【短篇(&lt;3万字)/中篇(3-10万字)/长篇(&gt;10万字)】
+
+### 选填项
+- 风格：【轻松/严肃/热血/温馨】（默认：轻松）
+- 主题：【一句话描述核心冲突?】
+- 世界观：【现代/古代/架空/未来】（默认：现代）
+- 特殊要求：【其他要求?】
+
+## 输出规范
+
+### 1. 一句话梗概
+用 30 字以内概括整个故事。
+
+### 2. 主要人物（3-5 个）
+每个人物包含：
+- 姓名 / 身份
+- 核心性格（3 个关键词）
+- 故事中的作用
+- 人物弧线（从什么变成什么）
+
+### 3. 章节大纲
+按起承转合结构，每部分包含：
+- 阶段名称
+- 预估章节数
+- 核心事件
+- 情感曲线
+
+### 4. 核心冲突
+- 外部冲突：[具体描述]
+- 内部冲突：[具体描述]
+- 解决方式：[概述]
+
+### 5. 故事亮点（3-5 个卖点）
+
+&lt;AdInArticle /&gt;
+
+## 示例
+
+### 输入
+- 类型：都市
+- 篇幅：中篇
+- 风格：热血
+- 主题：小人物逆袭
+
+### 输出
+
+#### 1. 一句话梗概
+快递员意外获得读心能力，在商战中帮助濒临破产的老板绝地翻盘。
+
+#### 2. 主要人物
+
+**1. 林小北 / 快递员**
+- 性格：乐观、执着、善良
+- 作用：主角，推动剧情
+- 弧线：从普通小人物 → 商业奇才
+
+**2. 赵明远 / 创业公司 CEO**
+- 性格：正直、倔强、理想主义
+- 作用：主角导师，提供舞台
+- 弧线：从即将破产 → 重获信心
+
+**3. 陈天华 / 竞争对手**
+- 性格：狡猾、贪婪、外强中干
+- 作用：主要反派，制造冲突
+- 弧线：从不可一世 → 身败名裂
+
+#### 3. 章节大纲
+
+**起（第 1-5 章）**
+- 林小北送快递时意外触电，获得读心能力
+- 发现公司老板赵明远正被对手算计
+- 情感曲线：平淡 → 惊奇 → 纠结
+
+**承（第 6-15 章）**
+- 林小北用能力帮赵明远识破多次商业陷阱
+- 逐渐赢得信任，成为核心团队成员
+- 情感曲线：紧张 → 小胜 → 信心建立
+
+**转（第 16-22 章）**
+- 陈天华发现林小北的秘密，设下致命圈套
+- 林小北能力突然失灵，陷入绝境
+- 情感曲线：危机 → 绝望 → 自我怀疑
+
+**合（第 23-28 章）**
+- 林小北放弃依赖能力，用真正的商业智慧反击
+- 最终击败陈天华，能力永久消失但收获成长
+- 情感曲线：觉醒 → 反击 → 胜利与释然
+
+#### 4. 核心冲突
+- **外部冲突**：林小北 vs 陈天华的商业对决
+- **内部冲突**：依赖超能力 vs 相信自己的真实能力
+- **解决方式**：主动放弃能力，用积累的智慧和人脉取胜
+
+#### 5. 故事亮点
+1. 金手指有&quot;保质期&quot;，避免无敌流
+2. 商战细节真实，参考真实商业案例
+3. 配角群像鲜明，各有成长线
+4. 结局反套路：失去能力反而是成长
+5. 爽点密集：每 3 章一个小高潮
+
+## 约束条件
+- ✅ 人物动机要清晰合理
+- ✅ 冲突要逐层递进
+- ✅ 结局要与开头呼应
+- ❌ 避免人设雷同
+- ❌ 避免事件跳跃太大
+
+## 自检清单
+完成前确认：
+- [ ] 每个主角都有清晰的弧线
+- [ ] 起承转合节奏合理
+- [ ] 核心冲突能贯穿全文
+- [ ] 亮点足以吸引目标读者
+
+## 错误处理
+- 如果类型/篇幅未提供，请先询问用户
+- 如果要求的类型不熟悉，说明并建议相近类型</code></pre></div><hr><h3 id="👤-角色卡生成" tabindex="-1">👤 角色卡生成 <a class="header-anchor" href="#👤-角色卡生成" aria-label="Permalink to “👤 角色卡生成”">​</a></h3><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre><code v-pre>## 角色
+你是资深小说编辑，擅长塑造立体、有深度的角色形象。
+
+## 任务
+根据用户提供的基本信息，生成一份完整的角色卡。
+
+## 输入信息
+### 必填项
+- 姓名：【角色名】
+- 身份：【职业/身份】
+
+### 选填项
+- 年龄：【年龄?】
+- 故事类型：【玄幻/都市/言情/悬疑?】
+- 角色定位：【主角/反派/配角?】
+- 特殊要求：【其他要求?】
+
+## 输出规范
+
+### 1. 外貌描写（100字左右）
+重点描写最具辨识度的特征。
+
+### 2. 性格特点
+3-5个关键词 + 每个关键词的具体表现。
+
+### 3. 背景故事（200字左右）
+塑造人物动机的核心经历。
+
+### 4. 核心动机
+他/她想要什么？为什么想要？
+
+### 5. 致命弱点
+是什么让他/她脆弱？
+
+### 6. 标志性语言/口头禅
+
+### 7. 与主角的关系（如适用）
+
+### 8. 角色弧线
+从什么状态变成什么状态。
+
+## 约束条件
+- ✅ 外貌描写要有画面感
+- ✅ 性格特点要有矛盾面
+- ❌ 避免脸谱化（全好或全坏）</code></pre></div><hr><h3 id="💬-对话润色" tabindex="-1">💬 对话润色 <a class="header-anchor" href="#💬-对话润色" aria-label="Permalink to “💬 对话润色”">​</a></h3><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre><code v-pre>## 角色
+你是专业的小说对话编辑，擅长让对话生动、有层次、富有潜台词。
+
+## 任务
+润色用户提供的对话，使其更具文学性和戏剧张力。
+
+## 输入信息
+### 必填项
+- 角色A说话风格：【描述】
+- 角色B说话风格：【描述】
+- 场景背景：【描述】
+- 原始对话：
+
+[粘贴对话]
+
+## 润色要求
+1. 保持每个角色独特的说话风格
+2. 增加潜台词和情感层次
+3. 控制节奏，该快则快该慢则慢
+4. 增加动作描写和神态描写
+5. 让冲突更加自然和有张力
+
+## 约束条件
+- ✅ 保持原意不变
+- ✅ 每个角色说话风格要有区分度
+- ❌ 避免过度书面化</code></pre></div><hr><h3 id="🎬-黄金三章生成-网文" tabindex="-1">🎬 黄金三章生成（网文） <a class="header-anchor" href="#🎬-黄金三章生成-网文" aria-label="Permalink to “🎬 黄金三章生成（网文）”">​</a></h3><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre><code v-pre>## 角色
+你是网文资深作者，擅长写让读者欲罢不能的开头。你深谙&quot;黄金三章&quot;法则。
+
+## 任务
+生成网文开头的&quot;黄金三章&quot;，确保读者追读。
+
+## 输入信息
+### 必填项
+- 类型：【玄幻/都市/系统流/重生】
+- 主角姓名：【名字】
+- 金手指：【主角的特殊能力/系统】
+
+### 选填项
+- 开篇场景：【穿越时刻/觉醒时刻/重生时刻?】
+- 主角初始处境：【描述?】
+
+## 输出规范
+
+### 第一章（2000字）
+- 开篇即爽点，30秒内让读者知道：
+  - 主角是谁
+  - 有什么金手指
+  - 要干什么
+- 结尾必须有悬念
+
+### 第二章（2000字）
+- 小打脸，建立短期目标
+- 展示金手指的实用性
+- 结尾必须有爽点
+
+### 第三章（2000字）
+- 大打脸，完成短期目标
+- 留下追读钩子（更大的危机或机遇）
+- 结尾让读者&quot;必须看下一章&quot;
+
+## 约束条件
+- ✅ 每章结尾必须有强烈的悬念或爽点
+- ✅ 节奏要快，不要水字数
+- ✅ 对话要口语化，不要书面语
+- ❌ 避免大段世界观介绍
+- ❌ 避免主角内心独白过长</code></pre></div><hr><h3 id="📢-aida-营销文案" tabindex="-1">📢 AIDA 营销文案 <a class="header-anchor" href="#📢-aida-营销文案" aria-label="Permalink to “📢 AIDA 营销文案”">​</a></h3><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre><code v-pre>## 角色
+你是资深文案策划，擅长用 AIDA 模型写转化率高的营销文案。
+
+## 任务
+用 AIDA 模型为产品写营销文案。
+
+## 输入信息
+### 必填项
+- 产品名称：【名称】
+- 产品类型：【类型】
+- 目标用户：【用户画像】
+- 核心卖点：【1-3个卖点】
+
+### 选填项
+- 使用场景：【什么时候用?】
+- 竞品痛点：【竞品哪里不好?】
+- 价格区间：【价格?】
+
+## 输出规范
+
+### 1. Attention（吸引注意）
+一个能让目标用户停下来的标题。
+
+### 2. Interest（引发兴趣）
+3-5个让用户产生共鸣的痛点描述。
+
+### 3. Desire（激发欲望）
+产品如何解决这些痛点，配合场景描写。
+
+### 4. Action（促进行动）
+清晰的 CTA 和限时优惠（如适用）。
+
+## 约束条件
+- ✅ 标题要有冲击力
+- ✅ 痛点要具体，能引发共鸣
+- ❌ 避免夸大宣传、违反广告法</code></pre></div><hr><h3 id="🌐-专业翻译" tabindex="-1">🌐 专业翻译 <a class="header-anchor" href="#🌐-专业翻译" aria-label="Permalink to “🌐 专业翻译”">​</a></h3><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre><code v-pre>## 角色
+你是专业译者，擅长在保持原意的同时让译文自然流畅。
+
+## 任务
+将用户提供的文本翻译成目标语言。
+
+## 输入信息
+### 必填项
+- 目标语言：【简体中文/英语/日语/...】
+- 原文：
+
+[粘贴原文]
+
+### 选填项
+- 专业领域：【技术/法律/医学/文学?】
+- 语气风格：【正式/轻松/专业?】
+
+## 翻译要求
+1. 保持原文的语气和风格
+2. 专业术语使用领域的标准译法
+3. 不要逐字翻译，要让译文自然流畅
+4. 保留原文格式（标题、列表、引用等）
+5. 对于无法翻译的专有名词，保留原文并在括号中注释
+
+## 约束条件
+- ✅ 术语一致性（同一术语全文使用同一译法）
+- ✅ 可读性优先于忠实度
+- ❌ 避免翻译腔
+
+## 错误处理
+- 如果目标语言未提供，请先询问用户
+- 如果遇到多义词，标注可能的译法供用户选择</code></pre></div><hr><h3 id="✏️-降重改写" tabindex="-1">✏️ 降重改写 <a class="header-anchor" href="#✏️-降重改写" aria-label="Permalink to “✏️ 降重改写”">​</a></h3><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre><code v-pre>## 角色
+你是专业的文字编辑，擅长在保持原意的同时改变表达方式。
+
+## 任务
+改写用户提供的文本，降低与原文的相似度。
+
+## 输入信息
+### 必填项
+- 改写程度：【轻度(30%)/中度(50%)/重度(70%)】
+- 原文：
+
+[粘贴原文]
+
+### 选填项
+- 保留关键词：【必须保留的术语?】
+
+## 改写策略
+
+### 轻度改写（~30%）
+- 同义词替换
+- 语序微调
+
+### 中度改写（~50%）
+- 句式结构变换
+- 主被动转换
+- 合并/拆分句子
+
+### 重度改写（~70%）
+- 重新组织段落逻辑
+- 用不同方式表达相同意思
+- 增加/删减细节描述
+
+## 输出规范
+1. 改写后的文本
+2. 改写统计：
+   - 估计改写比例
+   - 主要改动点
+
+## 约束条件
+- ✅ 保持原意不变
+- ✅ 保持专业术语准确
+- ❌ 避免改变核心观点</code></pre></div><hr><h2 id="💻-开发类模板" tabindex="-1">💻 开发类模板 <a class="header-anchor" href="#💻-开发类模板" aria-label="Permalink to “💻 开发类模板”">​</a></h2><h3 id="🔍-代码解释" tabindex="-1">🔍 代码解释 <a class="header-anchor" href="#🔍-代码解释" aria-label="Permalink to “🔍 代码解释”">​</a></h3><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre><code v-pre>## 角色
+你是资深技术文档工程师，擅长将复杂代码解释得通俗易懂。你的解释被初学者评价为&quot;终于看懂了&quot;。
+
+## 任务
+解释用户提供的代码，帮助他们理解代码的功能、原理和潜在问题。
+
+## 输入信息
+### 必填项
+- 编程语言：【编程语言】
+- 代码：
+
+[粘贴代码]
+
+### 选填项
+- 读者水平：【初学者/中级/高级】（默认：中级）
+- 重点关注：【特别想了解的方面?】
+
+## 输出规范
+
+### 1. 一句话总结
+用 ≤50 字说明这段代码的核心功能。
+
+### 2. 逐块解释
+对代码进行分块，每块说明：
+- **代码片段**（带行号）
+- **作用**：这块代码做什么
+- **原理**：为什么这样写
+
+### 3. 关键概念
+列出涉及的核心概念，如：
+- 设计模式
+- 算法
+- 语言特性
+- 框架 API
+
+### 4. 潜在问题（如有）
+- 🔴 严重：可能导致错误的问题
+- 🟡 建议：可以优化的地方
+- 🟢 提示：值得了解的细节
+
+### 5. 使用示例
+展示如何调用这段代码。
+
+## 示例
+
+### 输入
+语言：JavaScript
+
+```javascript
+function debounce(fn, delay) {
+  let timer = null;
+  return function(...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() =&gt; fn.apply(this, args), delay);
+  };
+}
+```
+
+### 输出
+
+#### 1. 一句话总结
+这是一个防抖函数，让频繁触发的函数在停止触发后才执行一次。
+
+#### 2. 逐块解释
+
+**L1-2: 函数定义与闭包变量**
+```javascript
+function debounce(fn, delay) {
+  let timer = null;
+```
+- **作用**：定义防抖函数，接收原函数和延迟时间
+- **原理**：`timer` 在闭包中保持引用，用于追踪定时器
+
+**L3-6: 返回包装函数**
+```javascript
+  return function(...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() =&gt; fn.apply(this, args), delay);
+  };
+```
+- **作用**：每次调用先清除上次定时器，再设置新定时器
+- **原理**：只有最后一次调用会真正执行（之前的都被清除了）
+
+#### 3. 关键概念
+- **闭包**：`timer` 变量在返回函数中持续存活
+- **防抖模式**：限制高频事件的触发频率
+- **apply**：保持原函数的 `this` 上下文
+
+#### 4. 潜在问题
+- 🟡 建议：可添加 `immediate` 参数支持立即执行模式
+- 🟢 提示：rest 参数语法（`...args`形式）使用了 ES6 剩余参数特性
+
+#### 5. 使用示例
+```javascript
+const handleSearch = debounce((query) =&gt; {
+  console.log(&#39;搜索:&#39;, query);
+}, 300);
+
+// 用户快速输入时，只有停顿 300ms 后才会执行
+input.addEventListener(&#39;input&#39;, (e) =&gt; handleSearch(e.target.value));
+```
+
+## 约束条件
+- ✅ 使用中文解释，术语保留英文
+- ✅ 解释要循序渐进，由浅入深
+- ✅ 为初学者加入类比说明
+- ❌ 避免假设读者已知高级概念
+- ❌ 避免只说&quot;做了什么&quot;不说&quot;为什么&quot;
+
+## 自检清单
+完成前确认：
+- [ ] 每块代码都有解释
+- [ ] 关键概念都有说明
+- [ ] 使用示例可以直接运行
+- [ ] 解释深度匹配读者水平
+
+## 错误处理
+- 如果代码片段不完整，指出缺失部分并基于现有内容解释
+- 如果无法识别语言，请用户确认后再解释
+- 如果代码有语法错误，先指出错误再解释意图</code></pre></div><hr><h3 id="⚡-功能实现" tabindex="-1">⚡ 功能实现 <a class="header-anchor" href="#⚡-功能实现" aria-label="Permalink to “⚡ 功能实现”">​</a></h3><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre><code v-pre>## 角色
+你是全栈开发工程师，擅长将需求转化为可运行的代码。
+
+## 任务
+根据用户的需求描述，实现完整的功能代码。
+
+## 输入信息
+### 必填项
+- 需求描述：【描述你想要的功能】
+- 编程语言：【语言】
+
+### 选填项
+- 框架：【框架?】
+- 相关依赖：【依赖?】
+- 约束条件：【约束?】
+
+## 输出规范
+1. 完整可运行的代码
+2. 必要的注释
+3. 使用示例
+4. 单元测试（如适用）
+
+## 约束条件
+- ✅ 代码要可直接运行
+- ✅ 包含错误处理
+- ✅ 命名清晰规范
+- ❌ 避免过度设计
+
+## 错误处理
+- 如果需求不清晰，先列出需要澄清的问题
+- 如果技术栈不熟悉，说明并建议替代方案</code></pre></div><hr><h3 id="🐛-bug-定位" tabindex="-1">🐛 Bug 定位 <a class="header-anchor" href="#🐛-bug-定位" aria-label="Permalink to “🐛 Bug 定位”">​</a></h3><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre><code v-pre>## 角色
+你是高级排障工程师，擅长从症状逆推根因。你的排障思路清晰、假设验证严谨。
+
+## 任务
+分析用户描述的 Bug，定位可能的原因，并提供修复方案。
+
+## 输入信息
+### 必填项
+- 问题描述：【描述问题现象】
+- 期望行为：【应该是什么样】
+- 实际行为：【实际是什么样】
+
+### 选填项
+- 复现步骤：
+  1. 【步骤1】
+  2. 【步骤2】
+
+- 相关代码：
+```【编程语言?】
+[粘贴代码]
+```
+
+- 错误信息：
+```
+[粘贴错误日志]
+```
+
+- 环境信息：【运行环境?】
+- 已尝试的方案：【尝试过什么?】
+
+## 输出规范
+
+### 1. 问题摘要
+一句话概括问题的核心症状。
+
+### 2. 根因分析
+按可能性从高到低列出原因：
+
+| 排序 | 可能原因 | 可能性 | 依据 |
+|------|---------|-------|------|
+| 1 | [原因] | 高/中/低 | [为什么这样判断] |
+
+### 3. 验证方法
+每个可能原因对应的验证步骤：
+
+**验证原因 1：[原因名称]**
+```bash
+# 验证命令或检查步骤
+```
+预期结果：[如果是这个原因，会看到什么]
+
+### 4. 修复方案
+针对最可能的原因，提供：
+- **临时方案**：快速止血
+- **根治方案**：彻底修复
+- **预防措施**：避免再次发生
+
+### 5. 排障思路（可选）
+说明推理过程，帮助用户学习排障方法。
+
+## 示例
+
+### 输入
+- 问题描述：用户登录后立即退出
+- 期望行为：登录后保持登录状态
+- 实际行为：登录成功提示后跳转，1 秒后又回到登录页
+- 相关代码：
+```javascript
+const login = async (credentials) =&gt; {
+  const token = await api.login(credentials);
+  localStorage.setItem(&#39;token&#39;, token);
+  router.push(&#39;/dashboard&#39;);
+};
+```
+
+### 输出
+
+#### 1. 问题摘要
+登录成功后 Token 存储或读取异常，导致鉴权失败被踢回登录页。
+
+#### 2. 根因分析
+
+| 排序 | 可能原因 | 可能性 | 依据 |
+|------|---------|-------|------|
+| 1 | Token 存储后读取时 key 不一致 | 高 | 存取使用不同字符串常见 |
+| 2 | Dashboard 路由守卫逻辑有误 | 中 | 跳转后被踢回说明守卫拦截了 |
+| 3 | Token 过期时间设置为 0 | 低 | 后端配置问题 |
+
+#### 3. 验证方法
+
+**验证原因 1：Token key 不一致**
+```javascript
+// 在 login 函数后添加
+console.log(&#39;存储的 key:&#39;, &#39;token&#39;);
+console.log(&#39;存储的值:&#39;, localStorage.getItem(&#39;token&#39;));
+
+// 在路由守卫中添加
+console.log(&#39;读取的 key:&#39;, &#39;你实际使用的 key&#39;);
+console.log(&#39;读取的值:&#39;, localStorage.getItem(&#39;你实际使用的 key&#39;));
+```
+预期结果：如果是这个问题，会看到两处使用的 key 不同
+
+#### 4. 修复方案
+
+**临时方案**
+```javascript
+// 统一 token key 为常量
+const TOKEN_KEY = &#39;auth_token&#39;;
+localStorage.setItem(TOKEN_KEY, token);
+```
+
+**根治方案**
+```javascript
+// 创建统一的 auth 模块
+// auth.js
+export const TOKEN_KEY = &#39;auth_token&#39;;
+export const setToken = (token) =&gt; localStorage.setItem(TOKEN_KEY, token);
+export const getToken = () =&gt; localStorage.getItem(TOKEN_KEY);
+```
+
+**预防措施**
+- 提取所有 localStorage key 为常量
+- 添加单元测试覆盖登录流程
+
+## 约束条件
+- ✅ 按可能性排序，先验证最可能的
+- ✅ 验证方法要具体可执行
+- ✅ 修复方案要考虑副作用
+- ❌ 避免一次改动太多
+- ❌ 避免只给答案不说原因
+
+## 自检清单
+完成前确认：
+- [ ] 每个假设都有验证方法
+- [ ] 修复方案考虑了边界情况
+- [ ] 预防措施可落地
+
+## 错误处理
+- 如果信息不足，列出需要补充的信息并说明为什么需要
+- 如果问题超出能力范围（如硬件问题），说明并建议求助渠道
+- 如果有多个独立问题，建议逐个处理</code></pre></div><hr><h3 id="✅-代码审查" tabindex="-1">✅ 代码审查 <a class="header-anchor" href="#✅-代码审查" aria-label="Permalink to “✅ 代码审查”">​</a></h3><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre><code v-pre>## 角色
+你是技术负责人，负责把控代码质量。你的 Review 风格是严格但建设性的。
+
+## 任务
+对提交的代码进行全面审查，发现问题并给出改进建议。
+
+## 输入信息
+### 必填项
+- 编程语言：【编程语言】
+- 代码：
+
+[粘贴代码]
+
+### 选填项
+- 审查重点：【重点关注的方面?】
+- 项目背景：【代码的上下文?】
+
+## 审查维度
+
+### 1. 代码质量
+- 命名规范（变量、函数、类名是否清晰）
+- 代码结构（逻辑是否清晰、嵌套是否过深）
+- 可读性（注释是否充分、复杂度是否可接受）
+- 重复代码（是否有可抽象的公共逻辑）
+
+### 2. 潜在问题
+- Bug 风险（空指针、越界、类型错误）
+- 边界条件（空值、极值、异常输入）
+- 错误处理（异常是否被正确捕获和处理）
+- 性能问题（时间/空间复杂度、资源泄漏）
+
+### 3. 安全隐患
+- 输入验证（是否信任了不可信的输入）
+- 敏感信息（是否有硬编码的密钥/密码）
+- 注入风险（SQL/XSS/命令注入）
+
+### 4. 最佳实践
+- 设计模式（是否使用了合适的模式）
+- SOLID 原则（是否符合面向对象设计原则）
+- 测试覆盖（关键逻辑是否可测试）
+
+## 输出规范
+
+### 评审总结
+- **代码评级**：A/B/C/D（见评分标准）
+- **一句话评价**：[整体印象]
+- **需修改才能合并**：是/否
+
+### 问题列表
+按严重程度分类：
+
+#### 🔴 严重问题（必须修复）
+1. `[文件:行号]` **问题描述**
+   - 问题：[具体问题]
+   - 风险：[可能的后果]
+   - 建议：[修复方案]
+
+#### 🟡 建议改进（推荐修复）
+...
+
+#### 🟢 优点（值得保持）
+...
+
+## 评分标准
+
+| 等级 | 标准 |
+|------|------|
+| **A (优秀)** | 无严重问题，代码清晰，符合最佳实践 |
+| **B (良好)** | 无严重问题，有少量可改进点 |
+| **C (一般)** | 有 1-2 个中等问题，需要修改后合并 |
+| **D (需重构)** | 有严重问题或 3 个以上中等问题 |
+
+## 示例
+
+### 输入
+语言：Python
+```python
+def get_user(id):
+    conn = mysql.connect(host=&#39;localhost&#39;, password=&#39;123456&#39;)
+    result = conn.execute(f&quot;SELECT * FROM users WHERE id = {id}&quot;)
+    return result
+```
+
+### 输出
+
+#### 评审总结
+- **代码评级**：D
+- **一句话评价**：存在严重安全漏洞和资源泄漏风险
+- **需修改才能合并**：是
+
+#### 🔴 严重问题
+
+1. `L2` **硬编码数据库密码**
+   - 问题：密码明文写在代码中
+   - 风险：代码泄漏导致数据库被入侵
+   - 建议：使用环境变量 `os.getenv(&#39;DB_PASSWORD&#39;)`
+
+2. `L3` **SQL 注入漏洞**
+   - 问题：直接拼接用户输入到 SQL
+   - 风险：攻击者可执行任意 SQL
+   - 建议：使用参数化查询 `execute(&quot;SELECT * FROM users WHERE id = ?&quot;, (id,))`
+
+#### 🟡 建议改进
+
+1. `L2` **连接未关闭**
+   - 问题：数据库连接未释放
+   - 建议：使用 `with` 语句或 `try-finally`
+
+2. `L1` **类型注解缺失**
+   - 问题：参数和返回值无类型提示
+   - 建议：`def get_user(id: int) -&gt; Optional[dict]:`
+
+## 约束条件
+- ✅ 问题要具体到行号
+- ✅ 每个问题都要有修复建议
+- ✅ 肯定做得好的地方
+- ❌ 避免主观偏好替代客观标准
+- ❌ 避免只批评不给方案
+
+## 自检清单
+完成前确认：
+- [ ] 所有严重问题都已标注
+- [ ] 修复建议具体可操作
+- [ ] 评分与问题数量匹配
+
+## 错误处理
+- 如果代码不完整，说明缺失的上下文，基于现有代码审查
+- 如果无法识别语言，请用户确认后再审查
+- 如果代码过长（&gt;2000+行），建议分批审查</code></pre></div><hr><h3 id="🧪-测试用例生成" tabindex="-1">🧪 测试用例生成 <a class="header-anchor" href="#🧪-测试用例生成" aria-label="Permalink to “🧪 测试用例生成”">​</a></h3><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre><code v-pre>## 角色
+你是 QA 工程师，擅长设计全面的测试用例。
+
+## 任务
+为用户提供的函数或模块生成测试用例。
+
+## 输入信息
+### 必填项
+- 编程语言：【语言】
+- 代码：
+
+[粘贴代码]
+
+### 选填项
+- 测试框架：【Jest/Pytest/JUnit/...?】
+
+## 输出规范
+使用 AAA (Arrange-Act-Assert) 模式，覆盖：
+1. 正常流程 (Happy Path)
+2. 边界条件
+3. 异常情况
+4. 空值/null 处理
+
+每个测试用例要有清晰的命名和注释。
+
+## 约束条件
+- ✅ 测试用例命名要清晰表达测试意图
+- ✅ 覆盖主要边界条件
+- ❌ 避免测试实现细节</code></pre></div><hr><h3 id="📄-readme-生成" tabindex="-1">📄 README 生成 <a class="header-anchor" href="#📄-readme-生成" aria-label="Permalink to “📄 README 生成”">​</a></h3><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre><code v-pre>## 角色
+你是技术文档工程师，擅长写让人一看就懂的项目文档。
+
+## 任务
+为项目生成专业的 README.md。
+
+## 输入信息
+### 必填项
+- 项目名称：【名称】
+- 一句话描述：【描述】
+- 技术栈：【技术栈】
+
+### 选填项
+- 目标用户：【谁会用这个项目?】
+- 项目结构：
+
+[粘贴项目结构]
+
+## 输出规范
+包含以下部分：
+1. 项目标题和 Badge
+2. 项目简介（3-5句话）
+3. 功能特性（用列表）
+4. 快速开始（安装和使用）
+5. 配置说明
+6. API 文档（如适用）
+7. 常见问题
+8. 贡献指南
+9. License
+
+## 约束条件
+- ✅ 快速开始要能直接复制运行
+- ✅ 配置说明要完整
+- ❌ 避免过于冗长</code></pre></div><hr><h3 id="🔧-commit-消息" tabindex="-1">🔧 Commit 消息 <a class="header-anchor" href="#🔧-commit-消息" aria-label="Permalink to “🔧 Commit 消息”">​</a></h3><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre><code v-pre>## 角色
+你是代码规范专家，擅长写规范的 Commit 消息。
+
+## 任务
+根据代码变更生成符合 Conventional Commits 规范的提交消息。
+
+## 输入信息
+### 必填项
+- 变更内容：
+
+```diff
+[粘贴 git diff]
+```
+
+## 输出规范
+格式：`&lt;type&gt;(&lt;scope&gt;): &lt;description&gt;`
+
+### type 选择
+- feat: 新功能
+- fix: Bug 修复
+- docs: 文档更新
+- style: 代码格式
+- refactor: 重构
+- test: 测试相关
+- chore: 构建/工具
+
+### 规范
+- 描述不超过 50 字符
+- 使用祈使语气
+- 如果变更复杂，添加 body 说明
+
+## 约束条件
+- ✅ type 要准确
+- ✅ 描述要具体
+- ❌ 避免含糊的描述如 &quot;fix bug&quot;</code></pre></div><hr><h2 id="📋-通用模板" tabindex="-1">📋 通用模板 <a class="header-anchor" href="#📋-通用模板" aria-label="Permalink to “📋 通用模板”">​</a></h2><h3 id="📝-内容总结" tabindex="-1">📝 内容总结 <a class="header-anchor" href="#📝-内容总结" aria-label="Permalink to “📝 内容总结”">​</a></h3><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre><code v-pre>## 角色
+你是信息分析师，擅长提炼关键信息。
+
+## 任务
+总结用户提供的内容，提取核心要点。
+
+## 输入信息
+### 必填项
+
+[粘贴内容]
+
+### 选填项
+- 总结长度：【简短/适中/详细?】
+
+## 输出规范
+1. 一句话总结（30字以内）
+2. 核心要点（3-5条）
+3. 关键数据/事实
+4. 行动项（如适用）
+
+## 约束条件
+- ✅ 保留关键数据和数字
+- ✅ 要点要独立完整
+- ❌ 避免添加原文没有的信息</code></pre></div><hr><h3 id="📅-会议纪要" tabindex="-1">📅 会议纪要 <a class="header-anchor" href="#📅-会议纪要" aria-label="Permalink to “📅 会议纪要”">​</a></h3><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre><code v-pre>## 角色
+你是专业的会议记录员，擅长整理会议内容。
+
+## 任务
+将会议记录整理成结构化的会议纪要。
+
+## 输入信息
+### 必填项
+
+[粘贴会议记录/语音转文字]
+
+## 输出规范
+
+### 1. 会议基本信息
+- 时间：
+- 参会人：
+- 主持人：
+
+### 2. 议题与结论
+| 议题 | 讨论内容 | 结论 |
+|------|---------|------|
+
+### 3. 待办事项
+| 事项 | 负责人 | 截止日期 |
+|------|--------|---------|
+
+### 4. 下次会议安排
+
+## 约束条件
+- ✅ 待办事项要有明确负责人
+- ✅ 结论要清晰明确
+- ❌ 避免遗漏重要决策</code></pre></div><hr><h3 id="✉️-邮件撰写" tabindex="-1">✉️ 邮件撰写 <a class="header-anchor" href="#✉️-邮件撰写" aria-label="Permalink to “✉️ 邮件撰写”">​</a></h3><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre><code v-pre>## 角色
+你是专业的商务沟通顾问，擅长写得体的邮件。
+
+## 任务
+根据用户需求撰写邮件。
+
+## 输入信息
+### 必填项
+- 邮件类型：【请求/通知/感谢/投诉/跟进】
+- 背景：【说明情况】
+- 目的：【你想达成什么】
+- 收件人：【对方是谁，与你的关系】
+
+### 选填项
+- 语气要求：【正式/半正式/轻松?】
+- 其他要求：【如有?】
+
+## 约束条件
+- ✅ 开头要直接说明目的
+- ✅ 语气要符合收件人关系
+- ❌ 避免过于冗长</code></pre></div><hr><h3 id="📚-学习笔记" tabindex="-1">📚 学习笔记 <a class="header-anchor" href="#📚-学习笔记" aria-label="Permalink to “📚 学习笔记”">​</a></h3><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre><code v-pre>## 角色
+你是学习教练，擅长帮助学生整理和理解知识。
+
+## 任务
+帮用户整理关于某主题的学习笔记。
+
+## 输入信息
+### 必填项
+- 学习主题：【主题】
+
+### 选填项
+- 我已知的：【列出已了解的内容?】
+- 我想学的：【想深入了解的内容?】
+- 学习阶段：【入门/进阶/专家?】
+
+## 输出规范
+1. 概念定义（用大白话解释）
+2. 核心原理（配合类比和例子）
+3. 关键知识点（用列表整理）
+4. 常见误区
+5. 实践练习（给一个可以动手的任务）
+6. 延伸阅读
+
+## 约束条件
+- ✅ 用大白话解释概念
+- ✅ 配合实际例子
+- ❌ 避免过于学术化</code></pre></div><hr><h2 id="使用技巧" tabindex="-1">使用技巧 <a class="header-anchor" href="#使用技巧" aria-label="Permalink to “使用技巧”">​</a></h2><h3 id="模板自定义" tabindex="-1">模板自定义 <a class="header-anchor" href="#模板自定义" aria-label="Permalink to “模板自定义”">​</a></h3><p>可以将常用模板保存为自定义命令：</p><div class="language-markdown"><button title="Copy Code" class="copy"></button><span class="lang">markdown</span><pre><code v-pre>&lt;!-- .opencode/command/review.md ---
+description: 代码审查
+---
+
+请审查以下代码：
+$ARGUMENTS
+
+关注：代码质量、潜在问题、安全隐患、最佳实践</code></pre></div><p>然后使用 <code>/review @file.ts</code> 即可。</p><h3 id="模板组合" tabindex="-1">模板组合 <a class="header-anchor" href="#模板组合" aria-label="Permalink to “模板组合”">​</a></h3><p>多个模板可以组合使用：</p><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre><code v-pre>1. 先用&quot;代码解释&quot;理解代码
+2. 再用&quot;代码审查&quot;找出问题
+3. 最后用&quot;测试用例生成&quot;补充测试</code></pre></div><hr><h2 id="相关资源" tabindex="-1">相关资源 <a class="header-anchor" href="#相关资源" aria-label="Permalink to “相关资源”">​</a></h2><ul><li><a href="./../4-scenarios/writer-workflow.html">创作工作流</a> - 内容创作场景教程</li><li><a href="./../4-scenarios/coder-daily.html">开发日常</a> - 开发场景教程</li><li><a href="./../5-advanced/04-commands.html">快捷命令</a> - 自定义命令</li></ul></div></div></main><footer class="VPDocFooter" data-v-7011f0d8 data-v-e257564d><!--[--><!--]--><div class="edit-info" data-v-e257564d><div class="edit-link" data-v-e257564d><a class="VPLink link vp-external-link-icon no-icon edit-link-button" href="https://github.com/vbgate/learn-opencode/edit/main/docs/appendix/prompts.md" target="_blank" rel="noreferrer" data-v-e257564d><!--[--><span class="vpi-square-pen edit-link-icon" data-v-e257564d></span> 在 GitHub 上编辑此页<!--]--></a></div><div class="last-updated" data-v-e257564d><p class="VPLastUpdated" data-v-e257564d data-v-3c637f39>最后更新: <time datetime="2026-02-25T10:07:14.000Z" data-v-3c637f39></time></p></div></div><nav class="prev-next" aria-labelledby="doc-footer-aria-label" data-v-e257564d><span class="visually-hidden" id="doc-footer-aria-label" data-v-e257564d>Pager</span><div class="pager" data-v-e257564d><a class="VPLink link pager-link prev" href="/appendix/providers.html" data-v-e257564d><!--[--><span class="desc" data-v-e257564d>上一课</span><span class="title" data-v-e257564d>E. 模型提供商</span><!--]--></a></div><div class="pager" data-v-e257564d><a class="VPLink link pager-link next" href="/appendix/faq.html" data-v-e257564d><!--[--><span class="desc" data-v-e257564d>下一课</span><span class="title" data-v-e257564d>G. 常见问题</span><!--]--></a></div></nav></footer><!--[--><!--[--><!--[--><!----><!--]--><!--]--><!--]--></div></div></div><!--[--><!--]--></div></div><footer class="VPFooter has-sidebar" data-v-1df9f90f data-v-c3855bb3><div class="container" data-v-c3855bb3><p class="message" data-v-c3855bb3><span title="未经授权，禁止将本站内容用于付费课程、付费专栏、出版物或其他商业用途。">本站内容围绕 AI+一人公司与 AI 工具实战 | <a href="/1-start/">开始学习</a> | <a href="/4-scenarios/">场景实战</a> | <a href="/community.html">加入社群</a> | © 2026 AI+一人公司教程</span></p><!----></div></footer><!--[--><!----><!--]--></div></div>
+    <script>window.__VP_HASH_MAP__=JSON.parse("{\"1-start_01-intro.md\":\"GF9L53TY\",\"1-start_02-install.md\":\"zPQo6dcq\",\"1-start_02a-install-alternatives.md\":\"c_ijWwSL\",\"1-start_02b-install-troubleshoot.md\":\"DTATjoYa\",\"1-start_03-network.md\":\"DPsf6Elb\",\"1-start_04-connect.md\":\"B7GCsCoa\",\"1-start_04a-free-models.md\":\"BNMqhJCo\",\"1-start_04b-deepseek.md\":\"sws6nBaM\",\"1-start_04c-zhipu.md\":\"D228BVmL\",\"1-start_04d-minimax.md\":\"mK9PIV6g\",\"1-start_04e-claude.md\":\"B44EZBFT\",\"1-start_04f-claudecode-relay.md\":\"6CGjh8M3\",\"1-start_04g-ollama.md\":\"DEm4nDcr\",\"1-start_04h-openai.md\":\"GyOdXMSO\",\"1-start_04i-alibaba.md\":\"DFSKBFTF\",\"1-start_04j-github-copilot.md\":\"CarzKHnL\",\"1-start_05-update.md\":\"Cj3ObOlX\",\"1-start_index.md\":\"DT64Zazp\",\"2-daily_01-interface.md\":\"C_76OtLb\",\"2-daily_01b-copy-paste.md\":\"iDgFXlJ1\",\"2-daily_01c-basic-tools.md\":\"DvoHZ8WM\",\"2-daily_02-sessions.md\":\"DA4hCGSh\",\"2-daily_03-shortcuts.md\":\"CyT5ACfj\",\"2-daily_04-global-rules.md\":\"CLqmqu9_\",\"2-daily_05-env-management.md\":\"C-SwNSLB\",\"2-daily_06-git-basics.md\":\"Tzpr3CE9\",\"2-daily_index.md\":\"CTEhkQnR\",\"3-workflow_01-plan-build.md\":\"B8XMKXNM\",\"3-workflow_02-agents.md\":\"CCGtfUpO\",\"3-workflow_03-init.md\":\"D2rYCEyj\",\"3-workflow_index.md\":\"CCkirTkZ\",\"4-scenarios_coder-agents.md\":\"DLB1VycO\",\"4-scenarios_coder-cicd.md\":\"DsvauPHB\",\"4-scenarios_coder-daily.md\":\"BSQ2py4D\",\"4-scenarios_coder-docs-git.md\":\"CiaVnzgp\",\"4-scenarios_coder-intranet.md\":\"BV9CDwWz\",\"4-scenarios_coder-refactor.md\":\"HRQd50qd\",\"4-scenarios_index.md\":\"BeOQUcw1\",\"4-scenarios_office-automation.md\":\"BR8GCCQw\",\"4-scenarios_office-data.md\":\"fnwZVMsC\",\"4-scenarios_office-files.md\":\"fQXj3Zgm\",\"4-scenarios_office-learn.md\":\"BtlJDVvn\",\"4-scenarios_writer-copywriting.md\":\"DIvXbvRs\",\"4-scenarios_writer-novel.md\":\"B6V-tzbn\",\"4-scenarios_writer-script.md\":\"DHG_9xHl\",\"4-scenarios_writer-translate.md\":\"Vv6iA8Wg\",\"4-scenarios_writer-webnovel.md\":\"B9FDVGOV\",\"4-scenarios_writer-wechat.md\":\"CdVFwDto\",\"4-scenarios_writer-workflow.md\":\"BH_cYn6P\",\"4-scenarios_writer-workstation.md\":\"PnmUFu5A\",\"4-scenarios_writer-xiaohongshu.md\":\"HdLVTZ5X\",\"5-advanced_01a-config-basics.md\":\"ruBOzgIF\",\"5-advanced_01b-config-advanced.md\":\"B0HMlReG\",\"5-advanced_02a-agent-quickstart.md\":\"Bb_79ePB\",\"5-advanced_02b-agent-patterns.md\":\"Dq38ghvL\",\"5-advanced_02c-agent-permissions.md\":\"Bp-z4Bvt\",\"5-advanced_02d-agent-advanced.md\":\"vnVh9Ev9\",\"5-advanced_03a-skills-basics.md\":\"DVTH6MWI\",\"5-advanced_03b-skills-advanced.md\":\"CxIFQDl_\",\"5-advanced_03c-skills-patterns.md\":\"CsggDg01\",\"5-advanced_04-commands.md\":\"D3vDviq_\",\"5-advanced_05-permissions.md\":\"vb6X1ufd\",\"5-advanced_06a-themes.md\":\"Bo6zrrxF\",\"5-advanced_06b-keybinds.md\":\"pG1RXxWn\",\"5-advanced_07a-mcp-basics.md\":\"D93_DF3H\",\"5-advanced_07b-mcp-advanced.md\":\"SOgMT1bX\",\"5-advanced_08a-ide-vscode.md\":\"CDIXJGk2\",\"5-advanced_08b-acp.md\":\"oQMEV9Y-\",\"5-advanced_09a-remote-basics.md\":\"CjZ8yWht\",\"5-advanced_09b-remote-api.md\":\"D-Khef6N\",\"5-advanced_10a-sdk-basics.md\":\"C8SbRyQF\",\"5-advanced_10b-sdk-reference.md\":\"g2NRP-kJ\",\"5-advanced_11-enterprise.md\":\"zDMIE25N\",\"5-advanced_11a-enterprise-auth.md\":\"BVY3FNAA\",\"5-advanced_12a-plugins-basics.md\":\"DFQVNSx2\",\"5-advanced_12b-plugins-advanced.md\":\"BS-cPlRs\",\"5-advanced_12c-hooks.md\":\"vBXHxkCZ\",\"5-advanced_13-custom-tools.md\":\"Dqwbicw6\",\"5-advanced_14-github.md\":\"BnujQhLY\",\"5-advanced_15-gitlab.md\":\"CGCoU9pT\",\"5-advanced_16-share.md\":\"Bg_MV4C2\",\"5-advanced_17-tools.md\":\"B-Xd3o0-\",\"5-advanced_18-formatters.md\":\"CXUXD-fy\",\"5-advanced_19-lsp.md\":\"rilVBwAP\",\"5-advanced_20-compaction.md\":\"DU52rvaX\",\"5-advanced_21-thinking-depth.md\":\"CX3fRow8\",\"5-advanced_22-debugging.md\":\"DYF-8D5U\",\"5-advanced_23-web-search.md\":\"CYY1chuW\",\"5-advanced_24-cli-automation.md\":\"L1KL7an_\",\"5-advanced_index.md\":\"Bhrg_SCP\",\"appendix_cli.md\":\"COvkM0As\",\"appendix_commands.md\":\"Bhsu2ZRA\",\"appendix_config-ref.md\":\"CDTEawlP\",\"appendix_ecosystem.md\":\"InB14AgA\",\"appendix_experimental-features.md\":\"BUVIx4HH\",\"appendix_faq.md\":\"8V9dGajH\",\"appendix_index.md\":\"B3HBm2_w\",\"appendix_keybinds.md\":\"BtB0PjND\",\"appendix_migration.md\":\"DzI32Aov\",\"appendix_prompt-guidelines.md\":\"CMDYik60\",\"appendix_prompts.md\":\"D8rLVU14\",\"appendix_providers.md\":\"BJ1VG0-c\",\"appendix_troubleshoot.md\":\"DBiShITV\",\"appendix_zen.md\":\"9geLvAkf\",\"changelog_index.md\":\"zBJ9JQaF\",\"changelog_v1.1.1.md\":\"BaQbQYJK\",\"changelog_v1.1.10.md\":\"CQtF32xq\",\"changelog_v1.1.11.md\":\"C1wrVz0M\",\"changelog_v1.1.12.md\":\"KYlv-iBx\",\"changelog_v1.1.13.md\":\"C8-slJlI\",\"changelog_v1.1.14.md\":\"l5tKsSec\",\"changelog_v1.1.15.md\":\"BYPOz_d7\",\"changelog_v1.1.16.md\":\"DVQknDNp\",\"changelog_v1.1.17.md\":\"CLa-WLcs\",\"changelog_v1.1.18.md\":\"CsDCJARY\",\"changelog_v1.1.19.md\":\"DlYoDZpy\",\"changelog_v1.1.2.md\":\"D5NrwhiP\",\"changelog_v1.1.20.md\":\"kBJx0EQ4\",\"changelog_v1.1.21.md\":\"D82xHHms\",\"changelog_v1.1.23.md\":\"CWJE44Ut\",\"changelog_v1.1.24.md\":\"j7d5OE3_\",\"changelog_v1.1.25.md\":\"gMrViQti\",\"changelog_v1.1.26.md\":\"Ilzj5-ra\",\"changelog_v1.1.27.md\":\"VP6-wU1Y\",\"changelog_v1.1.28.md\":\"ByfiKw9i\",\"changelog_v1.1.29.md\":\"D5SnkDF0\",\"changelog_v1.1.3.md\":\"ChR9f63j\",\"changelog_v1.1.30.md\":\"DMED20XC\",\"changelog_v1.1.31.md\":\"B_vGDsBE\",\"changelog_v1.1.32.md\":\"Dv79Ky45\",\"changelog_v1.1.33.md\":\"DOxgMsA4\",\"changelog_v1.1.34.md\":\"Comluz4y\",\"changelog_v1.1.35.md\":\"CFHDQ0jn\",\"changelog_v1.1.36.md\":\"BAMZF-4z\",\"changelog_v1.1.37.md\":\"CN1iGzNj\",\"changelog_v1.1.38.md\":\"QjFIj5Ed\",\"changelog_v1.1.39.md\":\"Dvamb3_5\",\"changelog_v1.1.4.md\":\"B-tw_rLO\",\"changelog_v1.1.40.md\":\"C7QxHoWf\",\"changelog_v1.1.41.md\":\"C3WbtwRz\",\"changelog_v1.1.42.md\":\"CbZwqv57\",\"changelog_v1.1.43.md\":\"CzOag8UR\",\"changelog_v1.1.44.md\":\"CHuat-Hs\",\"changelog_v1.1.45.md\":\"BySG9acq\",\"changelog_v1.1.46.md\":\"DwIdWZVB\",\"changelog_v1.1.47.md\":\"BqJSVGzs\",\"changelog_v1.1.48.md\":\"D_C5FP3H\",\"changelog_v1.1.49.md\":\"CN2fYYyD\",\"changelog_v1.1.50.md\":\"CBO-q02o\",\"changelog_v1.1.51.md\":\"CwwXC2SM\",\"changelog_v1.1.52.md\":\"DMHFX9-p\",\"changelog_v1.1.53.md\":\"DHlOw0XH\",\"changelog_v1.1.54.md\":\"BPpcx11i\",\"changelog_v1.1.55.md\":\"BSvQLZxX\",\"changelog_v1.1.56.md\":\"aBLPagb9\",\"changelog_v1.1.57.md\":\"B6XEsGF_\",\"changelog_v1.1.58.md\":\"Dk1MukTf\",\"changelog_v1.1.59.md\":\"C6796Lyv\",\"changelog_v1.1.6.md\":\"z7KQgqYA\",\"changelog_v1.1.60.md\":\"q7ILQbWI\",\"changelog_v1.1.61.md\":\"OT2znQYz\",\"changelog_v1.1.62.md\":\"DPy6BsEO\",\"changelog_v1.1.63.md\":\"C0tuDp34\",\"changelog_v1.1.64.md\":\"C0n8Dqgx\",\"changelog_v1.1.65.md\":\"yKpSHFLr\",\"changelog_v1.1.7.md\":\"2611sXXZ\",\"changelog_v1.1.8.md\":\"CUN_sVSa\",\"changelog_v1.2.0.md\":\"B24QiIKX\",\"changelog_v1.2.1.md\":\"Bs_mCLsN\",\"changelog_v1.2.10.md\":\"Bv7WXKMF\",\"changelog_v1.2.11.md\":\"xHubap_X\",\"changelog_v1.2.12.md\":\"DEMT-wb3\",\"changelog_v1.2.13.md\":\"Dkfss-gY\",\"changelog_v1.2.2.md\":\"CqDOrwMS\",\"changelog_v1.2.3.md\":\"Di_khrCE\",\"changelog_v1.2.4.md\":\"B2Cp3PY-\",\"changelog_v1.2.5.md\":\"D0TnK-rp\",\"changelog_v1.2.6.md\":\"DbH21JyU\",\"changelog_v1.2.7.md\":\"CwDZqfB-\",\"changelog_v1.2.8.md\":\"CRnidTdP\",\"changelog_v1.2.9.md\":\"B475nm9Z\",\"community.md\":\"BRUPTTDe\",\"data_readme.md\":\"CP8RuBa3\",\"en_1-start_01-intro.md\":\"CdeRfrL7\",\"en_1-start_02-install.md\":\"qXZwDx9d\",\"en_1-start_02a-install-alternatives.md\":\"CneDALWD\",\"en_1-start_02b-install-troubleshoot.md\":\"BBLSn3rZ\",\"en_1-start_03-network.md\":\"Bh9rq_qe\",\"en_1-start_04-connect.md\":\"iPOOoNBp\",\"en_1-start_04a-free-models.md\":\"C0zGakLo\",\"en_1-start_04b-deepseek.md\":\"D8tO5TZh\",\"en_1-start_04c-zhipu.md\":\"BD-8ylxz\",\"en_1-start_04d-minimax.md\":\"CDh-8IXg\",\"en_1-start_04e-claude.md\":\"DDEh57LJ\",\"en_1-start_04f-claudecode-relay.md\":\"TrPsALFV\",\"en_1-start_04g-ollama.md\":\"CckeVVtF\",\"en_1-start_04h-openai.md\":\"CGSO_0VB\",\"en_1-start_04i-alibaba.md\":\"Dc-noXUi\",\"en_1-start_04j-github-copilot.md\":\"H8dtzwg3\",\"en_1-start_05-update.md\":\"Hpt1gtgF\",\"en_1-start_index.md\":\"DG8j5YWa\",\"en_2-daily_01-interface.md\":\"Cayfn8yt\",\"en_2-daily_01b-copy-paste.md\":\"Bce-yHLG\",\"en_2-daily_01c-basic-tools.md\":\"BIivYaeb\",\"en_2-daily_02-sessions.md\":\"DXB3hQNc\",\"en_2-daily_03-shortcuts.md\":\"D1NUcaij\",\"en_2-daily_04-global-rules.md\":\"CPuH_nOI\",\"en_2-daily_05-env-management.md\":\"1mVar1P2\",\"en_2-daily_06-git-basics.md\":\"D7dXleMM\",\"en_2-daily_index.md\":\"BCvY9Pw5\",\"en_3-workflow_01-plan-build.md\":\"8jRVlkdV\",\"en_3-workflow_02-agents.md\":\"CAZE8lsI\",\"en_3-workflow_03-init.md\":\"BPprJ2xq\",\"en_3-workflow_index.md\":\"DHoICG5q\",\"en_4-scenarios_coder-agents.md\":\"B8mEBn97\",\"en_4-scenarios_coder-cicd.md\":\"CfxvlLQT\",\"en_4-scenarios_coder-daily.md\":\"CmlDw40q\",\"en_4-scenarios_coder-docs-git.md\":\"PBYBFQAT\",\"en_4-scenarios_coder-intranet.md\":\"BG8-gRcQ\",\"en_4-scenarios_coder-refactor.md\":\"q8NEcrf0\",\"en_4-scenarios_index.md\":\"6gR0l0bJ\",\"en_4-scenarios_office-automation.md\":\"B9Wls0qS\",\"en_4-scenarios_office-data.md\":\"DXl15Ovl\",\"en_4-scenarios_office-files.md\":\"DWn5QwfG\",\"en_4-scenarios_office-learn.md\":\"BP7sNJvG\",\"en_4-scenarios_writer-blog.md\":\"7jTseS55\",\"en_4-scenarios_writer-copywriting.md\":\"Dy1hQiyV\",\"en_4-scenarios_writer-novel.md\":\"D9qk39gZ\",\"en_4-scenarios_writer-script.md\":\"CoAZ0GQX\",\"en_4-scenarios_writer-social.md\":\"BnULHOws\",\"en_4-scenarios_writer-translate.md\":\"CouhYZ5f\",\"en_4-scenarios_writer-webnovel.md\":\"frQ8IwY2\",\"en_4-scenarios_writer-wechat.md\":\"Cmp5XS4j\",\"en_4-scenarios_writer-workflow.md\":\"DrNTKkdc\",\"en_4-scenarios_writer-workstation.md\":\"r6S_tN0b\",\"en_4-scenarios_writer-xiaohongshu.md\":\"B1RrBixa\",\"en_5-advanced_01a-config-basics.md\":\"CHCs_cO3\",\"en_5-advanced_01b-config-advanced.md\":\"_p2G05Hd\",\"en_5-advanced_02a-agent-quickstart.md\":\"CQpgoEtl\",\"en_5-advanced_02b-agent-patterns.md\":\"B7-rw0JF\",\"en_5-advanced_02c-agent-permissions.md\":\"D-rATnzB\",\"en_5-advanced_02d-agent-advanced.md\":\"Ct1K3oUu\",\"en_5-advanced_03a-skills-basics.md\":\"hNe5K6e4\",\"en_5-advanced_03b-skills-advanced.md\":\"DXhZHDFK\",\"en_5-advanced_03c-skills-patterns.md\":\"DC0Qlswr\",\"en_5-advanced_04-commands.md\":\"BQ6oB-yB\",\"en_5-advanced_05-permissions.md\":\"BA4mValR\",\"en_5-advanced_06a-themes.md\":\"kpZI_zyV\",\"en_5-advanced_06b-keybinds.md\":\"BIOMAUCa\",\"en_5-advanced_07a-mcp-basics.md\":\"CJWlawAa\",\"en_5-advanced_07b-mcp-advanced.md\":\"Cet224Ky\",\"en_5-advanced_08a-ide-vscode.md\":\"CNsf6KoE\",\"en_5-advanced_08b-acp.md\":\"DDYPq_tH\",\"en_5-advanced_09a-remote-basics.md\":\"D9OOW28w\",\"en_5-advanced_09b-remote-api.md\":\"dpKYkqpl\",\"en_5-advanced_10a-sdk-basics.md\":\"B959mkto\",\"en_5-advanced_10b-sdk-reference.md\":\"BaqOoCVM\",\"en_5-advanced_11-enterprise.md\":\"DSYlmGrT\",\"en_5-advanced_11a-enterprise-auth.md\":\"zbin3tIz\",\"en_5-advanced_12a-plugins-basics.md\":\"BrTi8jAI\",\"en_5-advanced_12b-plugins-advanced.md\":\"DCa0gPFr\",\"en_5-advanced_12c-hooks.md\":\"BE9SXEB2\",\"en_5-advanced_13-custom-tools.md\":\"BbWiO9mT\",\"en_5-advanced_14-github.md\":\"B47P8t1I\",\"en_5-advanced_15-gitlab.md\":\"BD_JjtQF\",\"en_5-advanced_16-share.md\":\"DmUolicN\",\"en_5-advanced_17-tools.md\":\"CdOSzUUl\",\"en_5-advanced_18-formatters.md\":\"-HI4_ea9\",\"en_5-advanced_19-lsp.md\":\"Bh1I7Zw0\",\"en_5-advanced_20-compaction.md\":\"poQMWpoS\",\"en_5-advanced_21-thinking-depth.md\":\"Bz7Ofo4w\",\"en_5-advanced_22-debugging.md\":\"BBIOK3jm\",\"en_5-advanced_23-web-search.md\":\"Cfk7g1TG\",\"en_5-advanced_24-cli-automation.md\":\"tT93EoVK\",\"en_5-advanced_index.md\":\"CrPv-PPD\",\"en_appendix_cli.md\":\"1-DqspvE\",\"en_appendix_commands.md\":\"BB8qoXaR\",\"en_appendix_config-ref.md\":\"DC4RNRN7\",\"en_appendix_ecosystem.md\":\"BqQcXag5\",\"en_appendix_experimental-features.md\":\"B6aQdhXY\",\"en_appendix_faq.md\":\"B8Cxh8_P\",\"en_appendix_index.md\":\"Bq8dg-lY\",\"en_appendix_keybinds.md\":\"Cjy4ewE6\",\"en_appendix_migration.md\":\"DSNCHkH2\",\"en_appendix_prompt-guidelines.md\":\"DtRun8N5\",\"en_appendix_prompts.md\":\"laiMxAsf\",\"en_appendix_providers.md\":\"Bbk6r74h\",\"en_appendix_troubleshoot.md\":\"DuIBDGZM\",\"en_appendix_zen.md\":\"C6j77ZZ0\",\"en_changelog_index.md\":\"CLZz2NsA\",\"en_changelog_v1.1.1.md\":\"CbTG2ayB\",\"en_changelog_v1.1.10.md\":\"eR01a6B2\",\"en_changelog_v1.1.11.md\":\"DRdedpsz\",\"en_changelog_v1.1.12.md\":\"C8zRiOUO\",\"en_changelog_v1.1.13.md\":\"CdwYf_uo\",\"en_changelog_v1.1.14.md\":\"BVCuJBIK\",\"en_changelog_v1.1.15.md\":\"D-lNwj84\",\"en_changelog_v1.1.16.md\":\"C_yZB7c7\",\"en_changelog_v1.1.17.md\":\"CnWyB7wy\",\"en_changelog_v1.1.18.md\":\"DTT1D7a3\",\"en_changelog_v1.1.19.md\":\"CojL4Yvb\",\"en_changelog_v1.1.2.md\":\"CeafLmNI\",\"en_changelog_v1.1.20.md\":\"Db93WUPL\",\"en_changelog_v1.1.21.md\":\"Bx05P4Fx\",\"en_changelog_v1.1.23.md\":\"CXmn9-IU\",\"en_changelog_v1.1.24.md\":\"DJgGdQ47\",\"en_changelog_v1.1.25.md\":\"nhb22lOP\",\"en_changelog_v1.1.26.md\":\"DJZMFs6Z\",\"en_changelog_v1.1.27.md\":\"By6fexzJ\",\"en_changelog_v1.1.28.md\":\"BLpmli8v\",\"en_changelog_v1.1.29.md\":\"DQj5pD2i\",\"en_changelog_v1.1.3.md\":\"5KYZkPho\",\"en_changelog_v1.1.30.md\":\"B_op0WcK\",\"en_changelog_v1.1.31.md\":\"Daj7HIkP\",\"en_changelog_v1.1.32.md\":\"CG4QfI5A\",\"en_changelog_v1.1.33.md\":\"DtyzvQBb\",\"en_changelog_v1.1.34.md\":\"OE45OLDe\",\"en_changelog_v1.1.35.md\":\"V-vJYvoD\",\"en_changelog_v1.1.36.md\":\"DCiqQGpc\",\"en_changelog_v1.1.37.md\":\"DO1GsFH8\",\"en_changelog_v1.1.38.md\":\"BnZUNZT8\",\"en_changelog_v1.1.39.md\":\"D4UWaHM8\",\"en_changelog_v1.1.4.md\":\"DIKczNxI\",\"en_changelog_v1.1.40.md\":\"DsGvo_sY\",\"en_changelog_v1.1.41.md\":\"DQqolwTF\",\"en_changelog_v1.1.42.md\":\"_-DZWaaf\",\"en_changelog_v1.1.43.md\":\"N5lPEd99\",\"en_changelog_v1.1.44.md\":\"Bj3UiG3b\",\"en_changelog_v1.1.45.md\":\"DPQKj2mz\",\"en_changelog_v1.1.46.md\":\"DXTHypd4\",\"en_changelog_v1.1.47.md\":\"DFJBWP-3\",\"en_changelog_v1.1.48.md\":\"BXI3CeKL\",\"en_changelog_v1.1.49.md\":\"Dd7t2P82\",\"en_changelog_v1.1.50.md\":\"DY0EOMAI\",\"en_changelog_v1.1.51.md\":\"C_QX6A3h\",\"en_changelog_v1.1.52.md\":\"l968Eezc\",\"en_changelog_v1.1.53.md\":\"BTDC7x9_\",\"en_changelog_v1.1.54.md\":\"CW1gcGDl\",\"en_changelog_v1.1.55.md\":\"BHvCidL1\",\"en_changelog_v1.1.56.md\":\"XMlwPTcN\",\"en_changelog_v1.1.57.md\":\"9IPzcxP7\",\"en_changelog_v1.1.58.md\":\"D82-X_cX\",\"en_changelog_v1.1.59.md\":\"CQHF8Tb3\",\"en_changelog_v1.1.6.md\":\"DAG-humK\",\"en_changelog_v1.1.60.md\":\"Cn772aEo\",\"en_changelog_v1.1.61.md\":\"CWOaI9FW\",\"en_changelog_v1.1.62.md\":\"Cj5_Knwg\",\"en_changelog_v1.1.63.md\":\"B8c_jNEX\",\"en_changelog_v1.1.64.md\":\"BNnSoDbl\",\"en_changelog_v1.1.65.md\":\"CTtAq4Lh\",\"en_changelog_v1.1.7.md\":\"U9ChIF9o\",\"en_changelog_v1.1.8.md\":\"w6Immkpx\",\"en_changelog_v1.2.0.md\":\"A1OfmoCH\",\"en_changelog_v1.2.1.md\":\"D9bVsExe\",\"en_changelog_v1.2.10.md\":\"Bm2MQACD\",\"en_changelog_v1.2.2.md\":\"DLJT9mZ-\",\"en_changelog_v1.2.3.md\":\"CoCH2B7J\",\"en_changelog_v1.2.4.md\":\"oH39Rfah\",\"en_changelog_v1.2.5.md\":\"5WhYCY7o\",\"en_changelog_v1.2.6.md\":\"CCzJA6IB\",\"en_changelog_v1.2.7.md\":\"u_p5maWV\",\"en_changelog_v1.2.8.md\":\"C__puwiH\",\"en_changelog_v1.2.9.md\":\"39nZjlcF\",\"en_community.md\":\"CDZceguS\",\"en_index.md\":\"BAXH7_Tp\",\"en_privacy.md\":\"bK816HAO\",\"index.md\":\"IjsYFyzo\",\"privacy.md\":\"BjxPCZog\",\"public_images_readme.md\":\"9Oz9sF2P\"}");window.__VP_SITE_DATA__=JSON.parse("{\"lang\":\"zh-CN\",\"dir\":\"ltr\",\"title\":\"OpenCode 中文教程\",\"titleTemplate\":\":title - AI 编程助手实战指南\",\"description\":\"OpenCode 是终端 AI 编程助手，本教程从零基础到进阶，教你用 AI 写代码、改 Bug、自动化办公。支持智谱、DeepSeek 等国产模型，完全免费开源。\",\"base\":\"/\",\"head\":[],\"router\":{\"prefetchLinks\":true},\"appearance\":true,\"themeConfig\":{\"logo\":{\"light\":\"/logo-light.png\",\"dark\":\"/logo-dark.png\"},\"nav\":[{\"text\":\"开始学习\",\"link\":\"/1-start/\"},{\"text\":\"场景实战\",\"link\":\"/4-scenarios/\"},{\"text\":\"进阶手册\",\"link\":\"/5-advanced/\"},{\"text\":\"速查手册\",\"link\":\"/appendix/\"},{\"text\":\"加入社群\",\"link\":\"/community\"}],\"sidebar\":[{\"text\":\"🚀 快速起步\",\"collapsed\":false,\"items\":[{\"text\":\"阶段导读\",\"link\":\"/1-start/\"},{\"text\":\"1.1 这是什么\",\"link\":\"/1-start/01-intro\"},{\"text\":\"1.2 安装\",\"collapsed\":true,\"items\":[{\"text\":\"安装：5 分钟搞定\",\"link\":\"/1-start/02-install\"},{\"text\":\"备用安装方式\",\"link\":\"/1-start/02a-install-alternatives\"},{\"text\":\"装不上怎么办？\",\"link\":\"/1-start/02b-install-troubleshoot\"}]},{\"text\":\"1.3 网络配置\",\"link\":\"/1-start/03-network\"},{\"text\":\"1.4 连接模型\",\"collapsed\":true,\"items\":[{\"text\":\"总览：第一次对话\",\"link\":\"/1-start/04-connect\"},{\"text\":\"免费模型（OpenCode Zen）\",\"link\":\"/1-start/04a-free-models\"},{\"text\":\"[推荐] 智谱 GLM-4.7\",\"link\":\"/1-start/04c-zhipu\"},{\"text\":\"DeepSeek\",\"link\":\"/1-start/04b-deepseek\"},{\"text\":\"MiniMax\",\"link\":\"/1-start/04d-minimax\"},{\"text\":\"Claude（Anthropic）\",\"link\":\"/1-start/04e-claude\"},{\"text\":\"Claude Code 中转\",\"link\":\"/1-start/04f-claudecode-relay\"},{\"text\":\"Ollama（本地）\",\"link\":\"/1-start/04g-ollama\"},{\"text\":\"OpenAI（GPT / Codex）\",\"link\":\"/1-start/04h-openai\"},{\"text\":\"通义千问\",\"link\":\"/1-start/04i-alibaba\"},{\"text\":\"GitHub Copilot\",\"link\":\"/1-start/04j-github-copilot\"}]},{\"text\":\"1.5 自动更新\",\"link\":\"/1-start/05-update\"}]},{\"text\":\"💪 日常使用\",\"collapsed\":false,\"items\":[{\"text\":\"阶段导读\",\"link\":\"/2-daily/\"},{\"text\":\"2.1 界面与操作\",\"link\":\"/2-daily/01-interface\"},{\"text\":\"2.1b 如何复制内容\",\"link\":\"/2-daily/01b-copy-paste\"},{\"text\":\"2.1c AI 的基础工具\",\"link\":\"/2-daily/01c-basic-tools\"},{\"text\":\"2.2 管理对话\",\"link\":\"/2-daily/02-sessions\"},{\"text\":\"2.3 常用快捷键\",\"link\":\"/2-daily/03-shortcuts\"},{\"text\":\"2.4 全局提示词\",\"link\":\"/2-daily/04-global-rules\"},{\"text\":\"2.5 环境管理\",\"link\":\"/2-daily/05-env-management\"},{\"text\":\"2.6 Git 入门\",\"link\":\"/2-daily/06-git-basics\"}]},{\"text\":\"⚡ 高效工作流\",\"collapsed\":false,\"items\":[{\"text\":\"阶段导读\",\"link\":\"/3-workflow/\"},{\"text\":\"3.1 Plan vs Build\",\"link\":\"/3-workflow/01-plan-build\"},{\"text\":\"3.2 认识 Agent\",\"link\":\"/3-workflow/02-agents\"},{\"text\":\"3.3 项目初始化\",\"link\":\"/3-workflow/03-init\"}]},{\"text\":\"🎯 场景实战\",\"collapsed\":false,\"items\":[{\"text\":\"选择你的路线\",\"link\":\"/4-scenarios/\"},{\"text\":\"✍️ 内容创作\",\"collapsed\":false,\"items\":[{\"text\":\"A1 创作工作流\",\"link\":\"/4-scenarios/writer-workflow\"},{\"text\":\"A2 公众号创作\",\"link\":\"/4-scenarios/writer-wechat\"},{\"text\":\"A3 小红书运营\",\"link\":\"/4-scenarios/writer-xiaohongshu\"},{\"text\":\"A4 营销文案\",\"link\":\"/4-scenarios/writer-copywriting\"},{\"text\":\"A5 翻译润色\",\"link\":\"/4-scenarios/writer-translate\"},{\"text\":\"A6 小说创作\",\"link\":\"/4-scenarios/writer-novel\"},{\"text\":\"A7 剧本写作\",\"link\":\"/4-scenarios/writer-script\"},{\"text\":\"A8 网文创作\",\"link\":\"/4-scenarios/writer-webnovel\"},{\"text\":\"A9 创作工作站\",\"link\":\"/4-scenarios/writer-workstation\"}]},{\"text\":\"💻 我是程序员\",\"collapsed\":false,\"items\":[{\"text\":\"B1 开发日常\",\"link\":\"/4-scenarios/coder-daily\"},{\"text\":\"B2 重构与测试\",\"link\":\"/4-scenarios/coder-refactor\"},{\"text\":\"B3 文档与 Git\",\"link\":\"/4-scenarios/coder-docs-git\"},{\"text\":\"B4 CI/CD 集成\",\"link\":\"/4-scenarios/coder-cicd\"},{\"text\":\"B5 专属 Agent\",\"link\":\"/4-scenarios/coder-agents\"},{\"text\":\"B6 内网/离线部署\",\"link\":\"/4-scenarios/coder-intranet\"}]},{\"text\":\"📊 效率提升\",\"collapsed\":false,\"items\":[{\"text\":\"C1 文件整理\",\"link\":\"/4-scenarios/office-files\"},{\"text\":\"C2 数据处理\",\"link\":\"/4-scenarios/office-data\"},{\"text\":\"C3 AI 学编程\",\"link\":\"/4-scenarios/office-learn\"},{\"text\":\"C4 自动化脚本\",\"link\":\"/4-scenarios/office-automation\"}]}]},{\"text\":\"🔧 进阶手册\",\"collapsed\":false,\"items\":[{\"text\":\"阶段导读\",\"link\":\"/5-advanced/\"},{\"text\":\"5.1 配置全解\",\"collapsed\":true,\"items\":[{\"text\":\"5.1a 配置基础\",\"link\":\"/5-advanced/01a-config-basics\"},{\"text\":\"5.1b 配置进阶\",\"link\":\"/5-advanced/01b-config-advanced\"}]},{\"text\":\"5.2 Agent 系统\",\"collapsed\":true,\"items\":[{\"text\":\"5.2a 快速入门\",\"link\":\"/5-advanced/02a-agent-quickstart\"},{\"text\":\"5.2b 设计模式\",\"link\":\"/5-advanced/02b-agent-patterns\"},{\"text\":\"5.2c 权限与安全\",\"link\":\"/5-advanced/02c-agent-permissions\"},{\"text\":\"5.2d 高级技巧\",\"link\":\"/5-advanced/02d-agent-advanced\"}]},{\"text\":\"5.3 Skill\",\"collapsed\":true,\"items\":[{\"text\":\"5.3a Skill 基础\",\"link\":\"/5-advanced/03a-skills-basics\"},{\"text\":\"5.3b Skill 进阶\",\"link\":\"/5-advanced/03b-skills-advanced\"},{\"text\":\"5.3c 高级模式\",\"link\":\"/5-advanced/03c-skills-patterns\"}]},{\"text\":\"5.4 快捷命令\",\"link\":\"/5-advanced/04-commands\"},{\"text\":\"5.5 权限管控\",\"link\":\"/5-advanced/05-permissions\"},{\"text\":\"5.6 主题与快捷键\",\"collapsed\":true,\"items\":[{\"text\":\"5.6a 主题系统\",\"link\":\"/5-advanced/06a-themes\"},{\"text\":\"5.6b 快捷键\",\"link\":\"/5-advanced/06b-keybinds\"}]},{\"text\":\"5.7 MCP 扩展\",\"collapsed\":true,\"items\":[{\"text\":\"5.7a MCP 基础\",\"link\":\"/5-advanced/07a-mcp-basics\"},{\"text\":\"5.7b MCP 进阶\",\"link\":\"/5-advanced/07b-mcp-advanced\"}]},{\"text\":\"5.8 IDE 集成\",\"collapsed\":true,\"items\":[{\"text\":\"5.8a VS Code 扩展\",\"link\":\"/5-advanced/08a-ide-vscode\"},{\"text\":\"5.8b ACP 协议\",\"link\":\"/5-advanced/08b-acp\"}]},{\"text\":\"5.9 远程模式\",\"collapsed\":true,\"items\":[{\"text\":\"5.9a 远程基础\",\"link\":\"/5-advanced/09a-remote-basics\"},{\"text\":\"5.9b API 参考\",\"link\":\"/5-advanced/09b-remote-api\"}]},{\"text\":\"5.10 SDK 开发\",\"collapsed\":true,\"items\":[{\"text\":\"5.10a SDK 基础\",\"link\":\"/5-advanced/10a-sdk-basics\"},{\"text\":\"5.10b API 参考\",\"link\":\"/5-advanced/10b-sdk-reference\"}]},{\"text\":\"5.11 企业版\",\"link\":\"/5-advanced/11-enterprise\"},{\"text\":\"5.11a 企业认证集成\",\"link\":\"/5-advanced/11a-enterprise-auth\"},{\"text\":\"5.12 插件开发\",\"collapsed\":true,\"items\":[{\"text\":\"5.12a 插件基础\",\"link\":\"/5-advanced/12a-plugins-basics\"},{\"text\":\"5.12b 插件进阶\",\"link\":\"/5-advanced/12b-plugins-advanced\"},{\"text\":\"5.12c Hook 教程\",\"link\":\"/5-advanced/12c-hooks\"}]},{\"text\":\"5.13 自定义工具\",\"link\":\"/5-advanced/13-custom-tools\"},{\"text\":\"5.14 GitHub 集成\",\"link\":\"/5-advanced/14-github\"},{\"text\":\"5.15 GitLab 集成\",\"link\":\"/5-advanced/15-gitlab\"},{\"text\":\"5.16 会话分享\",\"link\":\"/5-advanced/16-share\"},{\"text\":\"5.17 内置工具\",\"link\":\"/5-advanced/17-tools\"},{\"text\":\"5.18 代码格式化器\",\"link\":\"/5-advanced/18-formatters\"},{\"text\":\"5.19 LSP 代码智能\",\"link\":\"/5-advanced/19-lsp\"},{\"text\":\"5.20 上下文压缩\",\"link\":\"/5-advanced/20-compaction\"},{\"text\":\"5.21 思考深度配置\",\"link\":\"/5-advanced/21-thinking-depth\"},{\"text\":\"5.22 调试与诊断\",\"link\":\"/5-advanced/22-debugging\"},{\"text\":\"5.23 网络搜索与获取\",\"link\":\"/5-advanced/23-web-search\"},{\"text\":\"5.24 CLI 自动化\",\"link\":\"/5-advanced/24-cli-automation\"}]},{\"text\":\"📚 速查手册\",\"collapsed\":false,\"items\":[{\"text\":\"速查总览\",\"link\":\"/appendix/\"},{\"text\":\"A. 快捷键速查\",\"link\":\"/appendix/keybinds\"},{\"text\":\"B. 斜杠命令\",\"link\":\"/appendix/commands\"},{\"text\":\"C. CLI 参考\",\"link\":\"/appendix/cli\"},{\"text\":\"D. 配置选项\",\"link\":\"/appendix/config-ref\"},{\"text\":\"E. 模型提供商\",\"link\":\"/appendix/providers\"},{\"text\":\"F. Prompt 模板库\",\"link\":\"/appendix/prompts\"},{\"text\":\"G. 常见问题\",\"link\":\"/appendix/faq\"},{\"text\":\"H. 故障排除\",\"link\":\"/appendix/troubleshoot\"},{\"text\":\"I. 生态系统\",\"link\":\"/appendix/ecosystem\"},{\"text\":\"J. 迁移指南\",\"link\":\"/appendix/migration\"},{\"text\":\"K. OpenCode Zen\",\"link\":\"/appendix/zen\"},{\"text\":\"L. 实验性功能\",\"link\":\"/appendix/experimental-features\"}]},{\"text\":\"📝 OpenCode 更新日志\",\"collapsed\":true,\"items\":[{\"text\":\"更新日志\",\"link\":\"/changelog/\"},{\"text\":\"v1.2.13\",\"link\":\"/changelog/v1.2.13\"},{\"text\":\"v1.2.12\",\"link\":\"/changelog/v1.2.12\"},{\"text\":\"v1.2.11\",\"link\":\"/changelog/v1.2.11\"},{\"text\":\"v1.2.10\",\"link\":\"/changelog/v1.2.10\"},{\"text\":\"v1.2.9\",\"link\":\"/changelog/v1.2.9\"},{\"text\":\"v1.2.8\",\"link\":\"/changelog/v1.2.8\"},{\"text\":\"v1.2.7\",\"link\":\"/changelog/v1.2.7\"},{\"text\":\"v1.2.6\",\"link\":\"/changelog/v1.2.6\"},{\"text\":\"v1.2.5\",\"link\":\"/changelog/v1.2.5\"},{\"text\":\"v1.2.4\",\"link\":\"/changelog/v1.2.4\"},{\"text\":\"v1.2.3\",\"link\":\"/changelog/v1.2.3\"},{\"text\":\"v1.2.2\",\"link\":\"/changelog/v1.2.2\"},{\"text\":\"v1.2.1\",\"link\":\"/changelog/v1.2.1\"},{\"text\":\"v1.2.0\",\"link\":\"/changelog/v1.2.0\"},{\"text\":\"v1.1.65\",\"link\":\"/changelog/v1.1.65\"},{\"text\":\"v1.1.64\",\"link\":\"/changelog/v1.1.64\"},{\"text\":\"v1.1.63\",\"link\":\"/changelog/v1.1.63\"},{\"text\":\"v1.1.62\",\"link\":\"/changelog/v1.1.62\"},{\"text\":\"v1.1.61\",\"link\":\"/changelog/v1.1.61\"},{\"text\":\"v1.1.60\",\"link\":\"/changelog/v1.1.60\"},{\"text\":\"v1.1.59\",\"link\":\"/changelog/v1.1.59\"},{\"text\":\"v1.1.58\",\"link\":\"/changelog/v1.1.58\"},{\"text\":\"v1.1.57\",\"link\":\"/changelog/v1.1.57\"},{\"text\":\"v1.1.56\",\"link\":\"/changelog/v1.1.56\"},{\"text\":\"v1.1.55\",\"link\":\"/changelog/v1.1.55\"},{\"text\":\"v1.1.54\",\"link\":\"/changelog/v1.1.54\"},{\"text\":\"v1.1.53\",\"link\":\"/changelog/v1.1.53\"},{\"text\":\"v1.1.52\",\"link\":\"/changelog/v1.1.52\"},{\"text\":\"v1.1.51\",\"link\":\"/changelog/v1.1.51\"},{\"text\":\"v1.1.50\",\"link\":\"/changelog/v1.1.50\"},{\"text\":\"v1.1.49\",\"link\":\"/changelog/v1.1.49\"},{\"text\":\"v1.1.48\",\"link\":\"/changelog/v1.1.48\"},{\"text\":\"v1.1.47\",\"link\":\"/changelog/v1.1.47\"},{\"text\":\"v1.1.46\",\"link\":\"/changelog/v1.1.46\"},{\"text\":\"v1.1.45\",\"link\":\"/changelog/v1.1.45\"},{\"text\":\"v1.1.44\",\"link\":\"/changelog/v1.1.44\"},{\"text\":\"v1.1.43\",\"link\":\"/changelog/v1.1.43\"},{\"text\":\"v1.1.42\",\"link\":\"/changelog/v1.1.42\"},{\"text\":\"v1.1.41\",\"link\":\"/changelog/v1.1.41\"},{\"text\":\"v1.1.40\",\"link\":\"/changelog/v1.1.40\"},{\"text\":\"v1.1.39\",\"link\":\"/changelog/v1.1.39\"},{\"text\":\"v1.1.38\",\"link\":\"/changelog/v1.1.38\"},{\"text\":\"v1.1.37\",\"link\":\"/changelog/v1.1.37\"},{\"text\":\"v1.1.36\",\"link\":\"/changelog/v1.1.36\"},{\"text\":\"v1.1.35\",\"link\":\"/changelog/v1.1.35\"},{\"text\":\"v1.1.34\",\"link\":\"/changelog/v1.1.34\"},{\"text\":\"v1.1.33\",\"link\":\"/changelog/v1.1.33\"},{\"text\":\"v1.1.32\",\"link\":\"/changelog/v1.1.32\"},{\"text\":\"v1.1.31\",\"link\":\"/changelog/v1.1.31\"},{\"text\":\"v1.1.30\",\"link\":\"/changelog/v1.1.30\"},{\"text\":\"v1.1.29\",\"link\":\"/changelog/v1.1.29\"},{\"text\":\"v1.1.28\",\"link\":\"/changelog/v1.1.28\"},{\"text\":\"v1.1.27\",\"link\":\"/changelog/v1.1.27\"},{\"text\":\"v1.1.26\",\"link\":\"/changelog/v1.1.26\"},{\"text\":\"v1.1.25\",\"link\":\"/changelog/v1.1.25\"},{\"text\":\"v1.1.24\",\"link\":\"/changelog/v1.1.24\"},{\"text\":\"v1.1.23\",\"link\":\"/changelog/v1.1.23\"},{\"text\":\"v1.1.21\",\"link\":\"/changelog/v1.1.21\"},{\"text\":\"v1.1.20\",\"link\":\"/changelog/v1.1.20\"},{\"text\":\"v1.1.19\",\"link\":\"/changelog/v1.1.19\"},{\"text\":\"v1.1.18\",\"link\":\"/changelog/v1.1.18\"},{\"text\":\"v1.1.17\",\"link\":\"/changelog/v1.1.17\"},{\"text\":\"v1.1.16\",\"link\":\"/changelog/v1.1.16\"},{\"text\":\"v1.1.15\",\"link\":\"/changelog/v1.1.15\"},{\"text\":\"v1.1.14\",\"link\":\"/changelog/v1.1.14\"},{\"text\":\"v1.1.13\",\"link\":\"/changelog/v1.1.13\"},{\"text\":\"v1.1.12\",\"link\":\"/changelog/v1.1.12\"},{\"text\":\"v1.1.11\",\"link\":\"/changelog/v1.1.11\"},{\"text\":\"v1.1.10\",\"link\":\"/changelog/v1.1.10\"},{\"text\":\"v1.1.8\",\"link\":\"/changelog/v1.1.8\"},{\"text\":\"v1.1.7\",\"link\":\"/changelog/v1.1.7\"},{\"text\":\"v1.1.6\",\"link\":\"/changelog/v1.1.6\"},{\"text\":\"v1.1.4\",\"link\":\"/changelog/v1.1.4\"},{\"text\":\"v1.1.3\",\"link\":\"/changelog/v1.1.3\"},{\"text\":\"v1.1.2\",\"link\":\"/changelog/v1.1.2\"},{\"text\":\"v1.1.1\",\"link\":\"/changelog/v1.1.1\"}]}],\"socialLinks\":[{\"icon\":\"github\",\"link\":\"https://github.com/vbgate/learn-opencode\"}],\"footer\":{\"message\":\"<span title=\\\"未经授权，禁止将本站内容用于付费课程、付费专栏、出版物或其他商业用途。\\\">本教程采用 <a href=\\\"https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">CC BY-NC-SA 4.0</a> 许可协议 | <a href=\\\"/privacy\\\">隐私政策</a> | © 2026 LearnOpenCode</span>\"},\"search\":{\"provider\":\"local\",\"options\":{\"locales\":{\"root\":{\"translations\":{\"button\":{\"buttonText\":\"搜索文档\",\"buttonAriaLabel\":\"搜索文档\"},\"modal\":{\"noResultsText\":\"无法找到相关结果\",\"resetButtonTitle\":\"清除查询条件\",\"footer\":{\"selectText\":\"选择\",\"navigateText\":\"切换\"}}}},\"en\":{\"translations\":{\"button\":{\"buttonText\":\"Search\",\"buttonAriaLabel\":\"Search\"},\"modal\":{\"noResultsText\":\"No results found\",\"resetButtonTitle\":\"Clear search query\",\"footer\":{\"selectText\":\"Select\",\"navigateText\":\"Navigate\"}}}}}}},\"docFooter\":{\"prev\":\"上一课\",\"next\":\"下一课\"},\"outline\":{\"label\":\"本页目录\",\"level\":[2,3]},\"lastUpdated\":{\"text\":\"最后更新\"},\"editLink\":{\"pattern\":\"https://github.com/vbgate/learn-opencode/edit/main/docs/:path\",\"text\":\"在 GitHub 上编辑此页\"}},\"locales\":{\"root\":{\"label\":\"简体中文\",\"lang\":\"zh-CN\"},\"en\":{\"label\":\"English\",\"lang\":\"en-US\",\"link\":\"/en/\",\"themeConfig\":{\"nav\":[{\"text\":\"Start\",\"link\":\"/en/1-start/\"},{\"text\":\"Scenarios\",\"link\":\"/en/4-scenarios/\"},{\"text\":\"Advanced\",\"link\":\"/en/5-advanced/\"},{\"text\":\"Reference\",\"link\":\"/en/appendix/\"},{\"text\":\"Community\",\"link\":\"/en/community\"}],\"sidebar\":[{\"text\":\"🚀 Quick Start\",\"collapsed\":false,\"items\":[{\"text\":\"Phase Guide\",\"link\":\"/en/1-start/\"},{\"text\":\"1.1 What is OpenCode\",\"link\":\"/en/1-start/01-intro\"},{\"text\":\"1.2 Installation\",\"collapsed\":true,\"items\":[{\"text\":\"Install in 5 Minutes\",\"link\":\"/en/1-start/02-install\"},{\"text\":\"Alternative Methods\",\"link\":\"/en/1-start/02a-install-alternatives\"},{\"text\":\"Troubleshooting\",\"link\":\"/en/1-start/02b-install-troubleshoot\"}]},{\"text\":\"1.3 Network Config\",\"link\":\"/en/1-start/03-network\"},{\"text\":\"1.4 Connect Models\",\"collapsed\":true,\"items\":[{\"text\":\"Overview: First Chat\",\"link\":\"/en/1-start/04-connect\"},{\"text\":\"Free Models (OpenCode Zen)\",\"link\":\"/en/1-start/04a-free-models\"},{\"text\":\"[Recommended] Claude\",\"link\":\"/en/1-start/04e-claude\"},{\"text\":\"Claude Code Relay\",\"link\":\"/en/1-start/04f-claudecode-relay\"},{\"text\":\"OpenAI (GPT / Codex)\",\"link\":\"/en/1-start/04h-openai\"},{\"text\":\"Ollama (Local)\",\"link\":\"/en/1-start/04g-ollama\"},{\"text\":\"DeepSeek\",\"link\":\"/en/1-start/04b-deepseek\"},{\"text\":\"GLM (Zhipu)\",\"link\":\"/en/1-start/04c-zhipu\"},{\"text\":\"MiniMax\",\"link\":\"/en/1-start/04d-minimax\"},{\"text\":\"Qwen (Alibaba)\",\"link\":\"/en/1-start/04i-alibaba\"},{\"text\":\"GitHub Copilot\",\"link\":\"/en/1-start/04j-github-copilot\"}]},{\"text\":\"1.5 Auto Update\",\"link\":\"/en/1-start/05-update\"}]},{\"text\":\"💪 Daily Usage\",\"collapsed\":false,\"items\":[{\"text\":\"Phase Guide\",\"link\":\"/en/2-daily/\"},{\"text\":\"2.1 Interface & Controls\",\"link\":\"/en/2-daily/01-interface\"},{\"text\":\"2.1b Copy & Paste\",\"link\":\"/en/2-daily/01b-copy-paste\"},{\"text\":\"2.1c AI Basic Tools\",\"link\":\"/en/2-daily/01c-basic-tools\"},{\"text\":\"2.2 Session Management\",\"link\":\"/en/2-daily/02-sessions\"},{\"text\":\"2.3 Keyboard Shortcuts\",\"link\":\"/en/2-daily/03-shortcuts\"},{\"text\":\"2.4 Global Rules\",\"link\":\"/en/2-daily/04-global-rules\"},{\"text\":\"2.5 Environment Mgmt\",\"link\":\"/en/2-daily/05-env-management\"},{\"text\":\"2.6 Git Basics\",\"link\":\"/en/2-daily/06-git-basics\"}]},{\"text\":\"⚡ Efficient Workflow\",\"collapsed\":false,\"items\":[{\"text\":\"Phase Guide\",\"link\":\"/en/3-workflow/\"},{\"text\":\"3.1 Plan vs Build\",\"link\":\"/en/3-workflow/01-plan-build\"},{\"text\":\"3.2 Understanding Agents\",\"link\":\"/en/3-workflow/02-agents\"},{\"text\":\"3.3 Project Init\",\"link\":\"/en/3-workflow/03-init\"}]},{\"text\":\"🎯 Scenarios\",\"collapsed\":false,\"items\":[{\"text\":\"Choose Your Path\",\"link\":\"/en/4-scenarios/\"},{\"text\":\"✍️ Content Creation\",\"collapsed\":false,\"items\":[{\"text\":\"A1 Writing Workflow\",\"link\":\"/en/4-scenarios/writer-workflow\"},{\"text\":\"A2 Blog & Newsletter\",\"link\":\"/en/4-scenarios/writer-blog\"},{\"text\":\"A3 Social Content\",\"link\":\"/en/4-scenarios/writer-social\"},{\"text\":\"A4 Marketing Copy\",\"link\":\"/en/4-scenarios/writer-copywriting\"},{\"text\":\"A5 Translation\",\"link\":\"/en/4-scenarios/writer-translate\"},{\"text\":\"A6 Novel Writing\",\"link\":\"/en/4-scenarios/writer-novel\"},{\"text\":\"A7 Script Writing\",\"link\":\"/en/4-scenarios/writer-script\"},{\"text\":\"A8 Web Novel (CN Only)\",\"link\":\"/en/4-scenarios/writer-webnovel\"},{\"text\":\"A9 Writing Station\",\"link\":\"/en/4-scenarios/writer-workstation\"}]},{\"text\":\"💻 For Developers\",\"collapsed\":false,\"items\":[{\"text\":\"B1 Daily Coding\",\"link\":\"/en/4-scenarios/coder-daily\"},{\"text\":\"B2 Refactor & Test\",\"link\":\"/en/4-scenarios/coder-refactor\"},{\"text\":\"B3 Docs & Git\",\"link\":\"/en/4-scenarios/coder-docs-git\"},{\"text\":\"B4 CI/CD Integration\",\"link\":\"/en/4-scenarios/coder-cicd\"},{\"text\":\"B5 Custom Agents\",\"link\":\"/en/4-scenarios/coder-agents\"},{\"text\":\"B6 Air-gapped Deploy\",\"link\":\"/en/4-scenarios/coder-intranet\"}]},{\"text\":\"📊 Productivity\",\"collapsed\":false,\"items\":[{\"text\":\"C1 File Management\",\"link\":\"/en/4-scenarios/office-files\"},{\"text\":\"C2 Data Processing\",\"link\":\"/en/4-scenarios/office-data\"},{\"text\":\"C3 Learn Coding w/ AI\",\"link\":\"/en/4-scenarios/office-learn\"},{\"text\":\"C4 Automation\",\"link\":\"/en/4-scenarios/office-automation\"}]}]},{\"text\":\"🔧 Advanced Guide\",\"collapsed\":false,\"items\":[{\"text\":\"Phase Guide\",\"link\":\"/en/5-advanced/\"},{\"text\":\"5.1 Configuration\",\"collapsed\":true,\"items\":[{\"text\":\"5.1a Basics\",\"link\":\"/en/5-advanced/01a-config-basics\"},{\"text\":\"5.1b Advanced\",\"link\":\"/en/5-advanced/01b-config-advanced\"}]},{\"text\":\"5.2 Agent System\",\"collapsed\":true,\"items\":[{\"text\":\"5.2a Quickstart\",\"link\":\"/en/5-advanced/02a-agent-quickstart\"},{\"text\":\"5.2b Patterns\",\"link\":\"/en/5-advanced/02b-agent-patterns\"},{\"text\":\"5.2c Permissions\",\"link\":\"/en/5-advanced/02c-agent-permissions\"},{\"text\":\"5.2d Advanced\",\"link\":\"/en/5-advanced/02d-agent-advanced\"}]},{\"text\":\"5.3 Skills\",\"collapsed\":true,\"items\":[{\"text\":\"5.3a Basics\",\"link\":\"/en/5-advanced/03a-skills-basics\"},{\"text\":\"5.3b Advanced\",\"link\":\"/en/5-advanced/03b-skills-advanced\"},{\"text\":\"5.3c Patterns\",\"link\":\"/en/5-advanced/03c-skills-patterns\"}]},{\"text\":\"5.4 Slash Commands\",\"link\":\"/en/5-advanced/04-commands\"},{\"text\":\"5.5 Permissions\",\"link\":\"/en/5-advanced/05-permissions\"},{\"text\":\"5.6 Themes & Keys\",\"collapsed\":true,\"items\":[{\"text\":\"5.6a Themes\",\"link\":\"/en/5-advanced/06a-themes\"},{\"text\":\"5.6b Keybinds\",\"link\":\"/en/5-advanced/06b-keybinds\"}]},{\"text\":\"5.7 MCP Extension\",\"collapsed\":true,\"items\":[{\"text\":\"5.7a Basics\",\"link\":\"/en/5-advanced/07a-mcp-basics\"},{\"text\":\"5.7b Advanced\",\"link\":\"/en/5-advanced/07b-mcp-advanced\"}]},{\"text\":\"5.8 IDE Integration\",\"collapsed\":true,\"items\":[{\"text\":\"5.8a VS Code\",\"link\":\"/en/5-advanced/08a-ide-vscode\"},{\"text\":\"5.8b ACP Protocol\",\"link\":\"/en/5-advanced/08b-acp\"}]},{\"text\":\"5.9 Remote Mode\",\"collapsed\":true,\"items\":[{\"text\":\"5.9a Basics\",\"link\":\"/en/5-advanced/09a-remote-basics\"},{\"text\":\"5.9b API Ref\",\"link\":\"/en/5-advanced/09b-remote-api\"}]},{\"text\":\"5.10 SDK Dev\",\"collapsed\":true,\"items\":[{\"text\":\"5.10a Basics\",\"link\":\"/en/5-advanced/10a-sdk-basics\"},{\"text\":\"5.10b API Ref\",\"link\":\"/en/5-advanced/10b-sdk-reference\"}]},{\"text\":\"5.11 Enterprise\",\"link\":\"/en/5-advanced/11-enterprise\"},{\"text\":\"5.11a Enterprise Auth\",\"link\":\"/en/5-advanced/11a-enterprise-auth\"},{\"text\":\"5.12 Plugins\",\"collapsed\":true,\"items\":[{\"text\":\"5.12a Basics\",\"link\":\"/en/5-advanced/12a-plugins-basics\"},{\"text\":\"5.12b Advanced\",\"link\":\"/en/5-advanced/12b-plugins-advanced\"},{\"text\":\"5.12c Hooks\",\"link\":\"/en/5-advanced/12c-hooks\"}]},{\"text\":\"5.13 Custom Tools\",\"link\":\"/en/5-advanced/13-custom-tools\"},{\"text\":\"5.14 GitHub Integration\",\"link\":\"/en/5-advanced/14-github\"},{\"text\":\"5.15 GitLab Integration\",\"link\":\"/en/5-advanced/15-gitlab\"},{\"text\":\"5.16 Session Sharing\",\"link\":\"/en/5-advanced/16-share\"},{\"text\":\"5.17 Built-in Tools\",\"link\":\"/en/5-advanced/17-tools\"},{\"text\":\"5.18 Formatters\",\"link\":\"/en/5-advanced/18-formatters\"},{\"text\":\"5.19 LSP Intelligence\",\"link\":\"/en/5-advanced/19-lsp\"},{\"text\":\"5.20 Context Compaction\",\"link\":\"/en/5-advanced/20-compaction\"},{\"text\":\"5.21 Thinking Depth\",\"link\":\"/en/5-advanced/21-thinking-depth\"},{\"text\":\"5.22 Debugging\",\"link\":\"/en/5-advanced/22-debugging\"},{\"text\":\"5.23 Web Search\",\"link\":\"/en/5-advanced/23-web-search\"},{\"text\":\"5.24 CLI Automation\",\"link\":\"/en/5-advanced/24-cli-automation\"}]},{\"text\":\"📚 Quick Reference\",\"collapsed\":false,\"items\":[{\"text\":\"Reference Overview\",\"link\":\"/en/appendix/\"},{\"text\":\"A. Keyboard Shortcuts\",\"link\":\"/en/appendix/keybinds\"},{\"text\":\"B. Slash Commands\",\"link\":\"/en/appendix/commands\"},{\"text\":\"C. CLI Reference\",\"link\":\"/en/appendix/cli\"},{\"text\":\"D. Config Options\",\"link\":\"/en/appendix/config-ref\"},{\"text\":\"E. Model Providers\",\"link\":\"/en/appendix/providers\"},{\"text\":\"F. Prompt Library\",\"link\":\"/en/appendix/prompts\"},{\"text\":\"G. FAQ\",\"link\":\"/en/appendix/faq\"},{\"text\":\"H. Troubleshooting\",\"link\":\"/en/appendix/troubleshoot\"},{\"text\":\"I. Ecosystem\",\"link\":\"/en/appendix/ecosystem\"},{\"text\":\"J. Migration Guide\",\"link\":\"/en/appendix/migration\"},{\"text\":\"K. OpenCode Zen\",\"link\":\"/en/appendix/zen\"},{\"text\":\"L. Experimental\",\"link\":\"/en/appendix/experimental-features\"}]},{\"text\":\"📝 Changelog\",\"collapsed\":true,\"items\":[{\"text\":\"Changelog\",\"link\":\"/en/changelog/\"},{\"text\":\"v1.2.13\",\"link\":\"/en/changelog/v1.2.13\"},{\"text\":\"v1.2.12\",\"link\":\"/en/changelog/v1.2.12\"},{\"text\":\"v1.2.11\",\"link\":\"/en/changelog/v1.2.11\"},{\"text\":\"v1.2.10\",\"link\":\"/en/changelog/v1.2.10\"},{\"text\":\"v1.2.9\",\"link\":\"/en/changelog/v1.2.9\"},{\"text\":\"v1.2.8\",\"link\":\"/en/changelog/v1.2.8\"},{\"text\":\"v1.2.7\",\"link\":\"/en/changelog/v1.2.7\"},{\"text\":\"v1.2.6\",\"link\":\"/en/changelog/v1.2.6\"},{\"text\":\"v1.2.5\",\"link\":\"/en/changelog/v1.2.5\"},{\"text\":\"v1.2.4\",\"link\":\"/en/changelog/v1.2.4\"},{\"text\":\"v1.2.3\",\"link\":\"/en/changelog/v1.2.3\"},{\"text\":\"v1.2.2\",\"link\":\"/en/changelog/v1.2.2\"},{\"text\":\"v1.2.1\",\"link\":\"/en/changelog/v1.2.1\"},{\"text\":\"v1.2.0\",\"link\":\"/en/changelog/v1.2.0\"},{\"text\":\"v1.1.65\",\"link\":\"/en/changelog/v1.1.65\"},{\"text\":\"v1.1.64\",\"link\":\"/en/changelog/v1.1.64\"},{\"text\":\"v1.1.63\",\"link\":\"/en/changelog/v1.1.63\"},{\"text\":\"v1.1.62\",\"link\":\"/en/changelog/v1.1.62\"},{\"text\":\"v1.1.61\",\"link\":\"/en/changelog/v1.1.61\"},{\"text\":\"v1.1.60\",\"link\":\"/en/changelog/v1.1.60\"},{\"text\":\"v1.1.59\",\"link\":\"/en/changelog/v1.1.59\"},{\"text\":\"v1.1.58\",\"link\":\"/en/changelog/v1.1.58\"},{\"text\":\"v1.1.57\",\"link\":\"/en/changelog/v1.1.57\"},{\"text\":\"v1.1.56\",\"link\":\"/en/changelog/v1.1.56\"},{\"text\":\"v1.1.55\",\"link\":\"/en/changelog/v1.1.55\"},{\"text\":\"v1.1.54\",\"link\":\"/en/changelog/v1.1.54\"},{\"text\":\"v1.1.53\",\"link\":\"/en/changelog/v1.1.53\"},{\"text\":\"v1.1.52\",\"link\":\"/en/changelog/v1.1.52\"},{\"text\":\"v1.1.51\",\"link\":\"/en/changelog/v1.1.51\"},{\"text\":\"v1.1.50\",\"link\":\"/en/changelog/v1.1.50\"},{\"text\":\"v1.1.49\",\"link\":\"/en/changelog/v1.1.49\"},{\"text\":\"v1.1.48\",\"link\":\"/en/changelog/v1.1.48\"},{\"text\":\"v1.1.47\",\"link\":\"/en/changelog/v1.1.47\"},{\"text\":\"v1.1.46\",\"link\":\"/en/changelog/v1.1.46\"},{\"text\":\"v1.1.45\",\"link\":\"/en/changelog/v1.1.45\"},{\"text\":\"v1.1.44\",\"link\":\"/en/changelog/v1.1.44\"},{\"text\":\"v1.1.43\",\"link\":\"/en/changelog/v1.1.43\"},{\"text\":\"v1.1.42\",\"link\":\"/en/changelog/v1.1.42\"},{\"text\":\"v1.1.41\",\"link\":\"/en/changelog/v1.1.41\"},{\"text\":\"v1.1.40\",\"link\":\"/en/changelog/v1.1.40\"},{\"text\":\"v1.1.39\",\"link\":\"/en/changelog/v1.1.39\"},{\"text\":\"v1.1.38\",\"link\":\"/en/changelog/v1.1.38\"},{\"text\":\"v1.1.37\",\"link\":\"/en/changelog/v1.1.37\"},{\"text\":\"v1.1.36\",\"link\":\"/en/changelog/v1.1.36\"},{\"text\":\"v1.1.35\",\"link\":\"/en/changelog/v1.1.35\"},{\"text\":\"v1.1.34\",\"link\":\"/en/changelog/v1.1.34\"},{\"text\":\"v1.1.33\",\"link\":\"/en/changelog/v1.1.33\"},{\"text\":\"v1.1.32\",\"link\":\"/en/changelog/v1.1.32\"},{\"text\":\"v1.1.31\",\"link\":\"/en/changelog/v1.1.31\"},{\"text\":\"v1.1.30\",\"link\":\"/en/changelog/v1.1.30\"},{\"text\":\"v1.1.29\",\"link\":\"/en/changelog/v1.1.29\"},{\"text\":\"v1.1.28\",\"link\":\"/en/changelog/v1.1.28\"},{\"text\":\"v1.1.27\",\"link\":\"/en/changelog/v1.1.27\"},{\"text\":\"v1.1.26\",\"link\":\"/en/changelog/v1.1.26\"},{\"text\":\"v1.1.25\",\"link\":\"/en/changelog/v1.1.25\"},{\"text\":\"v1.1.24\",\"link\":\"/en/changelog/v1.1.24\"},{\"text\":\"v1.1.23\",\"link\":\"/en/changelog/v1.1.23\"},{\"text\":\"v1.1.21\",\"link\":\"/en/changelog/v1.1.21\"},{\"text\":\"v1.1.20\",\"link\":\"/en/changelog/v1.1.20\"},{\"text\":\"v1.1.19\",\"link\":\"/en/changelog/v1.1.19\"},{\"text\":\"v1.1.18\",\"link\":\"/en/changelog/v1.1.18\"},{\"text\":\"v1.1.17\",\"link\":\"/en/changelog/v1.1.17\"},{\"text\":\"v1.1.16\",\"link\":\"/en/changelog/v1.1.16\"},{\"text\":\"v1.1.15\",\"link\":\"/en/changelog/v1.1.15\"},{\"text\":\"v1.1.14\",\"link\":\"/en/changelog/v1.1.14\"},{\"text\":\"v1.1.13\",\"link\":\"/en/changelog/v1.1.13\"},{\"text\":\"v1.1.12\",\"link\":\"/en/changelog/v1.1.12\"},{\"text\":\"v1.1.11\",\"link\":\"/en/changelog/v1.1.11\"},{\"text\":\"v1.1.10\",\"link\":\"/en/changelog/v1.1.10\"},{\"text\":\"v1.1.8\",\"link\":\"/en/changelog/v1.1.8\"},{\"text\":\"v1.1.7\",\"link\":\"/en/changelog/v1.1.7\"},{\"text\":\"v1.1.6\",\"link\":\"/en/changelog/v1.1.6\"},{\"text\":\"v1.1.4\",\"link\":\"/en/changelog/v1.1.4\"},{\"text\":\"v1.1.3\",\"link\":\"/en/changelog/v1.1.3\"},{\"text\":\"v1.1.2\",\"link\":\"/en/changelog/v1.1.2\"},{\"text\":\"v1.1.1\",\"link\":\"/en/changelog/v1.1.1\"}]}],\"footer\":{\"message\":\"Released under the <a href=\\\"https://creativecommons.org/licenses/by-nc-sa/4.0/\\\" target=\\\"_blank\\\">CC BY-NC-SA 4.0</a> License. | <a href=\\\"/en/privacy\\\">Privacy Policy</a> | © 2024 LearnOpenCode\"},\"docFooter\":{\"prev\":\"Previous\",\"next\":\"Next\"},\"outline\":{\"label\":\"On this page\"},\"lastUpdated\":{\"text\":\"Last updated\"},\"editLink\":{\"pattern\":\"https://github.com/vbgate/learn-opencode/edit/main/docs/:path\",\"text\":\"Edit this page on GitHub\"}}}},\"scrollOffset\":134,\"cleanUrls\":false,\"additionalConfig\":{}}");</script>
+    
+  </body>
+</html>

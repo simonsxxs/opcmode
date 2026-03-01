@@ -1,0 +1,13 @@
+import{_ as e,c as r,o as a,a5 as n,j as t,a as l,at as d}from"./chunks/framework.Dtwt352Q.js";const k=JSON.parse('{"title":"2.1b 如何复制内容","description":"为什么 Ctrl+C 不能复制？学会 OpenCode 高效复制的三种姿势。","frontmatter":{"title":"2.1b 如何复制内容","subtitle":"告别 Ctrl+C 的困惑","course":"OpenCode 中文实战课","stage":"第二阶段","lesson":"2.1b","duration":"5 分钟","practice":"5 分钟","level":"新手","description":"为什么 Ctrl+C 不能复制？学会 OpenCode 高效复制的三种姿势。","tags":["复制粘贴","基础操作","Windows","Mac"],"prerequisite":["2.1 界面与操作"]},"headers":[],"relativePath":"2-daily/01b-copy-paste.md","filePath":"2-daily/01b-copy-paste.md","lastUpdated":1772014034000}'),i={name:"2-daily/01b-copy-paste.md"};function s(c,o,h,b,p,u){return a(),r("div",null,[...o[0]||(o[0]=[n("",73),t("details",null,[t("summary",null,[t("strong",null,"点击展开查看源码位置")]),t("blockquote",null,[t("p",null,"更新时间：2026-02-14（v1.1.64）")]),t("p",null,'OpenCode 的"鼠标松开即复制"逻辑并非终端默认行为，而是写在代码里的高级特性：'),t("table",{tabindex:"0"},[t("thead",null,[t("tr",null,[t("th",null,"功能"),t("th",null,"文件路径"),t("th",null,"关键逻辑")])]),t("tbody",null,[t("tr",null,[t("td",null,"鼠标复制逻辑"),t("td",null,[t("a",{href:"https://github.com/anomalyco/opencode/blob/dev/packages/opencode/src/cli/cmd/tui/app.tsx",target:"_blank",rel:"noreferrer"},[t("code",null,"src/cli/cmd/tui/app.tsx")])]),t("td",null,[t("code",null,"onMouseUp"),l(" 事件监听")])]),t("tr",null,[t("td",null,"剪贴板工具"),t("td",null,[t("a",{href:"https://github.com/anomalyco/opencode/blob/dev/packages/opencode/src/cli/cmd/tui/util/clipboard.ts",target:"_blank",rel:"noreferrer"},[t("code",null,"src/cli/cmd/tui/util/clipboard.ts")])]),t("td",null,"跨平台剪贴板支持")]),t("tr",null,[t("td",null,"Windows 选择改进（v1.1.64）"),t("td",null,[l("搜索关键词 "),t("code",null,"windows"),l("、"),t("code",null,"win32"),l("、"),t("code",null,"selection")]),t("td",null,[t("code",null,"packages/opencode/src/")])])])]),t("p",null,[t("strong",null,"源码搜索命令"),l("：")]),t("div",{class:"language-bash"},[t("button",{title:"Copy Code",class:"copy"}),t("span",{class:"lang"},"bash"),t("pre",null,[t("code",{"v-pre":""},'grep -rn "windows\\|win32\\|selection" packages/opencode/src/')])]),t("p",null,[t("strong",null,[l("核心代码片段 ("),t("code",null,"app.tsx"),l(")")]),l("：")]),t("div",{class:"language-typescript"},[t("button",{title:"Copy Code",class:"copy"}),t("span",{class:"lang"},"typescript"),t("pre",null,[t("code",{"v-pre":""},`// 当鼠标松开时
+onMouseUp={async () => {
+  // 1. 获取选中的文本
+  const text = renderer.getSelection()?.getSelectedText()
+  if (text && text.length > 0) {
+    // 2. 调用剪贴板 API 复制
+    await Clipboard.copy(text)
+    // 3. 提示用户
+    toast.show({ message: "Copied to clipboard" })
+    // 4. 清除选中状态
+    renderer.clearSelection()
+  }
+}}`)])])],-1)])])}const C=e(i,[["render",s]]);export{k as __pageData,C as default};
