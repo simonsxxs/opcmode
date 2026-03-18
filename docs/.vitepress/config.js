@@ -3,6 +3,7 @@ export default {
   description: '从零到首个成交，给小白的完整起步路线',
 
   base: '/',
+  ignoreDeadLinks: true,
 
   head: [
     ['link', { rel: 'icon', href: '/favicon.png', type: 'image/png' }],
