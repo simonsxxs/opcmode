@@ -1,0 +1,252 @@
+/* ===== 我们的故事 (Story Page) ===== */
+/* 主题色：深海军蓝 / 玻璃拟态 / Instrument Serif */
+
+:root {
+  --story-bg: hsl(201, 100%, 13%);
+  --story-fg: hsl(0, 0%, 100%);
+  --story-muted: hsl(240, 4%, 66%);
+  --story-primary: hsl(0, 0%, 100%);
+  --story-border: hsl(0, 0%, 18%);
+  --story-secondary: hsl(0, 0%, 10%);
+  --font-display: 'Instrument Serif', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.story-page {
+  background: var(--story-bg);
+  color: var(--story-fg);
+  font-family: var(--font-body);
+  min-height: 100vh;
+}
+
+/* —— 全屏 Hero —— */
+.story-hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: var(--story-bg);
+}
+
+/* —— 顶部 nav —— */
+.story-nav {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+}
+.story-nav-logo {
+  font-family: var(--font-display);
+  font-size: 1.875rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--story-fg);
+}
+.story-nav-links {
+  display: none;
+  align-items: center;
+  gap: 2rem;
+  font-size: 0.875rem;
+  color: var(--story-muted);
+}
+.story-nav-links a {
+  color: var(--story-muted);
+  transition: color 0.2s;
+  text-decoration: none;
+}
+.story-nav-links a:hover,
+.story-nav-links a.active {
+  color: var(--story-fg);
+}
+@media (min-width: 768px) {
+  .story-nav-links { display: flex; }
+}
+
+/* —— Hero 中央内容 —— */
+.story-hero-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 8rem 1.5rem 10rem;
+  flex: 1;
+  justify-content: center;
+}
+.story-h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 0.95;
+  letter-spacing: -2.46px;
+  max-width: 80rem;
+  color: var(--story-fg);
+  margin: 0;
+}
+.story-h1 em {
+  font-style: normal;
+  color: var(--story-muted);
+}
+@media (min-width: 640px) {
+  .story-h1 { font-size: 4.5rem; }
+}
+@media (min-width: 768px) {
+  .story-h1 { font-size: 6rem; }
+}
+
+.story-subtext {
+  color: var(--story-muted);
+  font-size: 1rem;
+  line-height: 1.625;
+  max-width: 42rem;
+  margin: 2rem 0 0;
+}
+@media (min-width: 640px) {
+  .story-subtext { font-size: 1.125rem; }
+}
+
+/* —— Liquid Glass 效果 —— */
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.01);
+  background-blend-mode: luminosity;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: none;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  color: var(--story-fg);
+  text-decoration: none;
+  transition: transform 0.25s ease;
+}
+.liquid-glass::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.4px;
+  background: linear-gradient(180deg,
+    rgba(255, 255, 255, 0.45) 0%,
+    rgba(255, 255, 255, 0.15) 20%,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0) 60%,
+    rgba(255, 255, 255, 0.15) 80%,
+    rgba(255, 255, 255, 0.45) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+.liquid-glass:hover {
+  transform: scale(1.03);
+}
+
+.liquid-glass.nav-cta {
+  border-radius: 9999px;
+  padding: 0.625rem 1.5rem;
+  font-size: 0.875rem;
+}
+.liquid-glass.hero-cta {
+  border-radius: 9999px;
+  padding: 1.25rem 3.5rem;
+  font-size: 1rem;
+  margin-top: 3rem;
+}
+
+/* —— 渐入动画 —— */
+@keyframes fade-rise {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-rise          { animation: fade-rise 0.8s ease-out both; }
+.animate-fade-rise-delay    { animation: fade-rise 0.8s ease-out 0.2s both; }
+.animate-fade-rise-delay-2  { animation: fade-rise 0.8s ease-out 0.4s both; }
+.animate-fade-rise-delay-3  { animation: fade-rise 0.8s ease-out 0.6s both; }
+
+/* —— 故事正文区（用户延展用）—— */
+.story-content {
+  position: relative;
+  z-index: 1;
+  background: var(--story-bg);
+  padding: 6rem 1.5rem 8rem;
+}
+.story-content-inner {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+.story-content-eyebrow {
+  color: var(--story-muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.story-content-title {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  line-height: 1.1;
+  text-align: center;
+  margin: 0 0 3rem;
+  color: var(--story-fg);
+}
+@media (min-width: 640px) {
+  .story-content-title { font-size: 3rem; }
+}
+.story-content-body {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.0625rem;
+  line-height: 1.85;
+}
+.story-content-body p {
+  margin: 0 0 1.5rem;
+}
+.story-content-body p:last-child {
+  margin-bottom: 0;
+}
+.story-divider {
+  width: 48px;
+  height: 1px;
+  background: var(--story-muted);
+  opacity: 0.4;
+  margin: 3rem auto;
+}
+.story-quote {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--story-fg);
+  font-style: italic;
+  margin: 3rem 0;
+}
+.story-placeholder {
+  border: 1px dashed var(--story-border);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  color: var(--story-muted);
+  font-size: 0.875rem;
+  margin-top: 4rem;
+}
+.story-placeholder code {
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.125rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.85em;
+  color: var(--story-fg);
+}
