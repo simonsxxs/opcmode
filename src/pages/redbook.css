@@ -1,0 +1,605 @@
+.redbook-page,
+.redbook-page * {
+  box-sizing: border-box;
+  font-family: 'Noto Serif SC', 'Almarai', -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
+}
+
+.redbook-page {
+  min-height: 100vh;
+  background:
+    linear-gradient(140deg, rgba(197, 38, 54, 0.2), transparent 26%),
+    radial-gradient(circle at 82% 8%, rgba(222, 219, 200, 0.16), transparent 28%),
+    linear-gradient(180deg, #090908 0%, #12100d 42%, #050505 100%);
+  color: #f4f0df;
+  overflow-x: hidden;
+  padding: 5.5rem 1rem 4rem;
+}
+
+.redbook-page::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.18;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(to bottom, #000, transparent 88%);
+}
+
+.redbook-page > section {
+  position: relative;
+  z-index: 1;
+  width: min(1240px, calc(100vw - 2rem));
+  margin: 0 auto;
+}
+
+.redbook-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+  gap: 1rem;
+  align-items: stretch;
+  min-height: 520px;
+}
+
+.redbook-hero-copy,
+.redbook-account-card,
+.redbook-console,
+.redbook-output,
+.redbook-history {
+  border: 1px solid rgba(244, 240, 223, 0.12);
+  background: rgba(13, 12, 10, 0.78);
+  box-shadow: 0 30px 110px rgba(0, 0, 0, 0.34);
+  backdrop-filter: blur(18px);
+}
+
+.redbook-hero-copy {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  padding: clamp(2rem, 6vw, 5.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.redbook-hero-copy::after {
+  content: 'RED BOOK';
+  position: absolute;
+  right: -0.2em;
+  top: 0.06em;
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(5rem, 14vw, 13rem);
+  line-height: 0.78;
+  color: rgba(244, 240, 223, 0.035);
+  pointer-events: none;
+}
+
+.redbook-eyebrow,
+.redbook-panel-head p {
+  margin: 0;
+  color: rgba(244, 240, 223, 0.52);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.redbook-hero h1 {
+  margin: 1rem 0 1.5rem;
+  max-width: 760px;
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(3.3rem, 8vw, 8.2rem);
+  font-weight: 400;
+  line-height: 0.82;
+  letter-spacing: 0;
+}
+
+.redbook-hero h1 span {
+  display: block;
+  color: #cf3447;
+  font-family: inherit;
+}
+
+.redbook-hero-copy > p:last-child {
+  max-width: 720px;
+  margin: 0;
+  color: rgba(244, 240, 223, 0.74);
+  font-size: clamp(1rem, 1.7vw, 1.25rem);
+  line-height: 1.9;
+}
+
+.redbook-account-card {
+  border-radius: 8px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.redbook-account-top {
+  min-height: 150px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-radius: 6px;
+  padding: 1.25rem;
+  background:
+    linear-gradient(135deg, rgba(207, 52, 71, 0.22), rgba(222, 219, 200, 0.05)),
+    #15120f;
+}
+
+.redbook-account-top span {
+  display: block;
+  color: rgba(244, 240, 223, 0.58);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+}
+
+.redbook-account-top strong {
+  display: block;
+  margin-top: 0.45rem;
+  font-family: 'Instrument Serif', serif;
+  font-size: 4.2rem;
+  font-weight: 400;
+  line-height: 0.9;
+}
+
+.redbook-login-box,
+.redbook-redeem-box,
+.redbook-session-box {
+  border-radius: 6px;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.redbook-session-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  color: rgba(244, 240, 223, 0.78);
+}
+
+.redbook-session-box button,
+.redbook-inline-field button,
+.redbook-ghost-button,
+.redbook-run-button {
+  border: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.redbook-session-box button {
+  color: #f4f0df;
+  background: transparent;
+}
+
+.redbook-warning,
+.redbook-message {
+  border-radius: 6px;
+  padding: 0.8rem 0.9rem;
+  background: rgba(220, 172, 74, 0.12);
+  color: #f0cf84;
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.redbook-message.error {
+  background: rgba(207, 52, 71, 0.16);
+  color: #ff9ba7;
+}
+
+.redbook-workbench {
+  margin-top: 1rem;
+}
+
+.redbook-tabs {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.redbook-tabs button {
+  min-height: 96px;
+  padding: 0.9rem;
+  border-radius: 8px;
+  border: 1px solid rgba(244, 240, 223, 0.12);
+  background: rgba(255, 255, 255, 0.045);
+  color: rgba(244, 240, 223, 0.72);
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  transition: background 0.22s ease, transform 0.22s ease, border-color 0.22s ease;
+}
+
+.redbook-tabs button:hover,
+.redbook-tabs button.active {
+  transform: translateY(-1px);
+  border-color: rgba(207, 52, 71, 0.55);
+  background: linear-gradient(145deg, rgba(207, 52, 71, 0.22), rgba(255, 255, 255, 0.045));
+  color: #fff8e8;
+}
+
+.redbook-tabs span {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.redbook-tabs small {
+  color: rgba(244, 240, 223, 0.48);
+  line-height: 1.45;
+}
+
+.redbook-main-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.redbook-console,
+.redbook-output,
+.redbook-history {
+  border-radius: 8px;
+  padding: clamp(1rem, 2.4vw, 1.6rem);
+}
+
+.redbook-panel-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.1rem;
+}
+
+.redbook-panel-head h2 {
+  margin: 0.2rem 0 0;
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.redbook-panel-head > span {
+  border: 1px solid rgba(244, 240, 223, 0.14);
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  color: rgba(244, 240, 223, 0.58);
+  font-size: 0.76rem;
+  white-space: nowrap;
+}
+
+.redbook-field-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.redbook-two-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.redbook-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.redbook-field + .redbook-field {
+  margin-top: 0.75rem;
+}
+
+.redbook-field.compact + .redbook-field.compact {
+  margin-top: 0.65rem;
+}
+
+.redbook-field span {
+  color: rgba(244, 240, 223, 0.6);
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+}
+
+.redbook-field input,
+.redbook-field textarea,
+.redbook-field select {
+  width: 100%;
+  border: 1px solid rgba(244, 240, 223, 0.1);
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.24);
+  color: #fff8e8;
+  padding: 0.85rem 0.9rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  outline: none;
+  resize: vertical;
+}
+
+.redbook-field select {
+  min-height: 48px;
+}
+
+.redbook-field input:focus,
+.redbook-field textarea:focus,
+.redbook-field select:focus {
+  border-color: rgba(207, 52, 71, 0.68);
+  box-shadow: 0 0 0 3px rgba(207, 52, 71, 0.14);
+}
+
+.redbook-inline-field {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.45rem;
+}
+
+.redbook-inline-field button,
+.redbook-ghost-button {
+  min-width: 48px;
+  min-height: 48px;
+  border-radius: 6px;
+  padding: 0 0.85rem;
+  background: rgba(244, 240, 223, 0.1);
+  color: #fff8e8;
+}
+
+.redbook-ghost-button {
+  border: 1px solid rgba(244, 240, 223, 0.12);
+}
+
+.redbook-inline-field button:hover,
+.redbook-ghost-button:hover {
+  transform: translateY(-1px);
+  background: rgba(207, 52, 71, 0.3);
+}
+
+.redbook-run-button {
+  width: 100%;
+  margin-top: 1.2rem;
+  min-height: 56px;
+  border-radius: 6px;
+  background: #cf3447;
+  color: #fff8e8;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.redbook-run-button:hover {
+  transform: translateY(-1px);
+  background: #e04255;
+}
+
+.redbook-run-button:disabled,
+.redbook-inline-field button:disabled,
+.redbook-ghost-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+  transform: none;
+}
+
+.redbook-output {
+  min-height: 720px;
+}
+
+.redbook-empty-output {
+  min-height: 520px;
+  border: 1px dashed rgba(244, 240, 223, 0.14);
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 1rem;
+  color: rgba(244, 240, 223, 0.48);
+  text-align: center;
+  padding: 2rem;
+}
+
+.redbook-result-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.redbook-summary,
+.redbook-result-block,
+.redbook-cover-line,
+.redbook-notes {
+  border-radius: 6px;
+  border: 1px solid rgba(244, 240, 223, 0.1);
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.redbook-summary {
+  margin: 0;
+  padding: 1rem;
+  color: rgba(244, 240, 223, 0.78);
+  line-height: 1.8;
+}
+
+.redbook-result-block {
+  padding: 1rem;
+}
+
+.redbook-result-block h3 {
+  margin: 0 0 0.75rem;
+  color: #fff8e8;
+  font-size: 0.95rem;
+}
+
+.redbook-result-block p,
+.redbook-result-block li {
+  color: rgba(244, 240, 223, 0.76);
+  line-height: 1.8;
+}
+
+.redbook-result-block pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: rgba(244, 240, 223, 0.84);
+  line-height: 1.85;
+  font-size: 0.95rem;
+}
+
+.redbook-title-list,
+.redbook-tags,
+.redbook-notes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.redbook-title-list span,
+.redbook-tags span,
+.redbook-notes span {
+  border-radius: 999px;
+  padding: 0.48rem 0.7rem;
+  background: rgba(207, 52, 71, 0.16);
+  color: #ffd6dc;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.redbook-cover-line {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.8rem;
+  align-items: center;
+  padding: 1rem;
+}
+
+.redbook-cover-line span {
+  color: rgba(244, 240, 223, 0.48);
+  font-size: 0.78rem;
+}
+
+.redbook-cover-line strong {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #fff8e8;
+}
+
+.redbook-image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.redbook-image-grid img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid rgba(244, 240, 223, 0.12);
+  background: #100f0e;
+}
+
+.redbook-history {
+  margin-top: 1rem;
+}
+
+.redbook-history-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.redbook-history-card,
+.redbook-history-empty {
+  border-radius: 6px;
+  border: 1px solid rgba(244, 240, 223, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 1rem;
+}
+
+.redbook-history-card {
+  min-height: 132px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.redbook-history-card span,
+.redbook-history-card small,
+.redbook-history-empty {
+  color: rgba(244, 240, 223, 0.5);
+  font-size: 0.78rem;
+}
+
+.redbook-history-card strong {
+  color: #fff8e8;
+  line-height: 1.55;
+  font-size: 0.95rem;
+}
+
+.redbook-spin {
+  animation: redbook-spin 0.8s linear infinite;
+}
+
+@keyframes redbook-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 980px) {
+  .redbook-page {
+    padding-top: 4.5rem;
+  }
+
+  .redbook-hero,
+  .redbook-main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .redbook-tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .redbook-output {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .redbook-page {
+    padding-left: 0.65rem;
+    padding-right: 0.65rem;
+  }
+
+  .redbook-page > section {
+    width: min(100%, calc(100vw - 1.3rem));
+  }
+
+  .redbook-hero {
+    min-height: auto;
+  }
+
+  .redbook-hero-copy {
+    min-height: 470px;
+  }
+
+  .redbook-tabs,
+  .redbook-two-fields,
+  .redbook-history-grid,
+  .redbook-image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .redbook-tabs button {
+    min-height: 82px;
+  }
+
+  .redbook-cover-line {
+    grid-template-columns: 1fr;
+  }
+}

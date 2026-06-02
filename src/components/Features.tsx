@@ -52,16 +52,16 @@ const CARDS: CardData[] = [
   },
   {
     index: '03',
-    title: '提示词库。',
+    title: '图文生成器。',
     items: [
-      { text: '按场景分类：从写作到代码到产品' },
-      { text: '持续迭代：记录每一次与 AI 的协作' },
-      { text: '可分享：与读者共建的中文语料' },
+      { text: '小红书标题、正文、标签一键成稿' },
+      { text: '接入 GPT Image 生成封面与配图' },
+      { text: '支持爆款拆解、复刻和起号路线' },
     ],
     icon:
       ICON_BASE +
       'hf_20260405_171809_f56666dc-c099-4778-ad82-9ad4f209567b.png&w=1280&q=85',
-    link: '/prompts',
+    link: '/redbook',
   },
 ]
 

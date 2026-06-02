@@ -4,6 +4,7 @@ import About from './components/About'
 import Features from './components/Features'
 import JobsPage from './pages/JobsPage'
 import StoryPage from './pages/StoryPage'
+import RedbookPage from './pages/RedbookPage'
 import ScrollToTop from './components/ScrollToTop'
 
 function HomePage() {
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/jobs" element={<JobsPage />} />
         <Route path="/story" element={<StoryPage />} />
+        <Route path="/redbook" element={<RedbookPage />} />
       </Routes>
     </BrowserRouter>
   )

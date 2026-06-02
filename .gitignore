@@ -1,6 +1,11 @@
 node_modules/
 dist/
 .cache/
+.omc/
 .DS_Store
 *.log
 *.tsbuildinfo
+.env
+.env.*
+!.env.example
+redbook-codes-*.csv
