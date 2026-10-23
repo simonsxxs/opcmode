@@ -589,14 +589,14 @@ export default function RedbookPage() {
 
       <section className="redbook-hero">
         <div className="redbook-hero-copy">
-          <p className="redbook-eyebrow">OPCMODE PRODUCT NODE · XIAOHONGSHU</p>
+          <p className="redbook-eyebrow">OPCMODE TOOLBOX · CONTENT OPS</p>
           <h1>
-            小红书爆款图文
-            <span>生成工作台</span>
+            AI创作工具箱
+            <span>从选题到发布</span>
           </h1>
           <p>
-            从选题、标题、正文、标签到封面图和配图，一次生成可发布草稿。
-            还能拆解爆款、复刻结构、诊断主页、设计起号路线。
+            当前模块聚焦小红书图文：从选题、标题、正文、标签到封面图和配图，一次生成可发布草稿。
+            还能拆解爆款、复刻结构、诊断主页、设计起号路线；后续会扩展公众号、选题库和标题优化。
           </p>
         </div>
 
@@ -765,7 +765,7 @@ export default function RedbookPage() {
                 {!!result.image_urls?.length && (
                   <div className="redbook-image-grid">
                     {result.image_urls.map((url, index) => (
-                      <img key={url} src={url} alt={`小红书配图 ${index + 1}`} />
+                      <img key={url} src={url} alt={`AI创作工具箱配图 ${index + 1}`} />
                     ))}
                   </div>
                 )}

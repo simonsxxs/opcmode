@@ -1,7 +1,7 @@
 # opcmode 个人品牌站
 
 > 站点：**opcmode.com**（已上线） · 仓库：simonsxxs/opcmode · 主理人：半仙赛蒙
-> 最后更新：2026-06-02（v1.1 Redbook MVP 接入）
+> 最后更新：2026-06-02（v1.2 站点巡检与维护队列）
 
 ## 项目一句话
 
@@ -86,7 +86,7 @@ Supabase 初始化：先在 SQL Editor 执行 `supabase/redbook-schema.sql`。
 - 主页黑底：`#000`
 - Story 深海军蓝：`hsl(201 100% 13%)`
 
-## ⚠️ 6 大注意事项
+## ⚠️ 10 大注意事项
 
 1. **视频是 Higgs.ai 示例素材**（cloudfront CDN），**生产前必须替换**。当前视频常量在 Hero.tsx / StoryPage.tsx / Features.tsx 顶部。
 2. **headless 截图极慢**（视频加载），验证都用真实浏览器，别用 puppeteer。
@@ -94,6 +94,17 @@ Supabase 初始化：先在 SQL Editor 执行 `supabase/redbook-schema.sql`。
 4. **Navbar `<Link>` vs `<a>`**：跳转内部路由用 `<Link>`，锚点用 `<a>`。Navbar 内部已分流。
 5. **1.6s fallback** 在 WordsPullUp / WordsPullUpMultiStyle 里——别删，否则 headless 永远看不到字。
 6. **Jobs 页面 CSS 用了大量绝对定位 / canvas**，改样式前先看 `src/pages/jobs.css` 的注释。原 Vue `AiJobsHome.vue` 已在清理 `/docs/` 时删除（**没保留备份**），改 Jobs 页面前谨慎，必要时回 git 找历史。
+7. **`/workflow` 现在是死链**：`Features.tsx` 的“一人公司”卡片指向 `/workflow`，但 `App.tsx` 没有该路由。上线前建路由或临时改走已有页面。
+8. **Navbar 仍有占位入口**：`工作坊` / `联系` 目前是 `#`，不要长期上线保留；应建路由、改 mailto / 联系区，或暂时隐藏。
+9. **Story 页仍有占位与无动作按钮**：`.story-placeholder` 是开发提示；“开启旅程”按钮没有 onClick/link。改 Story 前优先处理这两处。
+10. **`favicon.svg` 缺失**：`index.html` 已引用 `/favicon.svg`，但 `public/` 没文件；补 favicon 时顺手补 `og:image` 和社交分享 meta。
+
+## 🔎 2026-06-02 巡检记录
+
+- `npm run build` 通过。
+- 线上 `GET https://opcmode.com/api/health` 可命中 Vercel Function，但 `openai=false`、`supabase=false`、`cardPepper=false`，Redbook 真实生成 / 登录 / 卡密链路还没点亮。
+- 本地 `npm run dev` 只跑 Vite 前端，`/api/*` 会被 SPA fallback 吃掉；完整联调要用 `vercel dev`。
+- Redbook 生成图片当前存 7 天签名 URL，历史记录图片未来可能失效；后续应存 storage path，读取历史时重新签名。
 
 ## 🚀 部署流程
 
@@ -127,11 +138,12 @@ git push origin main
 
 ## 用户（半仙赛蒙）当前优先级
 
-1. 🔥 **Redbook 上线配置**：执行 Supabase SQL、配置 OpenAI/Supabase env、生成卡密
-2. 🔥 **Story 故事正文**：`src/pages/StoryPage.tsx` 找 `<section className="story-content">`，把占位文案换成自己的故事
-3. ⭐ 视频素材替换：自己拍或 Pexels 找
-4. ⭐ 补 favicon + og:image
-5. 中等：剩余节点（工作坊 / 联系 / 项目 / 文章）
+1. 🔥 **Redbook 上线配置**：执行 Supabase SQL、开启 Email OTP、配置 OpenAI/Supabase env、生成卡密；直到 `/api/health` 三项为 `true`
+2. 🔥 **修死链 / 占位**：处理 `/workflow`、Navbar `#`、Story 无动作按钮、Story 开发占位提示
+3. 🔥 **Story 故事正文**：`src/pages/StoryPage.tsx` 找 `<section className="story-content">`，把占位文案换成自己的故事
+4. ⭐ **补 favicon + og:image + Open Graph**：先补 `public/favicon.svg`，再补 1200x630 分享图
+5. ⭐ 视频素材替换：自己拍或 Pexels 找
+6. 中等：剩余节点（工作坊 / 联系 / 项目 / 文章）
 
 完整维护手册：`MAINTAIN.md`
 完整方案档案：`final-plan.md`

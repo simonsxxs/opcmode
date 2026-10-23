@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import { motion } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, MessageCircle } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import WordsPullUp from './WordsPullUp'
 import Navbar from './Navbar'
 
@@ -50,13 +51,21 @@ export default function Hero() {
         {/* 底部内容：12 列网格 */}
         <div className="absolute bottom-0 left-0 right-0 z-10 px-4 pb-4 md:px-10 md:pb-10">
           <div className="grid grid-cols-12 gap-4 md:gap-8 items-end">
-            {/* 左 8 列：opcmode 大字 */}
+            {/* 左 8 列：个人品牌大字 */}
             <div className="col-span-12 md:col-span-8">
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2, ease: easeOut }}
+                className="mb-4 text-primary/70 text-xs sm:text-sm tracking-[0.18em] uppercase"
+              >
+                OPCMODE · BY 半仙赛蒙
+              </motion.div>
               <h1
-                className="text-[18vw] sm:text-[15vw] md:text-[12vw] lg:text-[10vw] xl:text-[9vw] 2xl:text-[8vw] font-medium leading-[0.85] tracking-[-0.07em]"
+                className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[9.5rem] font-medium leading-[0.9] tracking-normal"
                 style={{ color: '#E1E0CC' }}
               >
-                <WordsPullUp text="opcmode" showAsterisk />
+                <WordsPullUp text="半仙赛蒙" showAsterisk />
               </h1>
             </div>
 
@@ -69,25 +78,35 @@ export default function Hero() {
                 className="text-primary/70 text-sm sm:text-base md:text-lg"
                 style={{ lineHeight: 1.4 }}
               >
-                opcmode 是一个记录 AI 时代工作方式与个人创作可能的独立站点。
+                AI 时代普通人生存顾问。
                 <br />
-                由半仙赛蒙主理。
+                帮助普通人利用 AI 提升职业竞争力、打造副业和个人品牌。
               </motion.p>
 
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, delay: 0.7, ease: easeOut }}
+                className="flex flex-wrap items-center gap-3"
               >
                 <a
-                  href="#about"
+                  href="#contact"
                   className="group inline-flex items-center gap-2 bg-primary text-black rounded-full pl-4 pr-1.5 py-1.5 sm:pl-5 sm:pr-2 sm:py-2 font-medium text-sm sm:text-base transition-all hover:gap-3"
                 >
-                  <span>进入 opcmode</span>
+                  <span>免费交流</span>
                   <span className="flex items-center justify-center bg-black text-white rounded-full w-9 h-9 sm:w-10 sm:h-10 transition-transform group-hover:scale-110">
-                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" strokeWidth={2} />
+                    <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" strokeWidth={2} />
                   </span>
                 </a>
+                <Link
+                  to="/cases"
+                  className="group inline-flex items-center gap-2 border border-primary/25 text-primary rounded-full pl-4 pr-1.5 py-1.5 sm:pl-5 sm:pr-2 sm:py-2 font-medium text-sm sm:text-base transition-all hover:border-primary/50 hover:bg-primary/10 hover:gap-3"
+                >
+                  <span>查看案例</span>
+                  <span className="flex items-center justify-center bg-primary/10 text-primary rounded-full w-9 h-9 sm:w-10 sm:h-10 transition-transform group-hover:scale-110">
+                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" strokeWidth={2} />
+                  </span>
+                </Link>
               </motion.div>
             </div>
           </div>

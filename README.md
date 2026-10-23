@@ -17,6 +17,15 @@
 
 > ⚠️ **已从 VitePress 完全迁出**。`/docs/` 已删除，不再构建。
 
+## 当前维护重点（2026-06-02）
+
+- **Redbook 真实链路**：线上 `/api/health` 已能命中函数，但 OpenAI / Supabase / `CARD_CODE_PEPPER` 环境变量仍需在 Vercel Production 配好。
+- **上线占位清理**：`/workflow` 暂无路由，Navbar 的“工作坊 / 联系”仍是 `#`，Story 页还有开发占位提示和无动作按钮。
+- **品牌资源**：`index.html` 已引用 `/favicon.svg`，但 `public/favicon.svg` 暂缺；同时建议补 `og:image` 和 Open Graph meta。
+- **Redbook 产品说明**：未登录首屏建议补样例输出、积分说明、卡密获取方式，降低首次使用门槛。
+
+完整维护队列见 [`MAINTAIN.md`](./MAINTAIN.md)。
+
 ## 快速开始
 
 ```bash
@@ -97,6 +106,14 @@ API 路由：
 - `POST /api/redbook/redeem`
 - `POST /api/redbook/scrape`
 
+健康检查：
+
+```bash
+curl https://opcmode.com/api/health
+```
+
+返回里的 `openai`、`supabase`、`cardPepper` 都为 `true` 时，Redbook 真实生成 / 登录 / 卡密链路才算点亮。
+
 ## 主题色
 
 | 变量 | 值 | 用途 |
@@ -115,6 +132,13 @@ API 路由：
 - outputDirectory: `dist`
 - SPA fallback 由 `vercel.json` 的 `rewrites` 兜底
 - API functions 由 `api/` 目录提供，`/api/*` 不会走 SPA fallback
+
+部署后至少检查：
+
+- `/`、`/jobs`、`/story`、`/redbook` 四个路由可刷新
+- `/api/health` 返回 JSON
+- favicon / 社交分享图不返回 HTML fallback
+- Navbar 没有长期保留的 `#` 占位入口
 
 ## License
 

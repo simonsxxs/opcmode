@@ -568,31 +568,32 @@ export default function JobsPage() {
   const showDetail = isMobile() && selected
 
   return (
-    <main className="jobs-page relative">
+    <main id="page-top" className="jobs-page relative">
       <Navbar />
       <section className="jobs-hero">
         <div className="jobs-container">
-          <p className="jobs-eyebrow">AI+一人公司 · 就业市场观察</p>
-          <h1>AI 对中国就业市场的冲击</h1>
+          <p className="jobs-eyebrow">AI LAB · 职业地图</p>
+          <h1>AI时代职业地图</h1>
           <p className="jobs-hero-copy">
-            这是一张交互式职业图谱：把中国 147 个职业的就业人数、薪资水平和 AI 暴露分数放到同一个页面里，帮助你更快看懂哪些岗位更容易被 AI 重构，哪些行业仍然更依赖线下执行和复杂协作。
+            哪些职业会被 AI 冲击？哪些能力会被 AI 放大？哪些方向值得普通人进入？
+            这张交互地图把 147 个职业的就业人数、薪资水平和 AI 暴露分数放到同一个页面里，帮你先建立判断框架。
           </p>
 
           <div className="stats-grid jobs-stats-grid">
             <div className="stat-item">
               <span className="stat-number">147</span>
               <span className="stat-label">职业样本</span>
-              <span className="stat-desc">覆盖中国主要就业岗位类型。</span>
+              <span className="stat-desc">覆盖中国主要就业岗位类型，适合做方向筛选。</span>
             </div>
             <div className="stat-item">
               <span className="stat-number">14</span>
               <span className="stat-label">职业大类</span>
-              <span className="stat-desc">从信息技术到零售餐饮都有对比。</span>
+              <span className="stat-desc">从信息技术到零售餐饮，观察不同行业的重塑速度。</span>
             </div>
             <div className="stat-item">
               <span className="stat-number">3种</span>
               <span className="stat-label">面积模式</span>
-              <span className="stat-desc">可切换看就业、薪资总额和产值贡献。</span>
+              <span className="stat-desc">切换就业、薪资总额和产值贡献，避免只看岗位数量。</span>
             </div>
             <div className="stat-item">
               <span className="stat-number">交互式</span>
@@ -606,7 +607,7 @@ export default function JobsPage() {
       <section className="jobs-container jobs-main">
         <div className="jobs-intro-card">
           <p className="jobs-lead">
-            如果你在做个人业务、内容变现、职业转型，最有价值的不是"AI 会不会来"，而是"AI 先冲击哪里、冲击多大、我该往哪里靠"。
+            如果你在做职业升级、副业探索、内容变现，最有价值的不是"AI 会不会来"，而是"AI 先冲击哪里、冲击多大、我该往哪里靠"。
             这张图给你的不是结论，而是一个更快建立判断框架的入口。
           </p>
           <div className="jobs-actions">
@@ -727,7 +728,7 @@ export default function JobsPage() {
           <section className="jobs-canvas-panel">
             <div className="jobs-canvas-head">
               <div>
-                <h2 className="jobs-panel-title">职业图谱</h2>
+                <h2 className="jobs-panel-title">AI时代职业地图</h2>
                 <p className="jobs-panel-copy">
                   矩形越大，代表对应模式下的占比越高；颜色越偏红，代表该职业更容易被 AI 直接替代或被强力增效。
                 </p>
@@ -800,7 +801,7 @@ export default function JobsPage() {
         <div className="jobs-reading-card">
           <h2>怎么读这张图</h2>
           <ul>
-            <li>看面积：先切换到"就业人数"，你能快速看到哪些职业虽然不体面、但人数巨大，因此更值得关注结构性变化。</li>
+            <li>看面积：先切换到"就业人数"，你能快速看到哪些职业虽然不显眼、但人数巨大，因此更值得关注结构性变化。</li>
             <li>看颜色：颜色越红，说明职业的核心产出越容易数字化、标准化，更容易被大模型直接替代或大幅压缩人力。</li>
             <li>看模式切换：切到"薪资总额"和"行业产值"后，可以避免只盯着岗位数量，而忽略高价值岗位和行业利润分布。</li>
             <li>看详情理由：每个职业都带一段简短解释，帮助你理解"为什么这个岗位会被判成高暴露或低暴露"。</li>
@@ -823,7 +824,7 @@ export default function JobsPage() {
 
         <div className="final-cta jobs-footer-card">
           <p className="cta-highlight">
-            如果你是做一人公司、内容创业或自由职业，这张图最值得你关心的不是"哪个岗位最危险"，而是"哪些能力更不容易被压价，哪些环节更值得你用 AI 放大"。
+            如果你正在考虑职业升级、内容创业或副业起步，这张图最值得你关心的不是"哪个岗位最危险"，而是"哪些能力更不容易被压价，哪些环节更值得你用 AI 放大"。
           </p>
           <p className="jobs-disclaimer">
             免责声明：本页仅供学习和讨论使用，AI 暴露分数存在模型偏差与口径误差，请结合真实行业经验判断。

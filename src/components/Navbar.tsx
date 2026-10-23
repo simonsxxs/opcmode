@@ -2,16 +2,15 @@ import { Link } from 'react-router-dom'
 
 const NAV_ITEMS = [
   { label: '首页', to: '/' },
-  { label: '我们的故事', to: '/story' },
-  { label: '图文生成器', to: '/redbook' },
-  { label: '工作坊', to: '#' },
-  { label: '项目', to: '/jobs' },
-  { label: '联系', to: '#' },
+  { label: 'AI实验室', to: '/lab' },
+  { label: '案例库', to: '/cases' },
+  { label: '工具箱', to: '/toolbox' },
+  { label: '关于我', to: '/about' },
 ]
 
 /**
  * 顶部导航 pill：黑色圆角胶囊，挂在容器顶部
- * 内部路由用 Link，锚点占位用 a
+ * 内部路由用 Link，锚点入口用 a
  */
 export default function Navbar() {
   return (

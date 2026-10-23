@@ -2,7 +2,7 @@ import WordsPullUpMultiStyle from './WordsPullUpMultiStyle'
 import AnimatedLetter from './AnimatedLetter'
 
 const ABOUT_BODY =
-  '过去三年，我持续追踪 AI 对 147 个职业的重塑，沉淀一人公司的工作流，与数千位读者在 newsletter 与微信社群中共同探索：如何在这个时代，建造属于自己的小而美的事业。'
+  '我关注的不是炫技，而是普通人在 AI 时代如何做出更清醒的职业选择、更稳定的副业路径、更可信的个人品牌。opcmode 会把职业观察、真实案例、AI 工作流和创作工具沉淀成可复用的方法。'
 
 export default function About() {
   return (
@@ -21,9 +21,9 @@ export default function About() {
           <WordsPullUpMultiStyle
             segments={[
               { text: '我是半仙赛蒙，', className: 'font-normal' },
-              { text: '一个独立创作者。', className: 'font-serif italic' },
+              { text: 'AI 时代普通人生存顾问。', className: 'font-serif italic' },
               {
-                text: '我专注于 AI 工具、职业观察与一人公司方法论。',
+                text: '我帮普通人把 AI 变成职业竞争力、副业能力和个人品牌资产。',
                 className: 'font-normal',
               },
             ]}
